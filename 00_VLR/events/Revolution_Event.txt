@@ -1,4 +1,4 @@
-### Events 800050-800056 & 800147-800152 used
+### Events 2110511-2110527 & 2110520-2110525 used
 
 #################################################################################
 #																				#
@@ -8,21 +8,16 @@
 
 country_event = {
 
-	id = 800050
+	id = 2110511 #The New Regime - Reactionary
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800050" #The New Regime - Reactionary
-	desc = "EVTDESC800050"
+	title = "revolution.011.T"
+	desc = "revolution.011.D"
 	picture = "Danishgovernment"
 
 	option = {
-		name = "EVT800050OPTA"
-		clr_country_flag = everywhere_genocide_only
-		clr_country_flag = non_colonial_genocide_only
-		clr_country_flag = colonial_genocide_only
-		clr_country_flag = preparations_to_kill
-		remove_country_modifier = preparations_to_kill
+		name = "revolution.011.1"
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -76,7 +71,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -91,7 +86,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		any_country = {
 			limit = {
@@ -143,21 +138,16 @@ country_event = {
 
 country_event = {
 
-	id = 800051
+	id = 2110512
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800051"  #The New Regime - Fascist
-	desc = "EVTDESC800051"
+	title = "revolution.012.T"  #The New Regime - Fascist
+	desc = "revolution.012.D"
 	picture = "Fascist"
 
 	option = {
-		name = "EVT800051OPTA"
-		clr_country_flag = everywhere_genocide_only
-		clr_country_flag = non_colonial_genocide_only
-		clr_country_flag = colonial_genocide_only
-		clr_country_flag = preparations_to_kill
-		remove_country_modifier = preparations_to_kill
+		name = "revolution.012.1"
 		clr_country_flag = communist_gov
 		clr_country_flag = absolute_monarchy_gov
 		clr_country_flag = semi_constitutional_monarchy_gov
@@ -166,6 +156,9 @@ country_event = {
 		clr_country_flag = presidential_dictatorship_gov
 		set_country_flag = fascist_gov
 		clr_country_flag = anarcho_liberal_gov
+		clr_country_flag = radical_republic
+		clr_country_flag = socialist_republic
+		clr_country_flag = revolutionary_empire
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = paramilitaries_outlawed
@@ -251,7 +244,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -266,7 +259,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		random_country = {
 			limit = {
@@ -306,6 +299,9 @@ country_event = {
 					government = democracy
 					government = hms_government
 					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = revolutionary_empire
+					government = socialist_republic
 				}
 				NOT = {
 					has_country_flag = former_sphere_leader
@@ -327,10 +323,13 @@ country_event = {
 			limit = { 
 				NOT = {
 					OR = {
-						government = proletarian_dictatorship
-						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = revolutionary_empire
+						government = socialist_republic
+						government = fascist_dictatorship
 					}
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -361,6 +360,9 @@ country_event = {
 					government = democracy
 					government = hms_government
 					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = revolutionary_empire
+					government = socialist_republic
 				}
 				is_greater_power = no
 				NOT = { 
@@ -378,10 +380,13 @@ country_event = {
 			limit = { 
 				NOT = {
 					OR = {
-						government = proletarian_dictatorship
-						government = fascist_dictatorship
 						government = democracy
 						government = hms_government
+						government = proletarian_dictatorship
+						government = bourgeois_dictatorship
+						government = revolutionary_empire
+						government = socialist_republic
+						government = fascist_dictatorship
 					}
 				}
 				NOT = { 
@@ -418,21 +423,16 @@ country_event = {
 
 country_event = {
 
-	id = 800052
+	id = 2110513
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800052"  # The New Regime - Communist
-	desc = "EVTDESC800052"
+	title = "revolution.013.T"  # The New Regime - Communist
+	desc = "revolution.013.D"
 	picture = "Celebration"
 
 	option = {
-		name = "EVT800052OPTA"
-		clr_country_flag = everywhere_genocide_only
-		clr_country_flag = non_colonial_genocide_only
-		clr_country_flag = colonial_genocide_only
-		clr_country_flag = preparations_to_kill
-		remove_country_modifier = preparations_to_kill
+		name = "revolution.013.1"
 		set_country_flag = communist_gov
 		clr_country_flag = absolute_monarchy_gov
 		clr_country_flag = semi_constitutional_monarchy_gov
@@ -441,6 +441,9 @@ country_event = {
 		clr_country_flag = presidential_dictatorship_gov
 		clr_country_flag = fascist_gov
 		clr_country_flag = anarcho_liberal_gov
+		clr_country_flag = radical_republic
+		clr_country_flag = socialist_republic
+		clr_country_flag = revolutionary_empire
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -464,19 +467,23 @@ country_event = {
 		any_pop = {
 			scaled_militancy = {
 				ideology = fascist
-				factor = 4
+				factor = 10
+			}
+			scaled_militancy = {
+				ideology = conservative
+				factor = 8
 			}
 			scaled_militancy = {
 				ideology = liberal
-				factor = 2
-			}
-			scaled_militancy = {
-				ideology = anarcho_liberal
 				factor = 4
 			}
 			scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -4
+			}
+			scaled_militancy = {
 				ideology = socialist
-				factor = -10
+				factor = -6
 			}
 			scaled_militancy = {
 				ideology = communist
@@ -506,7 +513,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -521,7 +528,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		random_country = {
 			limit = {
@@ -529,7 +536,10 @@ country_event = {
 					neighbour = THIS
 					is_culture_group = THIS
 				} 
-				government = proletarian_dictatorship
+				OR = {
+					government = proletarian_dictatorship
+					government = socialist_republic
+				}
 				NOT = {
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -545,19 +555,36 @@ country_event = {
 			limit = {
 				neighbour = THIS
 				civilized = yes
-				NOT = { government = proletarian_dictatorship }
+				NOT = { 
+					OR = {
+						government = proletarian_dictatorship 
+						government = socialist_republic
+					}
+				}
 			}
 			any_pop = {
 				scaled_militancy = {
 					ideology = communist
 					factor = 5
 				}
+				scaled_militancy = {
+					ideology = socialist
+					factor = 3
+				}
+				scaled_militancy = {
+					ideology = anarcho_liberal
+					factor = 1
+				}
 			}
 		}
 		any_country = {
 			limit = { 
 				NOT = {
-					government = proletarian_dictatorship
+					OR = {
+						government = proletarian_dictatorship
+						government = socialist_republic
+						government = bourgeois_dictatorship
+					}
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
 				}
@@ -575,7 +602,11 @@ country_event = {
 		}
 		any_country = {
 			limit = { 
-				government = proletarian_dictatorship
+				OR = {
+					government = proletarian_dictatorship
+					government = socialist_republic
+					government = bourgeois_dictatorship
+				}
 				NOT = {
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -588,7 +619,13 @@ country_event = {
 		}
 		any_country = {
 			limit = { 
-				NOT = { government = proletarian_dictatorship }
+				NOT = {
+					OR = {
+						government = proletarian_dictatorship
+						government = socialist_republic
+						government = bourgeois_dictatorship
+					}
+				}
 				is_greater_power = no
 				NOT = {
 					has_country_flag = former_sphere_leader
@@ -611,7 +648,11 @@ country_event = {
 			limit = {
 				alliance_with = THIS
 				NOT = {
-					ruling_party_ideology = communist
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = socialist
+						ruling_party_ideology = anarcho_liberal
+					}
 					vassal_of = THIS
 					substate_of = THIS
 					in_sphere = THIS
@@ -625,21 +666,16 @@ country_event = {
 
 country_event = {
 
-	id = 800053
+	id = 2110514
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800053"  # The New Regime - Anarcho-Liberal
-	desc = "EVTDESC800053"
+	title = "revolution.014.T"  # The New Regime - Anarcho-Liberal
+	desc = "revolution.014.D"
 	picture = "Revolution"
 
 	option = {
-		name = "EVT800053OPTA"
-		clr_country_flag = everywhere_genocide_only
-		clr_country_flag = non_colonial_genocide_only
-		clr_country_flag = colonial_genocide_only
-		clr_country_flag = preparations_to_kill
-		remove_country_modifier = preparations_to_kill
+		name = "revolution.014.1"
 		political_reform = open_borders
 		clr_country_flag = communist_gov
 		clr_country_flag = absolute_monarchy_gov
@@ -648,7 +684,10 @@ country_event = {
 		clr_country_flag = democracy_gov
 		clr_country_flag = presidential_dictatorship_gov
 		clr_country_flag = fascist_gov
-		set_country_flag = anarcho_liberal_gov
+		clr_country_flag = anarcho_liberal_gov
+		set_country_flag = radical_republic
+		clr_country_flag = socialist_republic
+		clr_country_flag = revolutionary_empire
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -716,7 +755,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -731,7 +770,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		any_country = {
 			limit = {
@@ -843,21 +882,16 @@ country_event = {
 
 country_event = {
 
-	id = 800054
+	id = 2110515
 
 	is_triggered_only = yes
 
-	title = "EVTNAME800054"  # The New Regime - Jacobins
-	desc = "EVTDESC800054"
+	title = "revolution.015"  # The New Regime - Jacobins
+	desc = "revolution.015"
 	picture = "Prosper"
 
 	option = {
-		name = "EVT800054OPTA"
-		clr_country_flag = everywhere_genocide_only
-		clr_country_flag = non_colonial_genocide_only
-		clr_country_flag = colonial_genocide_only
-		clr_country_flag = preparations_to_kill
-		remove_country_modifier = preparations_to_kill
+		name = "revolution.015OPTA"
 		random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
@@ -975,7 +1009,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -990,7 +1024,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		random_country = {
 			limit = {
@@ -1134,16 +1168,16 @@ country_event = {
 
 country_event = {
 	
-	id = 810055
+	id = 2110517
 	
 	is_triggered_only = yes
 	
-	title = "EVTNAME810055" #$COUNTRY_ADJ$ Independence!
-	desc = "EVTDESC810055"
+	title = "revolution.017" #$COUNTRY_ADJ$ Independence!
+	desc = "revolution.017"
 	picture = "unite"
 	
 	option = {
-		name = "EVT810055OPTA"
+		name = "revolution.017OPTA"
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -1169,7 +1203,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -1184,7 +1218,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		any_country = {
 			limit = {
@@ -1203,16 +1237,16 @@ country_event = {
 
 country_event = {
 
-	id = 810056
+	id = 2110518
 
 	is_triggered_only = yes
 
-	title = "EVTNAME810056"  # The New Regime - Socialists
-	desc = "EVTDESC810056"
+	title = "revolution.018"  # The New Regime - Socialists
+	desc = "revolution.018"
 	picture = "Prosper"
 
 	option = {
-		name = "EVT810056OPTA"
+		name = "revolution.018OPTA"
 		clr_country_flag = everywhere_genocide_only
 		clr_country_flag = non_colonial_genocide_only
 		clr_country_flag = colonial_genocide_only
@@ -1286,7 +1320,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -1301,7 +1335,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		random_country = {
 			limit = {
@@ -1441,16 +1475,16 @@ country_event = {
 #The Colonial Regime Overthrown! - REDO
 country_event = {
 	
-	id = 810057
+	id = 2110519
 	
 	is_triggered_only = yes
 	
-	title = "EVTNAME810057"
-	desc = "EVTDESC810057"
+	title = "revolution.019"
+	desc = "revolution.019"
 	picture = "unite"
 	
 	option = {
-		name = "EVT810055OPTA"
+		name = "revolution.017OPTA"
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		clr_country_flag = rebels_in_capital
@@ -1661,7 +1695,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = { is_our_vassal = THIS }
@@ -1676,7 +1710,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		any_country = {
 			limit = {
@@ -1694,15 +1728,15 @@ country_event = {
 }
 
 country_event = {
-	id = 800147
-	title = "EVTNAME800147" #Sepoys Victorious
-	desc = "EVTDESC800147"
+	id = 2110520
+	title = "revolution.020" #Sepoys Victorious
+	desc = "revolution.020"
 	picture = "rebellion"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT800147OPTA"
+		name = "revolution.020OPTA"
 		prestige_factor = -0.25
 		any_pop = {
 			limit = {
@@ -1721,7 +1755,7 @@ country_event = {
 					}
 				exists = yes
 			}
-			country_event = 800148
+			country_event = 2110521
 		}
 		any_country = {
 			limit = {
@@ -1740,21 +1774,21 @@ country_event = {
 				type = make_puppet
 				months = 240
 			}
-			country_event = 97124
+			country_event = 2110533
 		}
 	}		
 }
 
 country_event = {
-	id = 800148
-	title = "EVTNAME800148" # Response in Indian Minors to Sepoy Rebellion
-	desc = "EVTDESC800148"
+	id = 2110521
+	title = "revolution.021" # Response in Indian Minors to Sepoy Rebellion
+	desc = "revolution.021"
 	picture = "rebellion"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT800148OPTA"
+		name = "revolution.021OPTA"
 		any_pop = {
 			militancy = -4
 		}
@@ -1797,15 +1831,15 @@ country_event = {
 }
 
 country_event = {
-	id = 800149
-	title = "EVTNAME800149" #Unciv Reactionaries Victorious
-	desc = "EVTDESC800149"
+	id = 2110522
+	title = "revolution.022" #Unciv Reactionaries Victorious
+	desc = "revolution.022"
 	picture = "unite"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT800149OPTA"
+		name = "revolution.022OPTA"
 		clr_country_flag = wants_to_unify
 		clr_country_flag = does_not_want_to_unify
 		set_country_flag = angry_rioters_victorious
@@ -1865,7 +1899,7 @@ country_event = {
 			}
 			set_country_flag = former_sphere_leader
 			leave_alliance = THIS
-			country_event = 800056
+			country_event = 2110527 #Response to losing a sphere that isn't your vassal
 		}
 		random_country = {
 			limit = {
@@ -1883,7 +1917,7 @@ country_event = {
 				value = -50
 			}
 			set_country_flag = former_overlord
-			country_event = 800055
+			country_event = 2110526 #Response to rebellion in a vassal
 		}
 		any_country = {
 			limit = { 
@@ -1946,15 +1980,15 @@ country_event = {
 }
 
 country_event = {
-	id = 97700
-	title = "EVTNAME800151" #$COUNTRY_ADJ$ Patriots
-	desc = "EVTDESC97700"
+	id = 2110523
+	title = "revolution.024" #$COUNTRY_ADJ$ Patriots
+	desc = "revolution.023"
 	picture = "rebellion"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT97700OPTA"
+		name = "revolution.023OPTA"
 		random_country = {
 			limit = {
 				tag = FROM
@@ -2022,7 +2056,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT97700OPTB"
+		name = "revolution.023OPTB"
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			militancy = 3
@@ -2048,9 +2082,9 @@ country_event = {
 }
 
 country_event = {
-	id = 800151 #$COUNTRY_ADJ$ Patriots (Annexation Event)
-	title = "EVTNAME800151"
-	desc = "EVTDESC800151"
+	id = 2110524 #$COUNTRY_ADJ$ Patriots (Annexation Event)
+	title = "revolution.024"
+	desc = "revolution.024"
 	picture = "rebellion"
 
 	trigger = {
@@ -2086,7 +2120,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVT97700OPTA"
+		name = "revolution.023OPTA"
 		random_country = {
 			limit = {
 				neighbour = THIS
@@ -2197,7 +2231,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT97700OPTB"
+		name = "revolution.023OPTB"
 		any_pop = {
 			limit = { is_primary_culture = yes }
 			militancy = 3
@@ -2272,9 +2306,9 @@ country_event = {
 }				
 
 country_event = {
-	id = 800152 #Provinces Under Control (Clean-Up Event)
-	title = "EVTNAME800152"
-	desc = "EVTDESC800152"
+	id = 2110525 #Provinces Under Control (Clean-Up Event)
+	title = "revolution.025"
+	desc = "revolution.025"
 	picture = "administration"
 
 	trigger = {
@@ -2291,7 +2325,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVT800152OPTA"
+		name = "revolution.025OPTA"
 		any_owned = {
 			limit = {
 				controlled_by = THIS
@@ -2303,17 +2337,17 @@ country_event = {
 }
 
 country_event = {
-	id = 800055
+	id = 2110526 #Response to rebellion in a vassal
 
 	is_triggered_only = yes
 
 
-	title = "EVTNAME800055" # Response to rebellion in a vassal
-	desc = "EVTDESC800055"
+	title = "revolution.026"
+	desc = "revolution.026"
 	picture = "Unite"
 
 	option = {
-		name = "EVT800055OPTA"
+		name = "revolution.026OPTA"
 		badboy = -1
 		any_pop = {
 			scaled_militancy = {
@@ -2394,7 +2428,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVT800055OPTB"
+		name = "revolution.026OPTB"
 		clr_country_flag = former_overlord		
 		relation = {
 			who = FROM
@@ -2450,7 +2484,7 @@ country_event = {
 			
 	}
 	option = {
-		name = "EVT800055OPTC"
+		name = "revolution.026OPTC"
 		clr_country_flag = former_overlord
 		badboy = 2
 		any_pop = {
@@ -2572,16 +2606,16 @@ country_event = {
 }
 
 country_event = {
-	id = 800056
+	id = 2110527 #Response to losing a sphere that isn't your vassal
 
-	title = "EVTNAME800056" # Response to losing a sphere that isn't your vassal
-	desc = "EVTDESC800056"
+	title = "revolution.027"
+	desc = "revolution.027"
 	picture = "Unite"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVT800056OPTA"
+		name = "revolution.027OPTA"
 		clr_country_flag = former_sphere_leader
 		prestige = -5
 		any_pop = {
@@ -2673,7 +2707,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVT800056OPTB"
+		name = "revolution.027OPTB"
 		clr_country_flag = former_sphere_leader
 		badboy = 1
 		any_pop = {
@@ -2780,9 +2814,9 @@ country_event = {
 }
 
 country_event = {
-	id = 97562
-	title = "EVTNAME97562" #$CAPITAL$ Burns
-	desc = "EVTDESC97562"
+	id = 2110528
+	title = "revolution.028" #$CAPITAL$ Burns
+	desc = "revolution.028"
 	picture = "rebellion"
 	
 	trigger = {
@@ -2835,7 +2869,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT97562OPTA"
+		name = "revolution.028OPTA"
 		prestige = -25
 		random_country = {
 			limit = { 
@@ -2860,9 +2894,9 @@ country_event = {
 
 #Notifying a sphere-owner if rebels are going to win
 country_event = {
-	id = 97565
-	title = "EVTNAME97565"
-	desc = "EVTDESC97565"
+	id = 2110529
+	title = "revolution.029"
+	desc = "revolution.029"
 	
 	trigger = {
 		ai = yes
@@ -2891,28 +2925,28 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT97562OPTA"
+		name = "revolution.028OPTA"
 		set_country_flag = called_for_help
 		any_country = {
 			limit = {
 				is_our_vassal = THIS
 				is_sphere_leader_of = THIS
 			}
-			country_event = 97566
+			country_event = 2110530
 		}
 	}
 }
 
 country_event = {
-	id = 97566
-	title = "EVTNAME97566" #Trouble in $FROMCOUNTRY$
-	desc = "EVTDESC97566"
+	id = 2110530
+	title = "revolution.030" #Trouble in $FROMCOUNTRY$
+	desc = "revolution.030"
 	picture = "rebellion"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVT97566OPTA"
+		name = "revolution.030OPTA"
 		create_alliance = FROM
 		military_access = FROM
 		relation = { who = FROM value = 25 }
@@ -2922,7 +2956,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT97566OPTB"
+		name = "revolution.030OPTB"
 		relation = { who = FROM value = -50 }
 		ai_chance = {
 			factor = 0
@@ -2931,9 +2965,9 @@ country_event = {
 }
 
 country_event = {
-	id = 97567
-	title = "EVTNAME97567"
-	desc = "EVTDESC97567"
+	id = 2110531
+	title = "revolution.031"
+	desc = "revolution.031"
 	
 	trigger = {
 		ai = yes
@@ -2952,15 +2986,15 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVT800152OPTA"
+		name = "revolution.025OPTA"
 		clr_country_flag = called_for_help
 	}
 }
 
 province_event = {
-	id = 97570
-	title = "EVTNAME97570" #Native Unrest in $STATENAME$
-	desc = "EVTDESC97570"
+	id = 2110532
+	title = "revolution.032" #Native Unrest in $STATENAME$
+	desc = "revolution.032"
 	
 	trigger = {
 		owner = {
@@ -3017,7 +3051,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVT97570OPTA"
+		name = "revolution.032OPTA"
 		add_province_modifier = {
 			name = peasant_revolt
 			duration = 730
@@ -3035,9 +3069,9 @@ province_event = {
 # Independence event for Indian minors
 country_event = {
 	
-	id = 97124
-	title = "EVTNAME97124"
-	desc = "EVTDESC97124"
+	id = 2110533
+	title = "revolution.033"
+	desc = "revolution.033"
 
 	is_triggered_only = yes
 

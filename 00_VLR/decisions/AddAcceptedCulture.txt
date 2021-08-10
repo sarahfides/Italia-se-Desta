@@ -1,0 +1,331 @@
+political_decisions = {
+
+	accept_breton_culture = {
+        potential = {
+			tag = FRA
+            NOT = {
+				or = {
+					has_accepted_culture = breton
+					exists = BRT
+				}
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = breton
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_wallonian_culture = {
+        potential = {
+			tag = FRA
+            NOT = {
+				or = {
+					has_accepted_culture = wallonian
+					exists = WLL
+				}
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			WLL = {
+				any_core = {
+					owned_by = THIS
+				}
+			}
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = wallonian
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_occitan_culture = {
+        potential = {
+			or = {
+				tag = FRA
+				tag = GIU
+				tag = ITA
+				tag = SPA
+				tag = ARN
+			}
+            NOT = {
+				or = {
+					has_accepted_culture = occitan
+					exists = OCC
+				}
+            }
+        }
+       
+        allow = {
+			or = {
+				tag = FRA
+				and = {
+					or = {
+						tag = ITA
+						tag = GIU
+					}
+					owns = 451
+					owns = 452
+					owns = 453
+					owns = 454
+					owns = 465
+					owns = 466
+					owns = 467
+					owns = 468
+					owns = 469
+					owns = 470
+					owns = 471
+				}
+				and = {
+					or = {
+						tag = SPA
+						tag = ARN
+					}
+					owns = 458
+					owns = 459
+					owns = 460
+					owns = 455
+					owns = 456
+					owns = 457
+					owns = 461
+					owns = 462
+					owns = 463
+				}
+			}
+			revolution_n_counterrevolution = 1
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = occitan
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_castillian_culture = {
+        potential = {
+			tag = ARN
+            NOT = {
+				has_accepted_culture = spanish
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			owns = 488
+			owns = 489
+			owns = 490
+			owns = 491
+			owns = 492
+			owns = 507
+			owns = 508
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = spanish
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_aragonese_culture = {
+        potential = {
+			tag = SPA
+            NOT = {
+				has_accepted_culture = catalan
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			owns = 495
+			owns = 497
+			owns = 503
+			owns = 504
+			owns = 505
+			owns = 506
+			owns = 507
+			owns = 508
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = catalan
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_galician_culture = {
+        potential = {
+			or = {
+				tag = SPA
+				tag = ARN
+				tag = POR
+			}
+            NOT = {
+				or = {
+					has_accepted_culture = galician
+					exists = GLC
+				}
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			or = {
+				owns = 474
+				owns = 476
+			}
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = galician
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	accept_basque_culture = {
+        potential = {
+			or = {
+				tag = SPA
+				tag = ARN
+			}
+            NOT = {
+				or = {
+					has_accepted_culture = basque
+					exists = BSQ
+				}
+            }
+        }
+       
+        allow = {
+			revolution_n_counterrevolution = 1
+			or = {
+				owns = 492
+				owns = 493
+			}
+			or = {
+				government = democracy
+				government = bourgeois_dictatorship
+				government = hms_government
+				government = proletarian_dictatorship
+				government = prussian_constitutionalism
+			}
+			not = {
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			citizenship_policy = full_citizenship
+        }
+       
+        effect = {
+			add_accepted_culture = basque
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

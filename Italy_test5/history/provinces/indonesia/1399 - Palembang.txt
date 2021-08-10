@@ -1,0 +1,8 @@
+owner=MNX
+controller=MNX
+add_core=MLY
+add_core=PLB
+trade_goods = grain
+life_rating = 30
+terrain = hills
+naval_base = 1

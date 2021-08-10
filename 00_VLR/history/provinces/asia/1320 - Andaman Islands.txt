@@ -1,0 +1,7 @@
+owner=ITA
+controller=ITA
+add_core=BRT
+trade_goods = grain
+life_rating = 30
+terrain = plains
+colonial=2

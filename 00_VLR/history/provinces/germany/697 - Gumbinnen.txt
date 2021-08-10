@@ -1,0 +1,7 @@
+owner=RUS
+add_core=PLC
+add_core=GER
+add_core=LIV
+trade_goods = grain
+life_rating = 40
+terrain = plains

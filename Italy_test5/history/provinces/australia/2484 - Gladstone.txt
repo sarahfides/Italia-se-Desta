@@ -1,0 +1,7 @@
+owner=X20
+controller=X20
+add_core=AUM
+add_core=X20
+trade_goods = wool
+life_rating = 30
+terrain = hills

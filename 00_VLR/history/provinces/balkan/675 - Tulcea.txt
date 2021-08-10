@@ -1,0 +1,6 @@
+owner=MOL
+add_core=BUL
+add_core=ROM
+trade_goods = coal
+life_rating = 35
+terrain = marsh

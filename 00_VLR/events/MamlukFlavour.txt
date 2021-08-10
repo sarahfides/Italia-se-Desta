@@ -1,0 +1,1160 @@
+country_event = { 
+	id = 2111091 #The Future of the Mamluks
+	title = "EVTNAME2111091"
+	desc = "EVTDESC2111091"
+	picture = "mamluk_question"
+	
+	trigger = {
+		tag = EGY
+		or = {
+			or = {
+				TUR = {
+					exists = yes
+				}
+				IRQ = {
+					exists = yes
+				}
+				SYR = {
+					exists = yes
+				}
+			}
+			and = {
+				EGY = {
+					not = {
+						or = {
+							is_greater_power = yes
+							is_secondary_power = yes
+							owns = 1475
+							owns = 1751
+							owns = 1755
+						}
+					}
+				}
+				has_global_flag = berlin_conference_ongoing
+			}
+			revolt_percentage = 0.7
+		}
+		not = {
+			has_global_flag = the_mamluk_question
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 14
+		
+		modifier = {
+			factor = 0.0001
+			has_global_flag = berlin_conference_ongoing
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2111091"
+		set_global_flag = the_mamluk_question
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111092 #The Mamluk Question (no Berlin conference)
+	title = "EVTNAME2111092"
+	desc = "EVTDESC2111092"
+	picture = "mamluk_question"
+	
+	trigger = {
+		is_greater_power = yes
+		has_global_flag = the_mamluk_question
+		not = {
+			has_global_flag = the_mamluk_question_conference
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 14
+		
+		modifier = {
+			factor = 10000
+			has_global_flag = berlin_conference_ongoing
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2111092"
+		set_global_flag = the_mamluk_question_conference
+		EGY = {
+			set_variable = {
+				which = dismantle_the_mamluks
+				value = 0.1
+			}
+		}
+		any_greater_power = {
+			country_event = 2111094 #The Fate of the Mamluks
+		}
+		country_event = 2111094 #The Fate of the Mamluks
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111093 #The Mamluk Question (Berlin conference)
+	title = "EVTNAME2111093"
+	desc = "EVTDESC2111093"
+	picture = "mamluk_question"
+	
+	trigger = {
+		is_greater_power = yes
+		has_country_flag = berlin_conference_participant
+		has_global_flag = berlin_conference_ongoing
+		has_global_flag = the_mamluk_question
+		not = {
+			has_global_flag = the_mamluk_question_conference
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2111093"
+		set_global_flag = the_mamluk_question_conference
+		EGY = {
+			set_variable = {
+				which = dismantle_the_mamluks
+				value = 0.1
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = berlin_conference_participant
+			}
+			country_event = 2111094 #The Fate of the Mamluks
+		}
+		country_event = 2111094 #The Fate of the Mamluks
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111094 #The Fate of the Mamluks
+	title = "EVTNAME2111094"
+	desc = "EVTDESC2111094"
+	picture = "mamluk_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111094"
+		set_country_flag = dislikes_the_mamluks
+		EGY = {
+			change_variable = {
+				which = dismantle_the_mamluks
+				value = 1
+			}
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 0.8
+				relation = {
+					who = EGY
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = {
+					who = EGY
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 0.8
+				relation = {
+					who = EGY
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				EGY = {
+					any_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_core = {
+					owned_by = EGY
+				}
+			}
+			modifier = {
+				factor = 0.3
+				capital_scope = {
+					not = {
+						or = {
+							continent = europe
+							continent = africa
+							continent = asia
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = { neighbour = EGY }
+			}
+			modifier = {
+				factor = 0
+				is_our_vassal = EGY
+			}
+			modifier = {
+				factor = 0.3
+				EGY = {
+					in_sphere = THIS
+				}
+			}
+			modifier = {
+				factor = 1.2
+				war_policy = jingoism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111094"
+		set_country_flag = likes_the_mamluks
+		EGY = {
+			change_variable = {
+				which = dismantle_the_mamluks
+				value = -1
+			}
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = EGY
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = EGY
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = EGY
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 0.5
+				EGY = {
+					any_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				any_core = {
+					owned_by = EGY
+				}
+			}
+			modifier = {
+				factor = 1.1
+				capital_scope = {
+					not = {
+						or = {
+							continent = europe
+							continent = africa
+							continent = asia
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				neighbour = EGY
+			}
+			modifier = {
+				factor = 10
+				is_our_vassal = EGY
+			}
+			modifier = {
+				factor = 2
+				EGY = {
+					in_sphere = THIS
+				}
+			}
+			modifier = {
+				factor = 2
+				or = {
+					war_policy = anti_military
+					war_policy = pacifism
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111095 #The Mamluks Supported
+	title = "EVTNAME2111095"
+	desc = "EVTDESC2111095"
+	
+	trigger = {
+		tag = EGY
+		EGY = {
+			not = {
+				check_variable = {
+					which = dismantle_the_mamluks
+					value = 1
+				}
+			}
+		}
+		has_global_flag = the_mamluk_question_conference
+	}
+	
+	mean_time_to_happen = {
+		days = 28
+		
+		modifier = {
+			factor = 10
+			EGY = {
+				check_variable = {
+					which = dismantle_the_mamluks
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			any_greater_power = {
+				not = {
+					or = {
+						has_country_flag = dislikes_the_mamluks
+						has_country_flag = likes_the_mamluks
+					}
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2111095"
+		prestige = 100
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -5
+			consciousness = -2
+		}
+		any_pop = {
+			limit = {
+				not = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = -2
+			consciousness = 2
+		}
+		any_country = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			clr_country_flag = dislikes_the_mamluks
+			clr_country_flag = likes_the_mamluks
+		}
+		clr_global_flag = the_mamluk_question_conference
+		years_of_research = 5
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111096 #The Mamluks Dismantled (Minimum)
+	title = "EVTNAME2111096"
+	desc = "EVTDESC2111096"
+	
+	trigger = {
+		tag = EGY
+		EGY = {
+			check_variable = {
+				which = dismantle_the_mamluks
+				value = 1
+			}
+			not = {
+				check_variable = {
+					which = dismantle_the_mamluks
+					value = 4
+				}
+			}
+		}
+		has_global_flag = the_mamluk_question_conference
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+		
+		modifier = {
+			factor = 10
+			EGY = {
+				check_variable = {
+					which = dismantle_the_mamluks
+					value = 4
+				}
+			}
+		}		
+		modifier = {
+			factor = 100
+			any_greater_power = {
+				not = {
+					or = {
+						has_country_flag = dislikes_the_mamluks
+						has_country_flag = likes_the_mamluks
+					}
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2111096"
+		prestige = -50
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		any_country = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		EGY = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = TUR
+						is_core = SYR
+						is_core = SRN
+					}
+				}
+				secede_province = TUR
+			}
+			any_owned = {
+				limit = {
+					or = {
+						is_core = IRQ
+						is_core = JOR
+					}
+					not = {
+						province_id = 1756
+					}
+				}
+				secede_province = IRQ
+			}
+			any_owned = {
+				limit = {
+					or = {
+						is_core = HAL
+						is_core = HDJ
+					}
+				}
+				secede_province = HDJ
+			}
+			any_owned = {
+				limit = {
+					is_core = NEJ
+				}
+				secede_province = NEJ
+			}
+			any_owned = {
+				limit = {
+					is_core = YEM
+				}
+				secede_province = YEM
+			}
+			set_country_flag = dismantled_mamluks
+		}
+		TUR = { set_country_flag = former_mamluk_territory }
+		IRQ = { set_country_flag = former_mamluk_territory }
+		NEJ = { set_country_flag = former_mamluk_territory }
+		HDJ = { set_country_flag = former_mamluk_territory }
+		YEM = { set_country_flag = former_mamluk_territory }
+		clr_global_flag = the_mamluk_question_conference
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111097 #The Mamluks Dismantled (Maximum)
+	title = "EVTNAME2111097"
+	desc = "EVTDESC2111097"
+	
+	trigger = {
+		tag = EGY
+		EGY = {
+			check_variable = {
+				which = dismantle_the_mamluks
+				value = 4
+			}
+		}
+		has_global_flag = the_mamluk_question_conference
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+		
+		modifier = {
+			factor = 100
+			any_greater_power = {
+				not = {
+					or = {
+						has_country_flag = dislikes_the_mamluks
+						has_country_flag = likes_the_mamluks
+					}
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2111097"
+		prestige = -50
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		any_country = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_greater_power = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		EGY = {
+			any_owned = {
+				limit = {
+					is_core = TUR
+				}
+				secede_province = TUR
+			}
+			any_owned = {
+				limit = {
+					is_core = SYR
+				}
+				secede_province = SYR
+			}
+			any_owned = {
+				limit = {
+					is_core = JOR
+				}
+				secede_province = JOR
+			}
+			any_owned = {
+				limit = {
+					is_core = IRQ
+					not = {
+						province_id = 1756
+					}
+				}
+				secede_province = IRQ
+			}
+			any_owned = {
+				limit = {
+					is_core = HDJ
+				}
+				secede_province = HDJ
+			}
+			any_owned = {
+				limit = {
+					is_core = NEJ
+				}
+				secede_province = NEJ
+			}
+			any_owned = {
+				limit = {
+					is_core = YEM
+				}
+				secede_province = YEM
+			}
+			any_owned = {
+				limit = {
+					is_core = SRN
+				}
+				secede_province = SRN
+			}
+			any_owned = {
+				limit = {
+					is_core = HAL
+				}
+				secede_province = HAL
+			}
+			set_country_flag = dismantled_mamluks
+		}
+		TUR = { set_country_flag = former_mamluk_territory }
+		SYR = { set_country_flag = former_mamluk_territory }
+		IRQ = { set_country_flag = former_mamluk_territory }
+		SRN = { set_country_flag = former_mamluk_territory }
+		JOR = { set_country_flag = former_mamluk_territory }
+		NEJ = { set_country_flag = former_mamluk_territory }
+		HDJ = { set_country_flag = former_mamluk_territory }
+		HAL = { set_country_flag = former_mamluk_territory }
+		YEM = { set_country_flag = former_mamluk_territory }
+		clr_global_flag = the_mamluk_question_conference
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111098 #$COUNTRY_ADJ$ Independence
+	title = "EVTNAME2111098"
+	desc = "EVTDESC2111098"
+	picture = "a_friendly_power"
+	
+	trigger = {
+		has_country_flag = former_mamluk_territory
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2111098"
+		clr_country_flag = former_mamluk_territory
+		random_country = {
+			limit = {
+				has_country_flag = dislikes_the_mamluks
+				is_greater_power = yes
+			}
+			country_event = 2111103
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111099 #The Future of the Mamluks (Mamluks are a vassal)
+	title = "EVTNAME2111099"
+	desc = "EVTDESC2111099"
+	picture = "a_friendly_power"
+	
+	trigger = {
+		has_country_flag = dismantled_mamluks
+		tag = EGY
+		EGY = {
+			is_vassal = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2111099"
+		clr_country_flag = dismantled_mamluks
+		overlord = {
+			country_event = 2111102
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111100 #The Future of the Mamluks (Mamluks are sphered)
+	title = "EVTNAME2111099"
+	desc = "EVTDESC2111099"
+	picture = "a_friendly_power"
+	
+	trigger = {
+		has_country_flag = dismantled_mamluks
+		tag = EGY
+		EGY = {
+			and = {
+				part_of_sphere = yes
+				is_vassal = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2111099"
+		clr_country_flag = dismantled_mamluks
+		sphere_owner = {
+			country_event = 2111102
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111101 #The Future of the Mamluks (Mamluks are independent)
+	title = "EVTNAME2111099"
+	desc = "EVTDESC2111099"
+	picture = "a_friendly_power"
+	
+	trigger = {
+		has_country_flag = dismantled_mamluks
+		tag = EGY
+		EGY = {
+			and = {
+				not = {
+					part_of_sphere = yes
+				}
+				is_vassal = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2111099"
+		clr_country_flag = dismantled_mamluks
+		random_country = {
+			limit = {
+				has_country_flag = likes_the_mamluks
+			}
+			country_event = 2111102
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111102 #The Mamluk Protectorate
+	title = "EVTNAME2111102"
+	desc = "EVTDESC2111102"
+	picture = "a_friendly_power"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111102" #Vassalise the Mamluks
+		any_owned = {
+			limit = {
+				is_core = EGY
+				not = {
+					province_id = 1755
+				}
+			}
+			secede_province = EGY
+		}
+		THIS = {
+			create_vassal = EGY
+		}
+		FROM = {
+			relation = {
+				who = THIS
+				value = -100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		#any_country = {
+		#	clr_country_flag = dislikes_the_mamluks
+		#	clr_country_flag = likes_the_mamluks
+		#}
+		#clr_country_flag = likes_the_mamluks
+		
+		ai_chance = { 
+			factor = 59
+			
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = liberal
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = conservative
+				}
+			}
+			modifier = {
+				factor = 1.2
+				war_policy = anti_military
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111102" #Annex the Mamluks
+		inherit = EGY
+		#any_country = {
+		#	clr_country_flag = dislikes_the_mamluks
+		#	clr_country_flag = likes_the_mamluks
+		#}
+		#clr_country_flag = likes_the_mamluks
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 0.5
+				or = {
+					ruling_party_ideology = liberal
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = conservative
+				}
+			}
+			modifier = {
+				factor = 1.2
+				war_policy = jingoism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC2111102" #Grant them independence
+		any_owned = {
+			limit = {
+				is_core = EGY
+				not = {
+					province_id = 1755
+				}
+			}
+			secede_province = EGY
+		}
+		release_vassal = EGY
+		FROM = {
+			relation = {
+				who = THIS
+				value = 200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		#any_country = {
+		#	clr_country_flag = dislikes_the_mamluks
+		#	clr_country_flag = likes_the_mamluks
+		#}
+		clr_country_flag = likes_the_mamluks
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = {
+				factor = 20
+				war_policy = pacifism
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111103 #The FROMCOUNTRY Protectorate
+	title = "EVTNAME2111103"
+	desc = "EVTDESC2111103"
+	picture = "a_friendly_power"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111102" #Vassalise
+		any_owned = {
+			limit = {
+				is_core = FROM
+				not = {
+					province_id = 1755
+				}
+			}
+			secede_province = FROM
+		}
+		THIS = {
+			create_vassal = FROM
+		}
+		FROM = {
+			relation = {
+				who = THIS
+				value = -100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		
+		ai_chance = { 
+			factor = 59
+			
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = liberal
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = conservative
+				}
+			}
+			modifier = {
+				factor = 1.2
+				war_policy = anti_military
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111102" #Annex
+		inherit = FROM
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 0.5
+				or = {
+					ruling_party_ideology = liberal
+					ruling_party_ideology = anarcho_liberal
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+				}
+			}
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+					ruling_party_ideology = conservative
+				}
+			}
+			modifier = {
+				factor = 1.2
+				war_policy = jingoism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC2111102" #Grant them independence
+		any_owned = {
+			limit = {
+				is_core = FROM
+			}
+			secede_province = FROM
+		}
+		release_vassal = FROM
+		FROM = {
+			relation = {
+				who = THIS
+				value = 200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = {
+				factor = 20
+				war_policy = pacifism
+			}
+		}
+	}
+}

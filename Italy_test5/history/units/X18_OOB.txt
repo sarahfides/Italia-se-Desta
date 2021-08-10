@@ -1,0 +1,1109 @@
+#Sphere of Influence
+
+AFG = {
+	value = 0
+	level = 2
+}
+AIN = {
+	value = 0
+	level = 2
+}
+AJU = {
+	value = 0
+	level = 2
+}
+ALS = {
+	value = 0
+	level = 2
+}
+ARN = {
+	value = 0
+	level = 2
+}
+ATJ = {
+	value = 0
+	level = 2
+}
+AUG = {
+	value = 0
+	level = 2
+}
+AUK = {
+	value = 0
+	level = 2
+}
+AUL = {
+	value = 0
+	level = 2
+}
+AUP = {
+	value = 0
+	level = 2
+}
+AUS = {
+	value = -3
+	level = 2
+}
+BAU = {
+	value = 0
+	level = 2
+}
+BOH = {
+	value = 0
+	level = 2
+}
+BOS = {
+	value = 0
+	level = 2
+}
+BPR = {
+	value = 0
+	level = 2
+}
+BRA = {
+	value = 0
+	level = 2
+}
+BRB = {
+	value = 0
+	level = 2
+}
+BRS = {
+	value = 0
+	level = 2
+}
+BRU = {
+	value = 0
+	level = 2
+}
+BUG = {
+	value = 31
+	level = 2
+}
+BUL = {
+	value = 0
+	level = 2
+}
+CAM = {
+	value = 0
+	level = 2
+}
+CHL = {
+	value = 0
+	level = 2
+}
+CIR = {
+	value = 0
+	level = 2
+}
+CJA = {
+	value = 0
+	level = 2
+}
+CLI = {
+	value = 0
+	level = 2
+}
+CLM = {
+	value = 0
+	level = 2
+}
+COL = {
+	value = 0
+	level = 2
+}
+CRB = {
+	value = 0
+	level = 2
+}
+DAH = {
+	value = 0
+	level = 2
+}
+DAI = {
+	value = 0
+	level = 2
+}
+DES = {
+	value = -9
+	level = 2
+}
+DLH = {
+	value = 0
+	level = 2
+}
+DNG = {
+	value = 0
+	level = 2
+}
+EFR = {
+	value = 0
+	level = 2
+}
+EGY = {
+	value = 19
+	level = 2
+}
+ENG = {
+	value = -22
+	level = 2
+}
+FEO = {
+	value = 0
+	level = 2
+}
+FJL = {
+	value = 0
+	level = 2
+}
+FJV = {
+	value = 0
+	level = 2
+}
+FLA = {
+	value = 0
+	level = 2
+}
+FRA = {
+	value = 0
+	level = 2
+}
+FRI = {
+	value = 0
+	level = 2
+}
+GDW = {
+	value = 0
+	level = 2
+}
+GEO = {
+	value = 0
+	level = 2
+}
+HAI = {
+	value = 0
+	level = 2
+}
+HAM = {
+	value = 0
+	level = 2
+}
+HAT = {
+	value = 0
+	level = 2
+}
+HES = {
+	value = 0
+	level = 2
+}
+HLL = {
+	value = 0
+	level = 2
+}
+HUN = {
+	value = 0
+	level = 2
+}
+HWK = {
+	value = 0
+	level = 2
+}
+HWM = {
+	value = 0
+	level = 2
+}
+ICL = {
+	value = 0
+	level = 2
+}
+ITA = {
+	value = 191
+	military_access = yes
+	influence_value = 35
+	level = 2
+}
+JAP = {
+	value = 0
+	level = 2
+}
+KAC = {
+	value = 0
+	level = 2
+}
+KAN = {
+	value = 0
+	level = 2
+}
+KBO = {
+	value = 0
+	level = 2
+}
+KHA = {
+	value = 0
+	level = 2
+}
+KHO = {
+	value = -6
+	level = 2
+}
+KLE = {
+	value = 0
+	level = 2
+}
+KNZ = {
+	value = 0
+	level = 2
+}
+KON = {
+	value = 0
+	level = 2
+}
+KOR = {
+	value = 0
+	level = 2
+}
+KTI = {
+	value = 0
+	level = 2
+}
+KWN = {
+	value = 0
+	level = 2
+}
+LDK = {
+	value = 0
+	level = 2
+}
+LIG = {
+	value = 0
+	level = 2
+}
+LIV = {
+	value = 0
+	level = 2
+}
+LOU = {
+	value = 0
+	level = 2
+}
+LUB = {
+	value = 0
+	level = 2
+}
+LUW = {
+	value = -17
+	level = 2
+}
+MAG = {
+	value = 0
+	level = 2
+}
+MAI = {
+	value = 0
+	level = 2
+}
+MBA = {
+	value = 0
+	level = 2
+}
+MBZ = {
+	value = 0
+	level = 2
+}
+MEW = {
+	value = 0
+	level = 2
+}
+MEX = {
+	value = -12
+	level = 2
+}
+MJZ = {
+	value = 0
+	level = 2
+}
+MKA = {
+	value = 0
+	level = 2
+}
+MKS = {
+	value = 0
+	level = 2
+}
+MLC = {
+	value = 0
+	level = 2
+}
+MNX = {
+	value = 0
+	level = 2
+}
+MOL = {
+	value = 0
+	level = 2
+}
+MSC = {
+	value = 0
+	level = 2
+}
+MUN = {
+	value = 0
+	level = 2
+}
+NAH = {
+	value = 0
+	level = 2
+}
+NAS = {
+	value = 0
+	level = 2
+}
+NEP = {
+	value = 0
+	level = 2
+}
+NOR = {
+	value = 0
+	level = 2
+}
+NOV = {
+	value = 0
+	level = 2
+}
+NZK = {
+	value = 0
+	level = 2
+}
+NZM = {
+	value = 0
+	level = 2
+}
+NZR = {
+	value = 0
+	level = 2
+}
+NZT = {
+	value = 0
+	level = 2
+}
+OIR = {
+	value = 0
+	level = 2
+}
+OLD = {
+	value = 0
+	level = 2
+}
+OMA = {
+	value = 0
+	level = 2
+}
+ORI = {
+	value = 0
+	level = 2
+}
+OTO = {
+	value = 0
+	level = 2
+}
+PAL = {
+	value = 0
+	level = 2
+}
+PAT = {
+	value = 0
+	level = 2
+}
+PEU = {
+	value = -11
+	level = 2
+}
+PGR = {
+	value = 0
+	level = 2
+}
+PHG = {
+	value = 8
+	level = 2
+}
+POL = {
+	value = -7
+	level = 2
+}
+POR = {
+	value = -6
+	level = 2
+}
+PRO = {
+	value = 0
+	level = 2
+}
+PSA = {
+	value = 0
+	level = 2
+}
+ROT = {
+	value = 0
+	level = 2
+}
+RUS = {
+	value = -19
+	level = 2
+}
+RWA = {
+	value = 0
+	level = 2
+}
+RYU = {
+	value = 0
+	level = 2
+}
+SAX = {
+	value = 0
+	level = 2
+}
+SCA = {
+	value = 0
+	level = 2
+}
+SDY = {
+	value = 0
+	level = 2
+}
+SER = {
+	value = 0
+	level = 2
+}
+SIA = {
+	value = 0
+	level = 2
+}
+SIE = {
+	value = 0
+	level = 2
+}
+SLV = {
+	value = 0
+	level = 2
+}
+SLZ = {
+	value = 0
+	level = 2
+}
+SMB = {
+	value = 0
+	level = 2
+}
+SPA = {
+	value = -11
+	level = 2
+}
+SUN = {
+	value = 0
+	level = 2
+}
+SWA = {
+	value = 0
+	level = 2
+}
+SWI = {
+	value = 0
+	level = 2
+}
+TBZ = {
+	value = 0
+	level = 2
+}
+TDO = {
+	value = 0
+	level = 2
+}
+TEX = {
+	value = 0
+	level = 2
+}
+TGA = {
+	value = 0
+	level = 2
+}
+THU = {
+	value = 0
+	level = 2
+}
+TIB = {
+	value = -17
+	level = 2
+}
+TIM = {
+	value = 0
+	level = 2
+}
+TIW = {
+	value = 16
+	level = 2
+}
+TRX = {
+	value = 0
+	level = 2
+}
+TTE = {
+	value = 0
+	level = 2
+}
+UIL = {
+	value = 0
+	level = 2
+}
+ULM = {
+	value = 0
+	level = 2
+}
+VIJ = {
+	value = 0
+	level = 2
+}
+WSI = {
+	value = 0
+	level = 2
+}
+X00 = {
+	value = 0
+	level = 2
+}
+X02 = {
+	value = 0
+	level = 2
+}
+X04 = {
+	value = 0
+	level = 2
+}
+X07 = {
+	value = 0
+	level = 2
+}
+X09 = {
+	value = -4
+	level = 2
+}
+X10 = {
+	value = 0
+	level = 2
+}
+X12 = {
+	value = 0
+	level = 2
+}
+X13 = {
+	value = 0
+	level = 2
+}
+X15 = {
+	value = 0
+	level = 2
+}
+X16 = {
+	value = 0
+	level = 2
+}
+X17 = {
+	value = 0
+	level = 2
+}
+X18 = {
+	value = 0
+	level = 2
+}
+X19 = {
+	value = 0
+	level = 2
+}
+X20 = {
+	value = 0
+	level = 2
+}
+YEM = {
+	value = 0
+	level = 2
+}
+YKT = {
+	value = 0
+	level = 2
+}
+ZAF = {
+	value = -4
+	level = 2
+}
+ZAP = {
+	value = 0
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Rodolfo Melzi"
+	date="1790.6.20"
+	type=land
+	personality="chivalrous"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Napoleone Chigi"
+	date="1799.1.2"
+	type=sea
+	personality="intuitive"
+	background="drillmaster"
+}
+
+leader = {
+	name="Fabio Conti"
+	date="1802.11.20"
+	type=land
+	personality="stalwart"
+	background="artillerist"
+}
+
+leader = {
+	name="Eugenio Sforza"
+	date="1809.10.1"
+	type=land
+	personality="stalwart"
+	background="bootlicker"
+}
+
+leader = {
+	name="Ottaviano Barberini"
+	date="1811.1.3"
+	type=land
+	personality="disciplined"
+	background="war_college"
+}
+
+leader = {
+	name="Ottaviano di Campofregoso"
+	date="1815.1.14"
+	type=sea
+	personality="resourceful"
+	background="bootlicker"
+}
+
+leader = {
+	name="Alberto Barberini"
+	date="1817.2.23"
+	type=land
+	personality="defiant"
+	background="school_of_defense"
+}
+
+
+#Armies
+army = {
+	name="3rd Army"
+	location=214
+	regiment = {
+		name="1st Roanoke Infantry"
+		type=infantry
+		home=216
+	}
+	regiment = {
+		name="1st Atlanta Infantry"
+		type=infantry
+		home=201
+	}
+	regiment = {
+		name="1st St Augustine Infantry"
+		type=infantry
+		home=199
+	}
+}
+
+army = {
+	name="1st Army"
+	location=201
+	regiment = {
+		name="1st Charleston Infantry"
+		type=infantry
+		home=205
+	}
+	regiment = {
+		name="1st Tuscaloosa Infantry"
+		type=infantry
+		home=196
+	}
+	regiment = {
+		name="1st Charlotte Infantry"
+		type=infantry
+		home=209
+	}
+	regiment = {
+		name="1st Trenton Infantry"
+		type=infantry
+		home=230
+	}
+	regiment = {
+		name="1st Columbia Artillery"
+		type=artillery
+		home=206
+	}
+	regiment = {
+		name="2nd Norfolk Artillery"
+		type=artillery
+		home=214
+	}
+	regiment = {
+		name="1st Richmond Artillery"
+		type=artillery
+		home=211
+	}
+}
+
+navy = {
+	name="5th Fleet"
+	location=214
+	ship = {
+		name="2nd Wilmington Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Tampa Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Tampa Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Tampa Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="4th Tampa Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="5th Tampa Man'o'war"
+		type=manowar
+	}
+}
+
+army = {
+	name="19th Army"
+	location=200
+	regiment = {
+		name="1st Columbia Infantry"
+		type=infantry
+		home=206
+	}
+	regiment = {
+		name="1st Tampa Infantry"
+		type=infantry
+		home=200
+	}
+	regiment = {
+		name="2nd Tampa Infantry"
+		type=infantry
+		home=200
+	}
+	regiment = {
+		name="2nd Columbia Infantry"
+		type=infantry
+		home=206
+	}
+	regiment = {
+		name="3rd Tampa Infantry"
+		type=infantry
+		home=200
+	}
+	regiment = {
+		name="1st Tampa Artillery"
+		type=artillery
+		home=200
+	}
+	regiment = {
+		name="1st Fredericksburg Infantry"
+		type=infantry
+		home=213
+	}
+	regiment = {
+		name="1st Atlanta Artillery"
+		type=artillery
+		home=201
+	}
+}
+
+navy = {
+	name="9th Fleet"
+	location=2954
+	ship = {
+		name="1st St Augustine Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Wilmington Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="15th Tampa Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="1st Fleet"
+	location=2953
+	ship = {
+		name="3rd Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="4th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="5th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="6th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="7th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="8th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Norfolk Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Greenville Frigate"
+		type=frigate
+	}
+}
+
+army = {
+	name="5th Army"
+	location=244
+	regiment = {
+		name="2nd Charlotte Infantry"
+		type=infantry
+		home=209
+	}
+	regiment = {
+		name="1st Richmond Infantry"
+		type=infantry
+		home=211
+	}
+	regiment = {
+		name="1st Washington Infantry"
+		type=infantry
+		home=220
+	}
+	regiment = {
+		name="1st Norfolk Infantry"
+		type=infantry
+		home=214
+	}
+	regiment = {
+		name="2nd Richmond Infantry"
+		type=infantry
+		home=211
+	}
+	regiment = {
+		name="1st Augusta Artillery"
+		type=artillery
+		home=2555
+	}
+	regiment = {
+		name="1st Norfolk Artillery"
+		type=artillery
+		home=214
+	}
+	regiment = {
+		name="2nd Tampa Artillery"
+		type=artillery
+		home=200
+	}
+	regiment = {
+		name="1st Montgomery Infantry"
+		type=infantry
+		home=195
+	}
+	regiment = {
+		name="1st Asheville Artillery"
+		type=artillery
+		home=2556
+	}
+}
+
+navy = {
+	name="6th Fleet"
+	location=2971
+	ship = {
+		name="9th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Galilea Maggiore Frigate"
+		type=frigate
+	}
+	ship = {
+		name="10th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="11th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="16th Tampa Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="2nd Fleet"
+	location=204
+	ship = {
+		name="2nd St Augustine Frigate"
+		type=frigate
+	}
+	ship = {
+		name="12th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="13th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="14th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Galilea Maggiore Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="6th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Charleston Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="7th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Savannah Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="8th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st St Augustine Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="9th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="10th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Wilmington Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="11th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd St Augustine Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Tallahassee Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="12th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="13th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="14th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="15th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="16th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="17th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Wilmington Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="18th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="17th Tampa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="19th Tampa Clipper Transport"
+		type=clipper_transport
+	}
+}
+

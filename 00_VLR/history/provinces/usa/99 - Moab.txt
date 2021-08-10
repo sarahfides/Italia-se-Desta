@@ -1,0 +1,7 @@
+add_core=X12
+add_core=LOU
+add_core=MSC
+add_core=DES
+trade_goods = grain
+life_rating = 30
+terrain = mountain

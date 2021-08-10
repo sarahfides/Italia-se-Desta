@@ -1,0 +1,200 @@
+806 = {
+	soldiers=
+	{
+		culture = serb
+		religion = catholic
+		size= 687
+	}
+
+	artisans=
+	{
+		culture = serb
+		religion = catholic
+		size= 4550
+	}
+
+	clergymen=
+	{
+		culture = serb
+		religion = catholic
+		size= 214
+	}
+
+	bureaucrats=
+	{
+		culture = serb
+		religion = catholic
+		size= 69
+	}
+
+	officers=
+	{
+		culture = serb
+		religion = catholic
+		size= 45
+	}
+
+	aristocrats=
+	{
+		culture = serb
+		religion = catholic
+		size= 433
+	}
+
+	farmers=
+	{
+		culture = serb
+		religion = catholic
+		size= 59256
+	}
+
+	soldiers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 234
+	}
+
+	artisans=
+	{
+		culture = serb
+		religion = orthodox
+		size= 7653
+	}
+
+	clergymen=
+	{
+		culture = serb
+		religion = orthodox
+		size= 361
+	}
+
+	bureaucrats=
+	{
+		culture = serb
+		religion = orthodox
+		size= 116
+	}
+
+	officers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 75
+	}
+
+	aristocrats=
+	{
+		culture = serb
+		religion = orthodox
+		size= 728
+	}
+
+	farmers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 13096
+	}
+
+}
+807 = {
+	soldiers=
+	{
+		culture = serb
+		religion = catholic
+		size= 4133
+	}
+
+	artisans=
+	{
+		culture = serb
+		religion = catholic
+		size= 4874
+	}
+
+	clergymen=
+	{
+		culture = serb
+		religion = catholic
+		size= 235
+	}
+
+	bureaucrats=
+	{
+		culture = serb
+		religion = catholic
+		size= 75
+	}
+
+	officers=
+	{
+		culture = serb
+		religion = catholic
+		size= 49
+	}
+
+	aristocrats=
+	{
+		culture = serb
+		religion = catholic
+		size= 475
+	}
+
+	farmers=
+	{
+		culture = serb
+		religion = catholic
+		size= 63524
+	}
+
+	soldiers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 156
+	}
+
+	artisans=
+	{
+		culture = serb
+		religion = orthodox
+		size= 6887
+	}
+
+	clergymen=
+	{
+		culture = serb
+		religion = orthodox
+		size= 332
+	}
+
+	bureaucrats=
+	{
+		culture = serb
+		religion = orthodox
+		size= 107
+	}
+
+	officers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 69
+	}
+
+	aristocrats=
+	{
+		culture = serb
+		religion = orthodox
+		size= 671
+	}
+
+	farmers=
+	{
+		culture = serb
+		religion = orthodox
+		size= 6600
+	}
+
+}

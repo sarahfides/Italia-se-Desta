@@ -1,0 +1,7 @@
+owner=X18
+add_core=X19
+add_core=X18
+add_core=SUS
+trade_goods = iron
+life_rating = 40
+terrain = farmlands

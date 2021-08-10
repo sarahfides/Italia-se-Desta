@@ -1,0 +1,6 @@
+owner=SWI
+add_core=SWI
+add_core=OCC
+trade_goods = grain
+life_rating = 31
+terrain = plains

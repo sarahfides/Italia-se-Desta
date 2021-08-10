@@ -1,0 +1,8 @@
+owner=COL
+controller=COL
+add_core=COL
+add_core=WCY
+trade_goods = grain
+life_rating = 30
+terrain = forest
+colonial=2

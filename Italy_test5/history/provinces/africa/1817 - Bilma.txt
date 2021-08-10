@@ -1,0 +1,7 @@
+owner=ARN
+controller=ARN
+add_core=AYR
+trade_goods = fruit
+life_rating = 10
+terrain = desert
+colonial=2

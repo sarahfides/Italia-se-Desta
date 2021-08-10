@@ -1,0 +1,16 @@
+name = "Ayutthayan Crusade against Orissa"
+
+1820.9.14 = {
+	add_attacker = SIA
+	add_attacker = PSA
+	add_defender = ORI
+	add_defender = SDY
+	add_defender = BRS
+
+	war_goal = {
+		casus_belli = acquire_state
+		actor = SIA
+		receiver = ORI
+		state_province_id = 1343
+	}
+}

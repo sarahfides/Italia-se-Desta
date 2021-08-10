@@ -1,0 +1,176 @@
+vassal=
+{
+	first="ENG"
+	second="NOV"
+	start_date="1768.11.23"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ENG"
+	second="UIL"
+	start_date="1814.1.22"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ENG"
+	second="X19"
+	start_date="1816.8.22"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="CHL"
+	second="CJA"
+	start_date="1820.11.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="X16"
+	start_date="1695.2.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="OTO"
+	start_date="1692.2.27"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="LOU"
+	start_date="1714.4.2"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="HAI"
+	start_date="1745.1.26"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="X12"
+	start_date="1796.4.29"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="FRA"
+	second="COL"
+	start_date="1800.7.26"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="BOH"
+	second="SLV"
+	start_date="1818.6.26"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="BOH"
+	second="SIE"
+	start_date="1818.11.20"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="POR"
+	second="DES"
+	start_date="1740.8.25"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="POR"
+	second="MEX"
+	start_date="1742.12.20"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="X13"
+	start_date="1668.2.6"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="ULM"
+	start_date="1703.12.11"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="X17"
+	start_date="1719.11.20"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="X18"
+	start_date="1740.12.4"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="WSI"
+	start_date="1744.1.4"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="ITA"
+	second="X20"
+	start_date="1818.9.6"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="HLL"
+	second="CRB"
+	start_date="1794.4.10"
+	end_date="1936.1.1"
+}
+
+vassal=
+{
+	first="HLL"
+	second="X15"
+	start_date="1795.4.10"
+	end_date="1936.1.1"
+}
+

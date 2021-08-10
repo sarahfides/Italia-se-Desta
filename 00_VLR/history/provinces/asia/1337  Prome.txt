@@ -1,0 +1,8 @@
+owner=KAC
+controller=KAC
+add_core=BUR
+add_core=IDO
+add_core=KAC
+trade_goods = grain
+life_rating = 30
+terrain = jungle

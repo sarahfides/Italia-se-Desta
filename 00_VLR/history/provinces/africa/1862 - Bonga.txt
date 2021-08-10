@@ -1,0 +1,6 @@
+owner=AJU
+add_core=ETH
+add_core=KAF
+trade_goods = grain
+life_rating = 30
+terrain = mountain

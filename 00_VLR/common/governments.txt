@@ -1,0 +1,151 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new forms of governemnts, make sure they are uniquely named.
+
+proletarian_dictatorship = {
+	#VANGUARDIST REPUBLIC
+	#which ideology of parties.
+	communist = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = communist
+}
+
+presidential_dictatorship = {
+	#PRESIDENTIAL REPUBLIC
+	#which ideology of parties.
+	reactionary = yes
+	fascist = yes
+	conservative = yes
+	agrarian = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = republic
+}
+ 
+bourgeois_dictatorship = {
+	#RADICAL REPUBLIC
+	#which ideology of parties.
+	anarcho_liberal = yes #Radical
+	liberal = yes
+	socialist = yes
+	social_liberal = yes
+	
+	election = yes
+	duration = 72
+	appoint_ruling_party = no
+}
+
+fascist_dictatorship = {
+	#FASCIST DICTATORSHIP
+	#which ideology of parties.
+	fascist = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = fascist
+}
+ 
+absolute_monarchy = {
+	liberal = yes
+	social_liberal = yes
+	conservative = yes
+	reactionary = yes
+	agrarian = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+ 
+prussian_constitutionalism = {
+	liberal = yes
+	social_liberal = yes
+	socialist = yes
+	conservative = yes
+	agrarian = yes
+	reactionary = yes
+	
+	election = yes
+	duration = 60
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+hms_government = {
+	liberal = yes
+	socialist = yes
+	conservative = yes
+	reactionary = yes
+	communist = yes
+	anarcho_liberal = yes #Radical
+	fascist = yes
+	agrarian = yes
+	social_liberal = yes
+	
+	election = yes
+	duration = 60
+	appoint_ruling_party = no
+	flagType = monarchy
+}
+
+democracy = {
+	liberal = yes
+	socialist = yes
+	conservative = yes
+	reactionary = yes
+	communist = yes
+	anarcho_liberal = yes #Radical
+	fascist = yes
+	agrarian = yes
+	social_liberal = yes
+	
+	election = yes
+	duration = 48
+	appoint_ruling_party = no
+}
+
+theocracy = {
+	#which ideology of parties.
+	reactionary = yes
+	conservative = yes
+	fascist = yes
+	agrarian = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+ 
+socialist_republic = {
+	#which ideology of parties.
+	communist = yes
+	socialist = yes
+	anarcho_liberal = yes #Radical
+	
+	election = yes
+	duration = 60
+	appoint_ruling_party = yes
+	flagType = communist
+}
+ 
+revolutionary_empire = {
+	#which ideology of parties.
+	reactionary = yes
+	conservative = yes
+	
+	election = yes
+	duration = 60
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+ 
+international_settlement = {
+	#which ideology of parties.
+	liberal = yes
+	
+	election = yes
+	duration = 24
+	appoint_ruling_party = no
+}

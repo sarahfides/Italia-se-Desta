@@ -1,0 +1,6 @@
+owner=ZAF
+add_core=FUL
+add_core=ZAF
+trade_goods = cattle
+life_rating = 15
+terrain = plains

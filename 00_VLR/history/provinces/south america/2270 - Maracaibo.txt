@@ -1,0 +1,7 @@
+owner=X17
+add_core=X17
+add_core=CLM
+trade_goods = coffee
+life_rating = 30
+terrain = plains
+naval_base = 2

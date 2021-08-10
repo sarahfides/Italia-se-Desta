@@ -1,0 +1,153 @@
+2129 = {
+	soldiers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 245
+	}
+
+	artisans=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 489
+	}
+
+	clergymen=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 80
+	}
+
+	bureaucrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 24
+	}
+
+	officers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 9
+	}
+
+	aristocrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 103
+	}
+
+	farmers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 11294
+	}
+
+}
+2130 = {
+	soldiers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 236
+	}
+
+	artisans=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 471
+	}
+
+	clergymen=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 76
+	}
+
+	bureaucrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 23
+	}
+
+	officers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 9
+	}
+
+	aristocrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 98
+	}
+
+	farmers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 10849
+	}
+
+}
+2132 = {
+	soldiers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 235
+	}
+
+	artisans=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 471
+	}
+
+	clergymen=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 76
+	}
+
+	bureaucrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 23
+	}
+
+	officers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 9
+	}
+
+	aristocrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 98
+	}
+
+	farmers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 10845
+	}
+
+}

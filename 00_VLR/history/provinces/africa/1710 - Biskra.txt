@@ -1,0 +1,5 @@
+owner=ITA
+trade_goods = iron
+life_rating = 35
+terrain = desert
+colonial=2

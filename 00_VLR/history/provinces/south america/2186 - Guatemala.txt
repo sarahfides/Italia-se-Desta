@@ -1,0 +1,8 @@
+owner=CLM
+add_core=UCA
+add_core=MEX
+trade_goods = fruit
+life_rating = 30
+terrain = plains
+colonial=2
+naval_base = 1

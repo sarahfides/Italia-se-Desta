@@ -1,0 +1,7 @@
+owner=EGY
+add_core=IRQ
+add_core=SRN
+trade_goods = sulphur
+life_rating = 35
+terrain = hills
+colonial=2

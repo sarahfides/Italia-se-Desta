@@ -1,0 +1,27 @@
+#
+## 2110000 - GENERAL EVENT CHAINS ##
+#
+# 2110001 - Colonial Transfers (overlord owns puppet core)
+# 2110101 - Colonial Management (slavery, changes of government)
+# 2110201 - Wars
+# 2110301 - Scramble for Africa
+# 2110401 - Congress of Vienna
+# 2110501 - Revolutions (including from SiR)
+#
+## 2111000 - COUNTRY FLAVOUR ##
+#
+# 2111001 - Russian flavour
+# 2111031 - Chinese flavour
+# 2111071 - Iberian African nations 
+# 2111091 - Mamluk Flavour
+# 2111121 - Swiss Flavour
+# 2111141 - Austrian Flavour
+# 2111180 - Suez & Shanghai
+# 2111221 - Iberia
+# 2111251 - UK / Great Britain / England
+# 2111301 - German Confederation & Germany
+#
+## 2119950 - INTRODUCTIONS ##
+#
+# 2119951 - Country introductions
+#

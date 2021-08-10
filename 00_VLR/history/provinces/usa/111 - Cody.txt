@@ -1,0 +1,5 @@
+add_core=NAK
+add_core=LOU
+trade_goods = coal
+life_rating = 30
+terrain = mountain

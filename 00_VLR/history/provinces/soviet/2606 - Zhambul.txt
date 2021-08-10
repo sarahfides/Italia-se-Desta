@@ -1,0 +1,7 @@
+owner=TRX
+add_core=RUS
+add_core=KAZ
+add_core=TRX
+trade_goods = coal
+life_rating = 25
+terrain = hills

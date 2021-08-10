@@ -1,0 +1,5 @@
+owner=CIR
+add_core=UKR
+trade_goods = fish
+life_rating = 35
+terrain = farmlands

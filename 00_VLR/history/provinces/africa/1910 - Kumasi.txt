@@ -1,0 +1,5 @@
+owner=ITA
+add_core=MFL
+trade_goods = coffee
+life_rating = 15
+terrain = plains

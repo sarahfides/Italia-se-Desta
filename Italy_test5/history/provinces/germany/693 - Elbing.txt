@@ -1,0 +1,7 @@
+owner=LIV
+controller=LIV
+add_core=GER
+add_core=LIV
+trade_goods = cattle
+life_rating = 40
+terrain = plains

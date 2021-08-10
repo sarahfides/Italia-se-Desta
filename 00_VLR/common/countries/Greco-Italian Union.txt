@@ -1,0 +1,306 @@
+graphical_culture = ItalianGC
+color = { 56 164 166 }
+
+party = {
+	name = "ITA_reactionary"
+	start_date = 1836.1.1
+	end_date = 1843.1.1
+
+	ideology = reactionary
+
+	citizenship_policy = residency
+	economic_policy = state_capitalism
+	religious_policy = pluralism
+	social_policy = no_state_interference
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_reactionary_2"
+	start_date = 1829.1.1
+	end_date = 1872.1.1
+
+	ideology = reactionary
+
+	citizenship_policy = residency
+	economic_policy = state_capitalism
+	religious_policy = moralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_reactionary_3"
+	start_date = 1860.1.1
+	end_date = 2000.1.1
+
+	ideology = reactionary
+
+	citizenship_policy = residency
+	economic_policy = state_capitalism
+	religious_policy = moralism
+	social_policy = no_state_interference
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_conservative"
+	start_date = 1800.1.1
+	end_date = 1839.1.1
+
+	ideology = conservative
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = no_state_interference
+	trade_policy = free_trade
+	war_policy = pro_military
+}
+
+party = {
+	name = "ITA_conservative_2"
+	start_date = 1833.1.1
+	end_date = 1855.1.1
+
+	ideology = conservative
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = moralism
+	social_policy = no_position_set
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+party = {
+	name = "ITA_conservative_3"
+	start_date = 1846.1.1
+	end_date = 1869.1.1
+
+	ideology = conservative
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = no_state_interference
+	trade_policy = protectionism
+	war_policy = pro_military
+}
+
+party = {
+	name = "ITA_conservative_4"
+	start_date = 1863.1.1
+	end_date = 1891.1.1
+
+	ideology = conservative
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = moralism
+	social_policy = no_state_interference
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_conservative_5"
+	start_date = 1880.1.1
+	end_date = 2000.1.1
+
+	ideology = conservative
+
+	citizenship_policy = limited_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = populist_welfare
+	trade_policy = free_trade
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_liberal"
+	start_date = 1800.1.1
+	end_date = 1844.1.1
+
+	ideology = liberal
+
+	citizenship_policy = limited_citizenship
+	economic_policy = laissez_faire
+	religious_policy = secularized
+	social_policy = no_state_interference
+	trade_policy = free_trade
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_liberal_2"
+	start_date = 1836.1.1
+	end_date = 1876.1.1
+
+	ideology = liberal
+
+	citizenship_policy = limited_citizenship
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = colonial_spending_policy
+	trade_policy = free_trade
+	war_policy = pro_military
+}
+
+party = {
+	name = "ITA_liberal_3"
+	start_date = 1871.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = full_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = populist_welfare
+	trade_policy = free_trade
+	war_policy = anti_military
+}
+
+party = {
+	name = "ITA_liberal_4"
+	start_date = 1872.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = full_citizenship
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = colonial_spending_policy
+	trade_policy = free_trade
+	war_policy = pro_military
+}
+
+party = {
+	name = "ITA_socialist"
+	start_date = 1848.1.1
+	end_date = 1890.1.1
+
+	ideology = socialist
+
+	citizenship_policy = full_citizenship
+	economic_policy = state_capitalism
+	religious_policy = secularized
+	social_policy = populist_welfare
+	trade_policy = protectionism
+	war_policy = pacifism
+}
+
+party = {
+	name = "ITA_socialist_2"
+	start_date = 1875.1.1
+	end_date = 2000.1.1
+
+	ideology = socialist
+
+	citizenship_policy = full_citizenship
+	economic_policy = state_capitalism
+	religious_policy = secularized
+	social_policy = welfare_state
+	trade_policy = protectionism
+	war_policy = anti_military
+}
+
+party = {
+	name = "ITA_anarcho_liberal"
+	start_date = 1824.1.1
+	end_date = 1900.1.1
+
+	ideology = anarcho_liberal
+
+	citizenship_policy = full_citizenship
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = colonial_spending_policy
+	trade_policy = free_trade
+	war_policy = pacifism
+}
+
+party = {
+	name = "ITA_anarcho_liberal_2"
+	start_date = 1889.1.1
+	end_date = 2000.1.1
+
+	ideology = anarcho_liberal
+
+	citizenship_policy = full_citizenship
+	economic_policy = laissez_faire
+	religious_policy = secularized
+	social_policy = colonial_spending_policy
+	trade_policy = free_trade
+	war_policy = anti_military
+}
+
+party = {
+	name = "ITA_communist"
+	start_date = 1842.1.1
+	end_date = 2000.1.1
+
+	ideology = communist
+
+	citizenship_policy = full_citizenship
+	economic_policy = planned_economy
+	religious_policy = pro_atheism
+	social_policy = welfare_state
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+party = {
+	name = "ITA_fascist"
+	start_date = 1900.1.1
+	end_date = 2000.1.1
+
+	ideology = fascist
+
+	citizenship_policy = limited_citizenship
+	economic_policy = state_capitalism
+	religious_policy = moralism
+	social_policy = populist_welfare
+	trade_policy = protectionism
+	war_policy = jingoism
+}
+
+unit_names= {
+    dreadnought = {
+        "Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto" "Georgios Averof" "King George I" "King George II" "King Otto" "King Constantine" "King Alexander" "Queen Olga" "Queen Sophia Constantinova" "Queen Amalia" "Queen Aspasia" "Queen Sophia of Prussia" "Constantine the Great" "Theodosius the Great" "Justinian the Great" Phocas "Irene of Athens" "Empress Theodora" "Nikephoros I" "Basil I" "Nikephoros II Phokas" "Alexios I Komnenos" "Manuel I Komnenos" "Isaac I Angelos" "Theodore I Laskaris" "Michail VIII Palaiologos" "Constantine XI Palaiologos"
+    }
+    battleship = {
+        "Caio Duilio" "Enrico Dandolo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Andrea Doria" "Re Umberto" Sicilia Sardegna "Ammiraglio di Saint Bon" "Emanuele Filiberto" "Regina Margherita" "Benedetto Brin" "Regina Elena" "Vittorio Emanuele" Napoli Roma "Alexander the Great" "Phillip II" Pericles Demosthenes Aristotle Pythagoras Homer Leonidas Herodotus Hippocrates Socrates Plato Archimedes Cleopatra Miltiades Lysander Epaminondas Aristides Lycurgus "Memnon of Rhodes" Polycrates Ptolemy "Pyrrhus of Epirus" Solon Themostocles Xenophon Seleucus "Diogenes of Sinope" Eratosthenes Hypatia Protagoras Theophrastus "Thales of Miletus"
+    }
+    ironclad = {
+        "Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto" Aegina Hydra Poros Spetsees Angistri Salamina Dokos Skiathos Skopelos Skyros Alonissos Corfu Ithaca Cephalonia Kythira Lefkada Paxi Zacynthus "Agios Efstratios" Chios Oinousses Psara Antipsara Ikaria "Fournoi Korseon" "Agios Minas" Thymaina Lesbos Lemnos Samos Samiopoula Samothraki Thasos Cyprus Imvros Tenedos Amorgos Anafi Andros Antiparos Delos Donoussa Folegandros Gyaros Ios Iraklia 
+    }
+    manowar = {
+        Sicilia Sardegna Puglia Libia Campania Basilicata Quarto Venezia Trento "Valle d'Aosta" Piemonte Liguria Lombardia Veneto Trentino Friuli "Emilia-Romagna" Toscana Marche Umbria Lazio Abruzzo Molise Calabria Anacreon Alcaeus Alcman Aeschylus Apollodorus Apollonius Aristophanes Callimachus "Cassius Dio" Euripides Eusebius "Hecataeus of Miletus" "Hecataeus of Abdera" Hesiod Longus Menander Pausanias Pindar Plutarch Polybius Polycarp Sappho Sophocles Theocritus Thucydides Agesandros Agasias Callicrates Lysippus Myron Phidias Polyclitus Polyeuctes Pheidias Praxiteles Scopas
+    }
+    cruiser = {
+        "Marco Polo" "Carlo Alberto" "Vettor Pisani" "General Garibaldi" "General San Martin" "General Belgrano" "General Pueyrredon" Amalfi Pisa "San Giorgio" "San Marco" "Nino Bixio" Marsala Taranto Brindisi Bari Trieste Fiume Gorizia Pola Zara Bolzano Kea Keros Kimolos Koufonisia Kythnos Makronissos Milos Mykonos Naxos Paros Polyaigos Santorini Schoinoussa Serifos Sifnos Sikinos Syros Thirasia Tinos "Afendis Christos" "Agia Varvara" "Agioi Apostoloi" "Agioi Pandes" "Agioi Theodoroi" "Agios Nikolaos" Anavatis Antimilos Arnaouti "Aspros Volakas" Avgo Crete Daskaleia Dia Diapori Dionysades Dragonada Elasa "Ftena Trachylia" Gianysada Glaronisi Gramvoussa Grandes Kalydon Karavi Karga Katergo
+    }
+    frigate = {
+        Fulmine Lampo Freccia Dardo Strale Euro Ostro Nembo Turbine Aquilone Borea Zeffiro Espero Artigliere Bersagliere Corazziere Garibaldino Granatiere Lanciere Alpino Fuciliere Pontiere Ascaro Indomito Impavido Impetuoso Insidioso Intrepido Irrequieto Ardito Ardente Audace Animoso "Alexander Ypsilantis" "Demetrius Ypsilantis" "Constantine Kanaris" "Laskarina Bouboulina" "Manto Mavrogenous" "Alexander Mavrokordatos" "Athanasios Diakos" "Andreas Miaoulis" "Petros Mavromichalis" "Yannis Makriyannis" "Georgios Karaiskakis" "Antonios Kriezis" "Dimitrios Papanikolis" Papaflessas "Markos Botsaris" "Lord Byron" "Charles Nicolas Fabvier" "Nikitas Stamatelopoulos" "Emannouel Pappas" "Theodoros Kolokotronis"
+    }
+    monitor = {
+        "Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto" Kavallos Kefali Kolokythas Koursaroi Kyriamadi Lazaretta Leon Mavros "Mavros Volakas" Megatzedes Mochlos Nikolos Palaiosouda Paximada Paximadaki Peristeri Peristerovrachoi Petalida Petalouda Pontikaki Pontikonisi Praso Kissamou Prosfora Pseira Sideros Souda Valenti Vryonisi "Agia Eirini" Agriomandra Artemis "Ammoudi tous Volakous" Chrysi Elafonisi Fotia Gaidouronisi Gavdos Gavdopoula Koufonisi Loutro Makroulo Marmaro
+
+    }
+    clipper_transport = {
+
+    }
+    steam_transport = {
+
+    }
+    commerce_raider = {
+        "Rosolino Pilo" "Giuseppe Cesare Abba" "Pilade Bronzetti" "Giuseppe Missori" "Antonio Mosto" "Ippolito Nievo" "Francesco Nullo" "Simone Schiaffino" "Giuseppe Sirtori" "Giovanni Acerbi" "Vincenzo Giordano Orsini" "Francesco Stucco" Constantinople Athens Thessaloniki Patras Piraeus Larissa Heraklion Peristeri Kallthea Acharnes Kalamaria Nikaia Glyfada Volos Ilio Ilioupoli Keratsini Evosmos Chalandri "Nea Smyrni" Marousi "Agios Dimitrios" Zografou Egaleo "Nea Ionia" Ioannina "Palaio Faliro" Korydallos Trikala Vyronas "Agia Paraskevi" Galatsi Chalcis Petroupoli Serres Alexandroupoli Xanthi Katerini Kalamata Kavala Chania Lamia Komotini Irakleio Rhodes Drama Veria Kozani Karditsa 
+    }
+}

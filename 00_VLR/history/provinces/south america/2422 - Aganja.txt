@@ -1,0 +1,6 @@
+owner=X13
+add_core=X13
+add_core=BRZ
+trade_goods = fruit
+life_rating = 30
+terrain = hills

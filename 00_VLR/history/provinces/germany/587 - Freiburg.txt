@@ -1,0 +1,8 @@
+owner=FRA
+controller=FRA
+add_core=GER
+add_core=KNZ
+add_core=ALS
+trade_goods = fruit
+life_rating = 40
+terrain = woods

@@ -1,0 +1,8 @@
+owner=ARN
+controller=ARN
+add_core=KAN
+add_core=KBO
+trade_goods = fish
+life_rating = 10
+terrain = plains
+colonial=2

@@ -1,0 +1,6 @@
+owner=SIA
+add_core=BUR
+add_core=PEG
+trade_goods = fish
+life_rating = 30
+terrain = hills

@@ -1,0 +1,7 @@
+owner=ZAF
+controller=ARN
+add_core=FUL
+add_core=ZAF
+trade_goods = timber
+life_rating = 15
+terrain = hills

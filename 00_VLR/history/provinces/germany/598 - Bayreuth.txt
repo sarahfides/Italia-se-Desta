@@ -1,0 +1,7 @@
+owner=BOH
+add_core=GER
+add_core=X00
+add_core=AUG
+trade_goods = timber
+life_rating = 40
+terrain = plains

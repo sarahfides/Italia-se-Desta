@@ -1,0 +1,9 @@
+owner=X18
+controller=X18
+add_core=IRO
+add_core=MHC
+add_core=PEQ
+add_core=X18
+trade_goods = iron
+life_rating = 35
+terrain = woods

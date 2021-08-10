@@ -1,0 +1,9 @@
+owner=SWA
+controller=SWA
+add_core=MAD
+add_core=SKA
+add_core=SWA
+trade_goods = timber
+life_rating = 35
+terrain = hills
+naval_base = 2

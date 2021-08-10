@@ -1,0 +1,1095 @@
+country_event = { 
+	id = 2111181 #Shanghai International Settlement
+	title = "SIS.001.T"
+	desc = "SIS.001.D"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances =  no
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "SIS.001.1"
+		#set_global_flag = shanghai_international_settlement
+		#set_country_flag = shanghai_major_concession
+		#set_country_flag = original_shanghai_owner
+		add_country_modifier = {
+			name = shanghai_major_concession
+			duration = -1
+		}
+		1538 = {
+			secede_province = SIS
+			add_core = SIS
+			life_rating = 2
+		}
+		SIS = {
+			set_country_flag = neutral_state
+			accepted_culture = nanfaren
+			primary_culture = FROM
+			#any_owned = {
+			#	assimilate = yes
+			#}
+			civilized = yes
+			ruling_party_ideology = liberal
+			government = international_settlement
+			social_reform = no_minimum_wage
+			social_reform = no_work_hour_limit
+			social_reform = no_safety
+			social_reform = no_health_care
+			social_reform = no_subsidies
+			social_reform = no_pensions
+			social_reform = no_schools
+			social_reform = no_pollution_regulations
+			social_reform = capital_punishment
+			social_reform = child_labor_legal
+			social_reform = culture_voting_only
+			social_reform = reactionary_state
+			political_reform = yes_slavery
+			political_reform = landed_voting
+			political_reform = appointed
+			political_reform = first_past_the_post
+			political_reform = yes_meeting
+			political_reform = censored_press
+			political_reform = no_trade_unions
+			political_reform = underground_parties
+			political_reform = no_draft
+			political_reform = open_borders
+			political_reform = bankruptcy
+			political_reform = unitary
+			set_variable = {
+				which = SIS_members
+				value = 1.1
+			}
+		}
+		relation = {
+			who = SIS
+			value = 400
+		}
+		diplomatic_influence = {
+			who = SIS
+			value = 200
+		}
+		
+		ai_chance = {
+			factor = 99
+		}
+	}
+	
+	#option = {
+	#	name = "SIS.001.1"
+	#	prestige = -20
+	#	set_global_flag = no_shanghai_international_settlement
+	#	
+	#	ai_chance = {
+	#		factor = 1
+	#	}
+	#}
+}
+
+country_event = { 
+	id = 2111182 #Our Application for a Concession at the SIS, from decision
+	title = "SIS.002.T"
+	desc = "SIS.002.D"
+	picture = "shanghai_international_settlement"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "SIS.002.1" #Send application
+		set_global_flag = considering_new_sis_member
+		set_country_flag = new_sis_member
+		SIS = {
+			set_variable = {
+				which = SIS_new_member
+				value = 0.1
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = shanghai_minor_concession
+			}
+			country_event = {
+				id = 2111183
+				days = 10
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = shanghai_major_concession
+			}
+			country_event = {
+				id = 2111184
+				days = 10
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111183 #A New Concession at the SIS? (for minor concessions)
+	title = "SIS.003.T"
+	desc = "SIS.003.D"
+	picture = "shanghai_international_settlement"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "SIS.003.1" #Refuse
+		set_country_flag = voted_no_on_new_sis_member
+		SIS = {
+			change_variable = {
+				which = SIS_new_member
+				value = -0.5
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 10
+				not = {
+					relation = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "SIS.003.2" #Small rights
+		set_country_flag = voted_min_on_new_sis_member
+		SIS = {
+			change_variable = {
+				which = SIS_new_member
+				value = 0.5
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 10
+				relation = {
+					who = FROM
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				truce_with = FROM
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111184 #A New Concession at the SIS? (for major concessions)
+	title = "SIS.003.T"
+	desc = "SIS.003.D"
+	picture = "shanghai_international_settlement"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "SIS.003.1" #Refuse
+		set_country_flag = voted_no_on_new_sis_member
+		SIS = {
+			change_variable = {
+				which = SIS_new_member
+				value = -1
+			}
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 10
+				not = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "SIS.003.2" #Small concession
+		set_country_flag = voted_min_on_new_sis_member
+		SIS = {
+			change_variable = {
+				which = SIS_new_member
+				value = 0.5
+			}
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				not = {
+					relation = {
+						who = FROM
+						value = 100
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "SIS.003.3" #Major concession
+		set_country_flag = voted_max_on_new_sis_member
+		SIS = {
+			change_variable = {
+				which = SIS_new_member
+				value = 1
+			}
+		}
+		
+		ai_chance = {
+			factor = 33
+			
+			modifier = {
+				factor = 3
+				relation = {
+					who = FROM
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					is_greater_power = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111185 #Concession refused
+	title = "SIS.005.T"
+	desc = "SIS.005.D"
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = considering_new_sis_member
+		has_country_flag = new_sis_member
+		SIS = {
+			not = {
+				check_variable = {
+					which = SIS_new_member
+					value = 0
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 2
+		
+		#modifier = {
+		#	factor = 5
+		#	any_country = {
+		#		limit = {
+		#			or = {
+		#				has_country_flag = shanghai_minor_concession
+		#				has_country_flag = shanghai_major_concession
+		#			}
+		#		}
+		#		not = {
+		#			or = {
+		#				has_country_flag = voted_no_on_new_sis_member
+		#				has_country_flag = voted_min_on_new_sis_member
+		#				has_country_flag = voted_max_on_new_sis_member
+		#			}
+		#		}
+		#	}
+		#}
+	}
+	
+	option = {
+		name = "SIS.005.1" #Refuse
+		set_country_flag = refused_concession_at_sis
+		prestige = -20
+		any_country = {
+			limit = {
+				has_country_flag = voted_no_on_new_sis_member
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		SIS = {
+			set_variable = {
+				which = SIS_new_member
+				value = 0
+			}
+		}
+		any_country = {
+			clr_country_flag = voted_no_on_new_sis_member
+			clr_country_flag = voted_min_on_new_sis_member
+			clr_country_flag = voted_max_on_new_sis_member
+			clr_country_flag = new_sis_member
+		}
+		clr_global_flag = considering_new_sis_member
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111186 #Minor concession
+	title = "SIS.006.T"
+	desc = "SIS.006.D"
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = considering_new_sis_member
+		has_country_flag = new_sis_member
+		or = {
+			and = {
+				SIS = {
+					not = {
+						check_variable = {
+							which = SIS_members
+							value = 1
+						}
+					}
+				}
+				SIS = {
+					check_variable = {
+						which = SIS_new_member
+						value = 0
+					}
+					not = {
+						check_variable = {
+							which = SIS_new_member
+							value = 1
+						}
+					}
+				}
+			}
+			and = {
+				SIS = {
+					check_variable = {
+						which = SIS_members
+						value = 1
+					}
+				}
+				SIS = {
+					check_variable = {
+						which = SIS_new_member
+						value = 0
+					}
+					not = {
+						check_variable = {
+							which = SIS_new_member
+							value = 2
+						}
+					}
+				}
+			}
+		}
+		#any_country = {
+		#	limit = {
+		#		or = {
+		#			has_country_flag = shanghai_minor_concession
+		#			has_country_flag = shanghai_major_concession
+		#		}
+		#	}
+		#	not = {
+		#		or = {
+		#			has_country_flag = voted_no_on_new_sis_member
+		#			has_country_flag = voted_min_on_new_sis_member
+		#			has_country_flag = voted_max_on_new_sis_member
+		#		}
+		#	}
+		#}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "SIS.006.1"
+		set_country_flag = shanghai_minor_concession
+		add_country_modifier = {
+			name = shanghai_minor_concession
+			duration = -1
+		}
+		prestige = 5
+		any_country = {
+			limit = {
+				or = {
+					has_country_flag = voted_no_on_new_sis_member
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		SIS = {
+			set_variable = {
+				which = SIS_new_member
+				value = 0
+			}
+			change_variable = {
+				which = SIS_members
+				value = 1
+			}
+		}
+		any_country = {
+			clr_country_flag = voted_no_on_new_sis_member
+			clr_country_flag = voted_min_on_new_sis_member
+			clr_country_flag = voted_max_on_new_sis_member
+			clr_country_flag = new_sis_member
+		}
+		clr_global_flag = considering_new_sis_member
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111187 #Major concession
+	title = "SIS.007.T"
+	desc = "SIS.007.D"
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = considering_new_sis_member
+		has_country_flag = new_sis_member
+		or = {
+			and = {
+				SIS = {
+					not = {
+						check_variable = {
+							which = SIS_members
+							value = 1
+						}
+					}
+				}
+				SIS = {
+					check_variable = {
+						which = SIS_new_member
+						value = 1
+					}
+				}
+			}
+			and = {
+				SIS = {
+					check_variable = {
+						which = SIS_members
+						value = 1
+					}
+				}
+				SIS = {
+					check_variable = {
+						which = SIS_new_member
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 2
+		
+		#modifier = {
+		#	factor = 5
+		#	any_country = {
+		#		limit = {
+		#			or = {
+		#				has_country_flag = shanghai_minor_concession
+		#				has_country_flag = shanghai_major_concession
+		#			}
+		#		}
+		#		not = {
+		#			or = {
+		#				has_country_flag = voted_no_on_new_sis_member
+		#				has_country_flag = voted_min_on_new_sis_member
+		#				has_country_flag = voted_max_on_new_sis_member
+		#			}
+		#		}
+		#	}
+		#}
+	}
+	
+	option = {
+		name = "SIS.007.1"
+		set_country_flag = shanghai_major_concession
+		add_country_modifier = {
+			name = shanghai_major_concession
+			duration = -1
+		}
+		prestige = 5
+		any_country = {
+			limit = {
+				or = {
+					has_country_flag = voted_no_on_new_sis_member
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		SIS = {
+			set_variable = {
+				which = SIS_new_member
+				value = 0
+			}
+			change_variable = {
+				which = SIS_members
+				value = 1
+			}
+		}
+		any_country = {
+			clr_country_flag = voted_no_on_new_sis_member
+			clr_country_flag = voted_min_on_new_sis_member
+			clr_country_flag = voted_max_on_new_sis_member
+			clr_country_flag = new_sis_member
+		}
+		clr_global_flag = considering_new_sis_member
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111188 #Dividends from the SIS
+	title = "SIS.008.T"
+	desc = "SIS.008.D"
+	picture = "shanghai_dividends"
+	
+	trigger = {
+		tag = SIS
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "SIS.008.1"
+		random_list = { #test to see if the chance number seed causes the same outcome every time?
+			25 = {
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_minor_concession
+					}
+					country_event = 2111189 #Good year (minor)
+				}
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_major_concession
+					}
+					country_event = 2111190 #Good year (major)
+				}
+			}
+			50 = {
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_minor_concession
+					}
+					country_event = 2111191 #Average year (minor)
+				}
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_major_concession
+					}
+					country_event = 2111192 #Average year (major)
+				}
+			}
+			25 = {
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_minor_concession
+					}
+					country_event = 2111193 #Bad year (minor)
+				}
+				any_country = {
+					limit = { 
+						has_country_flag = shanghai_major_concession
+					}
+					country_event = 2111194 #Bad year (major)
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111189 #Good year (minor)
+	title = "SIS.009.T"
+	desc = "SIS.009.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.009.1"
+		add_tax_relative_income = 5
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111190 #Good year (major)
+	title = "SIS.009.T"
+	desc = "SIS.009.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.009.1"
+		add_tax_relative_income = 10
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111191 #Average year (minor)
+	title = "SIS.011.T"
+	desc = "SIS.011.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.011.1"
+		add_tax_relative_income = 2.5
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111192 #Average year (major)
+	title = "SIS.011.T"
+	desc = "SIS.011.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.011.1"
+		add_tax_relative_income = 5
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111193 #Bad year (minor)
+	title = "SIS.013.T"
+	desc = "SIS.013.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.013.1"
+		add_tax_relative_income = -5
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111194 #Bad year (major)
+	title = "SIS.013.T"
+	desc = "SIS.013.D"
+	picture = "shanghai_dividends"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.013.1"
+		add_tax_relative_income = -10
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111195 #Chinese Jazz
+	title = "SIS.015.T"
+	desc = "SIS.015.D"
+	picture = "seven_singing_stars"
+	
+	trigger = {
+		not = {
+			tag = SIS
+		}
+		or = {
+			and = {
+				has_country_flag = original_shanghai_owner
+				exists = SIS
+			}
+			owns = 1538
+		}
+		invention = jazz
+		year = 1900
+	}
+	
+	allow_multiple_instances =  no
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "SIS.015.1"
+		prestige = 20
+		any_country = {
+			limit = {
+				owns = 1612
+			}
+			country_event = 2111196
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "SIS.015.2"
+		prestige = 25
+		any_country = {
+			limit = {
+				owns = 1612
+			}
+			country_event = 2111196
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = { 
+	id = 2111196 #Chinese Jazz (China)
+	title = "SIS.016.T"
+	desc = "SIS.016.D"
+	picture = "seven_singing_stars"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SIS.016.1"
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				or = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = agrarian
+					pop_majority_ideology = fascist
+				}
+			}
+			militancy = 2
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111197 #The Magnificence of the Bund
+	title = "SIS.017.T"
+	desc = "SIS.017.D"
+	picture = "shanghai_bund"
+	
+	trigger = {
+		not = {
+			tag = SIS
+		}
+		or = {
+			and = {
+				has_country_flag = original_shanghai_owner
+				exists = SIS
+			}
+			owns = 1538
+		}
+		has_country_flag = original_shanghai_owner
+		invention = modern_design
+		year = 1910
+	}
+	
+	allow_multiple_instances =  no
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "SIS.017.1"
+		prestige = 20
+		1538 = {
+			life_rating = 2
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111198 #Reclaiming Shanghai
+	title = "SIS.018.T"
+	desc = "SIS.018.D"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances =  no
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "SIS.018.1"
+		1538 = {
+			add_core = CHI
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111199 #Shanghai Conquered
+	title = "SIS.019.T"
+	desc = "SIS.019.D"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances =  no
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "SIS.019.1"
+		prestige = 20
+		1538 = {
+			remove_core = SIS
+			life_rating = -2
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111101 #Greetings from Suez (Sole ownership)
+	title = "SEZ.001.T"
+	desc = "SEZ.001.D"
+	picture = "greetings_from_suez"
+	
+	trigger = {
+		has_country_flag = suez_owner
+		not = {
+			has_global_flag = suez_not_operational
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "SEZ.001.1"
+		add_tax_relative_income = 1.25
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111102 #Serious Incident at the Suez Canal
+	title = "SEZ.002.T"
+	desc = "SEZ.002.D"
+	picture = "accident_at_suez"
+	
+	trigger = {
+		has_country_flag = suez_owner
+		not = {
+			has_global_flag = suez_not_operational
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.7
+			social_reform = no_safety
+		}
+		modifier = {
+			factor = 2
+			social_reform = acceptable_safety
+		}
+		modifier = {
+			factor = 2
+			social_reform = good_safety
+		}
+	}
+	
+	option = {
+		name = "SEZ.001.1"
+		add_tax_relative_income = -0.85
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111103 #Ownership over the Suez Canal
+	title = "SEZ.003.T"
+	desc = "SEZ.003.D"
+	picture = "greetings_from_suez"
+	
+	trigger = {
+		1755 = {
+			owned_by = THIS
+		}
+		not = { has_country_flag = suez_owner }
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "SEZ.003.1"
+		set_country_flag = suez_owner
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111101 #The Expansion of the Suez Canal
+	title = "SEZ.002.T"
+	desc = "SEZ.002.D"
+	picture = "crossing_the_suez"
+	
+	trigger = {
+		year = 1850
+		has_country_flag = suez_owner
+		not = {
+			or = {
+				has_global_flag = suez_not_operational
+				has_global_flag = suez_expanded
+			}
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "SEZ.001.1"
+		add_tax_relative_income = 2.5
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

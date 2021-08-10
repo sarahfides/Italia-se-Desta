@@ -1,0 +1,5 @@
+owner=EGY
+add_core=LBN
+trade_goods = iron
+life_rating = 35
+terrain = plains

@@ -1,0 +1,7 @@
+owner=KON
+controller=KON
+add_core=KIK
+add_core=KON
+trade_goods = grain
+life_rating = 15
+terrain = hills

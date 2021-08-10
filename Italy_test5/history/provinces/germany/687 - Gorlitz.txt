@@ -1,0 +1,8 @@
+owner=BOH
+controller=BOH
+add_core=PLC
+add_core=SRB
+add_core=X08
+trade_goods = coal
+life_rating = 40
+terrain = woods

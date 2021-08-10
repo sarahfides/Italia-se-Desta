@@ -1,0 +1,5 @@
+add_core=MSC
+add_core=LOU
+trade_goods = cattle
+life_rating = 35
+terrain = steppe

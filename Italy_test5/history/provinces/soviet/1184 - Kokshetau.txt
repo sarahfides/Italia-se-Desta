@@ -1,0 +1,6 @@
+owner=OIR
+controller=RUS
+add_core=KAZ
+trade_goods = iron
+life_rating = 35
+terrain = forest

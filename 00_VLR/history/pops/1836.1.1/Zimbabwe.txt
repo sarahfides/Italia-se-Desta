@@ -1,0 +1,357 @@
+2068 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 7233
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 1584
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 257
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 36
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 83
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 333
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 30062
+	}
+
+}
+2069 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 410
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 5742
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 267
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 21
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 53
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 345
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 34178
+	}
+
+}
+2070 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 1381
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 6903
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 320
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 25
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 104
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 414
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 40159
+	}
+
+}
+2071 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 614
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 878
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 143
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 11
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 46
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 215
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 20039
+	}
+
+}
+2072 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 4133
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 11866
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 551
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 76
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 178
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 1424
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 66529
+	}
+
+}
+2073 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 629
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 899
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 146
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 11
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 47
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 220
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 20519
+	}
+
+}
+2635 = {
+	soldiers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 1229
+	}
+
+	artisans=
+	{
+		culture = shona
+		religion = shamanism
+		size= 6143
+	}
+
+	clergymen=
+	{
+		culture = shona
+		religion = shamanism
+		size= 285
+	}
+
+	bureaucrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 22
+	}
+
+	officers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 92
+	}
+
+	aristocrats=
+	{
+		culture = shona
+		religion = shamanism
+		size= 369
+	}
+
+	farmers=
+	{
+		culture = shona
+		religion = shamanism
+		size= 35738
+	}
+
+}

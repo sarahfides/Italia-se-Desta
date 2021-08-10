@@ -1,0 +1,6 @@
+owner=X19
+controller=X19
+add_core=CCA
+trade_goods = tobacco
+life_rating = 35
+terrain = woods

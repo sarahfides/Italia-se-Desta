@@ -1,0 +1,8 @@
+owner=NZT
+controller=NZT
+add_core=AOT
+add_core=NZT
+add_core=X15
+trade_goods = cattle
+life_rating = 30
+terrain = woods

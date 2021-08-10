@@ -1,0 +1,7 @@
+owner=ITA
+add_core=EGY
+add_core=JOR
+trade_goods = fruit
+life_rating = 35
+terrain = plains
+colonial=2

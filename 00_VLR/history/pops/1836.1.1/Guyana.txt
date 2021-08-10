@@ -1,0 +1,617 @@
+1979 = {
+	soldiers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 31
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1438
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 4
+	}
+
+	clerks=
+	{
+		culture = guajiro
+		religion = animist
+		size= 5
+	}
+
+	capitalists=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 4
+	}
+
+	craftsmen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 167
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 13
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 3
+	}
+
+	clerks=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 19
+	}
+
+	capitalists=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 3
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 3
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 3
+	}
+
+	craftsmen=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 139
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 20
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 3
+	}
+
+	clerks=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 28
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 2
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 1
+	}
+
+	capitalists=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 5
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 4
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 138
+	}
+
+	craftsmen=
+	{
+		culture = boeroe
+		religion = animist
+		size= 6426
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = animist
+		size= 314
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = animist
+		size= 51
+	}
+
+	clerks=
+	{
+		culture = boeroe
+		religion = animist
+		size= 440
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 24
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 10
+	}
+
+	capitalists=
+	{
+		culture = boeroe
+		religion = animist
+		size= 79
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 66
+	}
+
+}
+2239 = {
+	soldiers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 55
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 2688
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 6
+	}
+
+	clergymen=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 6
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 23
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 4
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 2
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 5
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 277
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 5
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 36
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 6
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 3
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 8
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = catholic
+		size= 206
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 1033
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = animist
+		size= 558
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = animist
+		size= 91
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 42
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 18
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 117
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 10423
+	}
+
+}
+2242 = {
+	soldiers=
+	{
+		culture = carribean
+		religion = animist
+		size= 59
+	}
+
+	farmers=
+	{
+		culture = carribean
+		religion = animist
+		size= 2838
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 36
+	}
+
+	artisans=
+	{
+		culture = carribean
+		religion = animist
+		size= 44
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 8
+	}
+
+	clergymen=
+	{
+		culture = carribean
+		religion = animist
+		size= 2
+	}
+
+	bureaucrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 2
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 5
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 172
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 8
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 4
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 2
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 10
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 22
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 236
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = animist
+		size= 1876
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = animist
+		size= 87
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 40
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 17
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = animist
+		size= 113
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = animist
+		size= 9429
+	}
+
+}
+2243 = {
+	soldiers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1838
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 12860
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 74639
+	}
+
+	aristocrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1543
+	}
+
+	clergymen=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1194
+	}
+
+	bureaucrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 256
+	}
+
+	officers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 119
+	}
+
+}

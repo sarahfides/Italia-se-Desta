@@ -1,0 +1,51 @@
+252 = {
+	soldiers=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 1033
+	}
+
+	artisans=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 1275
+	}
+
+	clergymen=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 207
+	}
+
+	bureaucrats=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 44
+	}
+
+	officers=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 26
+	}
+
+	aristocrats=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 535
+	}
+
+	farmers=
+	{
+		culture = icelandic
+		religion = catholic
+		size= 28750
+	}
+
+}

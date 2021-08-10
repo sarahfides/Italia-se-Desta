@@ -1,0 +1,8 @@
+owner=DAH
+controller=DAH
+add_core=NUP
+add_core=KAN
+add_core=HAU
+trade_goods = grain
+life_rating = 35
+terrain = plains

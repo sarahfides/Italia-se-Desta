@@ -1,0 +1,19 @@
+name = "5th Konstanzer-Bregenzer Nationalist War"
+
+1818.10.19 = {
+	add_attacker = KNZ
+	add_attacker = ALS
+	add_attacker = SWI
+	add_defender = MBZ
+	add_defender = AUG
+	add_defender = NAS
+	add_defender = LUB
+	add_defender = OLD
+
+	war_goal = {
+		casus_belli = acquire_state
+		actor = KNZ
+		receiver = MBZ
+		state_province_id = 614
+	}
+}

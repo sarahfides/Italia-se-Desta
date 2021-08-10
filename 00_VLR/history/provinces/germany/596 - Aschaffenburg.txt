@@ -1,0 +1,8 @@
+owner=HES
+add_core=GER
+add_core=MAI
+add_core=ROT
+add_core=AUG
+trade_goods = grain
+life_rating = 40
+terrain = plains

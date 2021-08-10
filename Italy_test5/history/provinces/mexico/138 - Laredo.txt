@@ -1,0 +1,8 @@
+owner=X16
+controller=X16
+add_core=MEX
+add_core=LPN
+trade_goods = cattle
+life_rating = 35
+terrain = plains
+colonial=2

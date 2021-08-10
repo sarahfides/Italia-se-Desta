@@ -1,0 +1,5 @@
+owner=MNX
+add_core=DAI
+trade_goods = grain
+life_rating = 30
+terrain = mountain

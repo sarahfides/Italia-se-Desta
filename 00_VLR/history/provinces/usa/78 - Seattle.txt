@@ -1,0 +1,9 @@
+owner=COL
+controller=COL
+add_core=CNK
+add_core=COL
+add_core=SAL
+trade_goods = timber
+life_rating = 35
+terrain = forest
+naval_base = 2

@@ -1,0 +1,6 @@
+owner=ENG
+add_core=SDA
+trade_goods = fruit
+life_rating = 35
+terrain = hills
+naval_base = 2

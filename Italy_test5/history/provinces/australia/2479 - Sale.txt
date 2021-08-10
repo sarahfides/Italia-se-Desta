@@ -1,0 +1,7 @@
+owner=AUL
+controller=AUL
+add_core=AUL
+add_core=AUW
+trade_goods = grain
+life_rating = 30
+terrain = plains

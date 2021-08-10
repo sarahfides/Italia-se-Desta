@@ -1,0 +1,7 @@
+owner=NOV
+controller=NOV
+add_core=NOV
+add_core=WCR
+trade_goods = fish
+life_rating = 35
+terrain = forest

@@ -1,0 +1,6 @@
+owner=X12
+add_core=X12
+add_core=BLA
+trade_goods = fish
+life_rating = 35
+terrain = hills

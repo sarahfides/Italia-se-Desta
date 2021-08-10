@@ -1,0 +1,8 @@
+owner=SIA
+controller=SIA
+add_core=CHA
+add_core=IDO
+trade_goods = silk
+life_rating = 30
+terrain = plains
+naval_base = 1

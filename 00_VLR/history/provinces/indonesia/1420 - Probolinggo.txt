@@ -1,0 +1,9 @@
+owner=SUN
+controller=SUN
+add_core=BLM
+add_core=JAV
+add_core=MJP
+add_core=SUN
+trade_goods = sulphur
+life_rating = 30
+terrain = plains

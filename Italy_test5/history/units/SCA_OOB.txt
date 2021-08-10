@@ -1,0 +1,992 @@
+#Sphere of Influence
+
+AFG = {
+	value = 0
+	level = 2
+}
+AIN = {
+	value = 0
+	level = 2
+}
+AJU = {
+	value = 0
+	level = 2
+}
+ALS = {
+	value = 11
+	level = 2
+}
+ARN = {
+	value = 0
+	level = 2
+}
+AUG = {
+	value = 27
+	level = 2
+}
+AUK = {
+	value = 0
+	level = 2
+}
+AUL = {
+	value = 0
+	level = 2
+}
+AUP = {
+	value = 0
+	level = 2
+}
+AUS = {
+	value = 10
+	level = 2
+}
+BAU = {
+	value = 0
+	level = 2
+}
+BOH = {
+	value = 9
+	level = 2
+}
+BOS = {
+	value = 0
+	level = 2
+}
+BPR = {
+	value = 0
+	level = 2
+}
+BRA = {
+	value = 63
+	influence_value = 3
+	level = 2
+}
+BRB = {
+	value = 0
+	level = 2
+}
+BRS = {
+	value = 0
+	level = 2
+}
+BRU = {
+	value = 0
+	level = 2
+}
+BUG = {
+	value = 0
+	level = 2
+}
+BUL = {
+	value = 0
+	level = 2
+}
+CAM = {
+	value = 0
+	level = 2
+}
+CHL = {
+	value = 0
+	level = 2
+}
+CIR = {
+	value = 0
+	level = 2
+}
+CJA = {
+	value = 0
+	level = 2
+}
+CLI = {
+	value = 69
+	influence_value = 4
+	level = 2
+}
+CLM = {
+	value = 0
+	level = 2
+}
+COL = {
+	value = 0
+	level = 2
+}
+CRB = {
+	value = 0
+	level = 2
+}
+DAH = {
+	value = 0
+	level = 2
+}
+DAI = {
+	value = 0
+	level = 2
+}
+DES = {
+	value = 0
+	level = 2
+}
+DLH = {
+	value = 0
+	level = 2
+}
+EFR = {
+	value = 186
+	influence_value = 34
+	level = 4
+}
+EGY = {
+	value = 0
+	level = 2
+}
+ENG = {
+	value = 0
+	level = 2
+}
+FJL = {
+	value = 0
+	level = 2
+}
+FJV = {
+	value = 0
+	level = 2
+}
+FRA = {
+	value = 1
+	level = 2
+}
+FRI = {
+	value = 0
+	level = 2
+}
+GEO = {
+	value = 0
+	level = 2
+}
+HAI = {
+	value = 0
+	level = 2
+}
+HAM = {
+	value = 17
+	level = 2
+}
+HES = {
+	value = 0
+	level = 2
+}
+HLL = {
+	value = 150
+	influence_value = 25
+	level = 4
+}
+HUN = {
+	value = 0
+	level = 2
+}
+HWK = {
+	value = 0
+	level = 2
+}
+HWM = {
+	value = 0
+	level = 2
+}
+ICL = {
+	value = 0
+	level = 2
+}
+ITA = {
+	value = 8
+	level = 2
+}
+JAP = {
+	value = 0
+	level = 2
+}
+KAC = {
+	value = 0
+	level = 2
+}
+KAN = {
+	value = 0
+	level = 2
+}
+KHO = {
+	value = 0
+	level = 2
+}
+KLE = {
+	value = 0
+	level = 2
+}
+KNZ = {
+	value = 0
+	level = 2
+}
+KON = {
+	value = 0
+	level = 2
+}
+KOR = {
+	value = 0
+	level = 2
+}
+KTI = {
+	value = 0
+	level = 2
+}
+KWN = {
+	value = 0
+	level = 2
+}
+LDK = {
+	value = 0
+	level = 2
+}
+LIG = {
+	value = 0
+	level = 2
+}
+LIV = {
+	value = 0
+	level = 2
+}
+LOU = {
+	value = 0
+	level = 2
+}
+LUB = {
+	value = 63
+	influence_value = 3
+	level = 2
+}
+LUW = {
+	value = -17
+	level = 2
+}
+MAG = {
+	value = 91
+	influence_value = 10
+	level = 2
+}
+MBA = {
+	value = 0
+	level = 2
+}
+MBZ = {
+	value = -3
+	level = 2
+}
+MEW = {
+	value = 0
+	level = 2
+}
+MEX = {
+	value = 0
+	level = 2
+}
+MJZ = {
+	value = 0
+	level = 2
+}
+MKA = {
+	value = 0
+	level = 2
+}
+MKS = {
+	value = 0
+	level = 2
+}
+MLC = {
+	value = 0
+	level = 2
+}
+MNX = {
+	value = 0
+	level = 2
+}
+MOL = {
+	value = 0
+	level = 2
+}
+MSC = {
+	value = 0
+	level = 2
+}
+MUN = {
+	value = 0
+	level = 2
+}
+NAH = {
+	value = 0
+	level = 2
+}
+NAS = {
+	value = 0
+	level = 2
+}
+NEP = {
+	value = 0
+	level = 2
+}
+NOR = {
+	value = 167
+	influence_value = 29
+	level = 3
+}
+NOV = {
+	value = 76
+	influence_value = 6
+	level = 2
+}
+NZK = {
+	value = 0
+	level = 2
+}
+NZM = {
+	value = 0
+	level = 2
+}
+NZR = {
+	value = 0
+	level = 2
+}
+NZT = {
+	value = 0
+	level = 2
+}
+OIR = {
+	value = 0
+	level = 2
+}
+OLD = {
+	value = -3
+	level = 2
+}
+OMA = {
+	value = 0
+	level = 2
+}
+ORI = {
+	value = 0
+	level = 2
+}
+OTO = {
+	value = 0
+	level = 2
+}
+PAT = {
+	value = 0
+	level = 2
+}
+PEU = {
+	value = 0
+	level = 2
+}
+PGR = {
+	value = 0
+	level = 2
+}
+PHG = {
+	value = 0
+	level = 2
+}
+POL = {
+	value = -13
+	level = 2
+}
+POR = {
+	value = 0
+	level = 2
+}
+PSA = {
+	value = 0
+	level = 2
+}
+ROT = {
+	value = 0
+	level = 2
+}
+RUS = {
+	value = -19
+	level = 2
+}
+RWA = {
+	value = 0
+	level = 2
+}
+RYU = {
+	value = 0
+	level = 2
+}
+SAX = {
+	value = 49
+	level = 2
+}
+SCA = {
+	value = 0
+	level = 2
+}
+SDY = {
+	value = 0
+	level = 2
+}
+SER = {
+	value = 0
+	level = 2
+}
+SIA = {
+	value = 0
+	level = 2
+}
+SIE = {
+	value = 0
+	level = 2
+}
+SLV = {
+	value = 0
+	level = 2
+}
+SLZ = {
+	value = 4
+	level = 2
+}
+SMB = {
+	value = 0
+	level = 2
+}
+SPA = {
+	value = 4
+	level = 2
+}
+SUN = {
+	value = 0
+	level = 2
+}
+SWA = {
+	value = 0
+	level = 2
+}
+SWI = {
+	value = 15
+	level = 2
+}
+TDO = {
+	value = 0
+	level = 2
+}
+TEX = {
+	value = 0
+	level = 2
+}
+TGA = {
+	value = 0
+	level = 2
+}
+TIB = {
+	value = -17
+	level = 2
+}
+TIW = {
+	value = 0
+	level = 2
+}
+TLC = {
+	value = 0
+	level = 2
+}
+TRX = {
+	value = 0
+	level = 2
+}
+TTE = {
+	value = 0
+	level = 2
+}
+UIL = {
+	value = 0
+	level = 2
+}
+ULM = {
+	value = 0
+	level = 2
+}
+VIJ = {
+	value = 0
+	level = 2
+}
+WSI = {
+	value = 0
+	level = 2
+}
+X00 = {
+	value = -12
+	level = 2
+}
+X02 = {
+	value = 0
+	level = 2
+}
+X04 = {
+	value = 97
+	influence_value = 11
+	level = 2
+}
+X07 = {
+	value = -71
+	level = 2
+}
+X09 = {
+	value = 0
+	level = 2
+}
+X10 = {
+	value = 21
+	level = 2
+}
+X12 = {
+	value = 0
+	level = 2
+}
+X13 = {
+	value = 0
+	level = 2
+}
+X15 = {
+	value = 53
+	level = 2
+}
+X16 = {
+	value = 0
+	level = 2
+}
+X17 = {
+	value = 0
+	level = 2
+}
+X18 = {
+	value = 0
+	level = 2
+}
+X19 = {
+	value = 0
+	level = 2
+}
+X20 = {
+	value = 0
+	level = 2
+}
+YEM = {
+	value = 0
+	level = 2
+}
+YKT = {
+	value = 0
+	level = 2
+}
+ZAF = {
+	value = -4
+	level = 2
+}
+ZAP = {
+	value = 0
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Fredrik III Frille"
+	date="1811.2.4"
+	type=land
+	personality="stalwart"
+	background="uncommonly_young"
+}
+
+leader = {
+	name="Inge Trolle"
+	date="1798.7.9"
+	type=sea
+	personality="intuitive"
+	background="brownnoser"
+}
+
+leader = {
+	name="Fredrik Juel"
+	date="1811.2.9"
+	type=land
+	personality="stalwart"
+	background="artillerist"
+}
+
+leader = {
+	name="Gustav Lingby"
+	date="1816.4.10"
+	type=sea
+	personality="stalwart"
+	background="bootlicker"
+}
+
+leader = {
+	name="Harald Banér"
+	date="1816.11.3"
+	type=land
+	personality="stalwart"
+	background="natural_born_leader"
+}
+
+leader = {
+	name="Gottfrid Brahe"
+	date="1818.2.8"
+	type=land
+	personality="intuitive"
+	background="natural_born_leader"
+}
+
+
+#Armies
+navy = {
+	name="4th Fleet"
+	location=372
+	ship = {
+		name="1st Archangel Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Archangel Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Esbjerg Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Mezen Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Bornholm Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Onega Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Kotka Man'o'war"
+		type=manowar
+	}
+}
+
+army = {
+	name="Frisian Free Company"
+	location=323
+	regiment = {
+		name="1st Copenhagen Infantry"
+		type=infantry
+		home=372
+	}
+	regiment = {
+		name="2nd Copenhagen Infantry"
+		type=infantry
+		home=372
+	}
+}
+
+army = {
+	name="4th Army"
+	location=994
+	regiment = {
+		name="1st Aarhus Infantry"
+		type=infantry
+		home=366
+	}
+	regiment = {
+		name="1st Odense Infantry"
+		type=infantry
+		home=373
+	}
+	regiment = {
+		name="1st Kiel Cavalry"
+		type=cavalry
+		home=369
+	}
+	regiment = {
+		name="1st Malmö Cavalry"
+		type=cavalry
+		home=334
+	}
+	regiment = {
+		name="1st Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="1st Esbjerg Artillery"
+		type=artillery
+		home=2557
+	}
+	regiment = {
+		name="2nd Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="3rd Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="1st Odense Artillery"
+		type=artillery
+		home=373
+	}
+	regiment = {
+		name="2nd Esbjerg Artillery"
+		type=artillery
+		home=2557
+	}
+	regiment = {
+		name="1st Karlskrona Infantry"
+		type=infantry
+		home=335
+	}
+	regiment = {
+		name="1st Odense Cavalry"
+		type=cavalry
+		home=373
+	}
+	regiment = {
+		name="1st Aarhus Cavalry"
+		type=cavalry
+		home=366
+	}
+	regiment = {
+		name="3rd Esbjerg Artillery"
+		type=artillery
+		home=2557
+	}
+}
+
+army = {
+	name="9th Army"
+	location=323
+	regiment = {
+		name="1st Aalborg Infantry"
+		type=infantry
+		home=367
+	}
+	regiment = {
+		name="1st Esbjerg Infantry"
+		type=infantry
+		home=2557
+	}
+	regiment = {
+		name="1st Aarhus Artillery"
+		type=artillery
+		home=366
+	}
+	regiment = {
+		name="4th Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="2nd Aarhus Artillery"
+		type=artillery
+		home=366
+	}
+	regiment = {
+		name="2nd Odense Artillery"
+		type=artillery
+		home=373
+	}
+	regiment = {
+		name="2nd Aarhus Infantry"
+		type=infantry
+		home=366
+	}
+	regiment = {
+		name="7th Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+}
+
+army = {
+	name="3rd Army"
+	location=328
+	regiment = {
+		name="1st Kiel Infantry"
+		type=infantry
+		home=369
+	}
+	regiment = {
+		name="5th Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="1st Ribe Artillery"
+		type=artillery
+		home=368
+	}
+	regiment = {
+		name="2nd Odense Infantry"
+		type=infantry
+		home=373
+	}
+}
+
+navy = {
+	name="8th Fleet"
+	location=2711
+	ship = {
+		name="1st Bodo Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Karlskrona Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Ribe Frigate"
+		type=frigate
+	}
+	ship = {
+		name="6th Vancouver Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Bornholm Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Gotland Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="10th Fleet"
+	location=2719
+	ship = {
+		name="1st Copenhagen Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Aarhus Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Copenhagen Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="7th Fleet"
+	location=2706
+	ship = {
+		name="1st Inta Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st St Petersburg Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bremen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Bremen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kostomushka Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Kostomushka Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kandalaksha Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Nantes Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Malmö Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Onega Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Ribe Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Kostomushka Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bornholm Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+army = {
+	name="1st Army"
+	location=331
+	regiment = {
+		name="2nd Esbjerg Infantry"
+		type=infantry
+		home=2557
+	}
+	regiment = {
+		name="1st Malmö Infantry"
+		type=infantry
+		home=334
+	}
+	regiment = {
+		name="3rd Odense Artillery"
+		type=artillery
+		home=373
+	}
+	regiment = {
+		name="6th Copenhagen Artillery"
+		type=artillery
+		home=372
+	}
+	regiment = {
+		name="3rd Aarhus Artillery"
+		type=artillery
+		home=366
+	}
+	regiment = {
+		name="4th Odense Artillery"
+		type=artillery
+		home=373
+	}
+	regiment = {
+		name="3rd Esbjerg Infantry"
+		type=infantry
+		home=2557
+	}
+	regiment = {
+		name="1st Aalborg Artillery"
+		type=artillery
+		home=367
+	}
+}
+

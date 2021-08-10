@@ -1,0 +1,1329 @@
+country_event = { 
+	id = 2110301 # Getting interest through African vassal
+	title = "EVTNAME2110301"
+	desc = "EVTDESC2110301"
+	picture = "ic_congress_of_berlin"
+	
+	trigger = {
+		year = 1880
+		civilized = no
+		is_vassal = yes
+		not = { has_country_flag = declared_overlord }
+		capital_scope = {
+			continent = africa
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	option = {
+		name = "EVTOPTB2110301"
+		set_country_flag = declared_overlord
+		overlord = {
+			set_country_flag = an_interest_in_africa
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110302 # Getting interest through sphered African minor
+	title = "EVTNAME2110301"
+	desc = "EVTDESC2110302"
+	picture = "ic_congress_of_berlin"
+	
+	trigger = {
+		year = 1880
+		civilized = no
+		and = {
+			is_vassal = no
+			part_of_sphere = yes
+		}
+		not = { has_country_flag = declared_sphere_owner }
+		capital_scope = {
+			continent = africa
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	option = {
+		name = "EVTOPTB2110301"
+		set_country_flag = declared_sphere_owner
+		overlord = {
+			set_country_flag = an_interest_in_africa
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110303 # Getting interest by owning a province in Africa
+	title = "EVTNAME2110303"
+	desc = "EVTDESC2110303"
+	picture = "ic_congress_of_berlin"
+	
+	trigger = {
+		year = 1880
+		civilized = yes
+		any_owned_province = {
+			continent = africa
+		}
+		not = { has_country_flag = an_interest_in_africa }
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB2110303"
+		set_country_flag = an_interest_in_africa
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110304 # Getting interest by being top 16
+	title = "EVTNAME2110304"
+	desc = "EVTDESC2110304"
+	picture = "ic_congress_of_berlin"
+	
+	trigger = {
+		year = 1880
+		civilized = yes
+		or = {
+			is_greater_power = yes
+			and = {
+				is_secondary_power = yes
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
+		not = { has_country_flag = an_interest_in_africa }
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTB2110304"
+		set_country_flag = an_interest_in_africa
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110310 # GP gets asked to host conference
+	title = "EVTNAME2110310"
+	desc = "EVTDESC2110310"
+	picture = "ic_congress_of_berlin"
+	
+	trigger = {
+		not = {
+			or = {
+				has_global_flag = berlin_conference_ongoing
+				has_global_flag = berlin_conference_held
+				has_country_flag = declined_to_host_berlin_conference
+				is_disarmed = yes
+			}
+		}
+		has_country_flag = an_interest_in_africa
+		and = {
+			is_greater_power = yes
+			capital_scope = {
+				continent = europe
+			}
+		}
+		war = no
+		year = 1880
+		invention = mission_to_civilize
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+		
+		modifier = {
+            factor = 0.9 #increase likelihood to happen
+            rank = 1
+        }
+		
+		modifier = {
+            factor = 0.9 #increase likelihood to happen
+            rank = 2
+        }
+		
+		modifier = {
+            factor = 0.9 #increase likelihood to happen
+            rank = 4
+        }
+		
+		modifier = {
+            factor = 0.9 #increase likelihood to happen
+            rank = 6
+        }
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110310"
+		set_global_flag = berlin_conference_ongoing
+		set_country_flag = berlin_conference_participant
+		any_country = {
+			limit = {
+				has_country_flag = an_interest_in_africa
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 2110311 #Invitation to Berlin conference
+		}
+		any_country = {
+			limit = {
+				capital_scope = {
+					continent = africa
+				}
+				civilized = no
+			}
+			set_country_flag = berlin_conference_african_nation
+		}
+		country_event = {
+			id = 2110313
+			days = 300
+		}
+		money = -50000
+		
+		ai_chance = { 
+			factor = 80
+		
+			modifier = {
+				factor = 0
+				or = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+					war_policy = pacifism
+				}
+			} 
+		
+			modifier = {
+				factor = 0.4
+				or = {
+					war_policy = anti_military
+				}
+			} 
+		
+			modifier = {
+				factor = 1.2
+				or = {
+					economic_policy = laissez_faire
+					trade_policy = free_trade
+				}
+			} 
+		
+			modifier = {
+				factor = 1.5
+				any_owned_province = {
+					continent = africa
+				}
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110310"
+		set_global_flag = declined_to_host_berlin_conference
+		prestige = -10
+		
+		ai_chance = { 
+			factor = 40 
+			
+			modifier = {
+				factor = 10
+				or = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+					war_policy = pacifism
+					not = {
+						money = 50000
+					}
+				}
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = 2110311 # Invitation to Congress of Berlin
+	title = "EVTNAME2110311"
+	desc = "EVTDESC2110311"
+	picture = "ic_congress_of_berlin"
+	
+	allow_multiple_instances = yes
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2110311"
+		set_country_flag = berlin_conference_participant
+		FROM = {
+			country_event = 2110312 #FROMCOUNTRY attending
+		}
+		any_country = {
+			limit = {
+				capital_scope = {
+					continent = africa
+				}
+				civilized = no
+				not = {
+					or = {
+						vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -400
+			}
+		}
+		
+		ai_chance = { 
+			factor = 60
+		
+			modifier = {
+				factor = 0.3
+				or = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+					war_policy = pacifism
+				}
+			} 
+		
+			modifier = {
+				factor = 0.6
+				or = {
+					war_policy = anti_military
+				}
+			} 
+		
+			modifier = {
+				factor = 1.2
+				or = {
+					economic_policy = laissez_faire
+					trade_policy = free_trade
+				}
+			} 
+		
+			modifier = {
+				factor = 5
+				any_owned_province = {
+					continent = africa
+				}
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110311"
+		prestige = -30
+		
+		ai_chance = { 
+			factor = 40
+		
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = socialist
+					ruling_party_ideology = communist
+					war_policy = pacifism
+				}
+			} 
+		
+			modifier = {
+				factor = 1.1
+				or = {
+					war_policy = anti_military
+				}
+			} 
+		
+			modifier = {
+				factor = 0.7
+				or = {
+					economic_policy = laissez_faire
+					trade_policy = free_trade
+				}
+			} 
+		
+			modifier = {
+				factor = 0.4
+				any_owned_province = {
+					continent = africa
+				}
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = 2110312 # FROMCOUNTRY accepts invitation
+	title = "EVTNAME2110312"
+	desc = "EVTDESC2110312"
+	picture = "ic_congress_of_berlin"
+	
+	allow_multiple_instances = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2110312"
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110313 # The CAPITAL Conference
+	title = "EVTNAME2110313"
+	desc = "EVTDESC2110313"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2110313"
+		clr_global_flag = berlin_conference_ongoing
+		set_global_flag = berlin_conference_held
+		any_country = {
+			limit = {
+				has_country_flag = berlin_conference_received_colony
+			}
+			clr_country_flag = berlin_conference_participant
+			clr_country_flag = an_interest_in_africa
+		}
+		any_country = {
+			limit = {
+				has_country_flag = berlin_conference_african_nation
+			}
+			clr_country_flag = berlin_conference_african_nation
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110314 # Conference participant did not get anything
+	title = "EVTNAME2110314"
+	desc = "EVTDESC2110314"
+	picture = "ic_congress_of_berlin"
+		
+	trigger = {
+		has_global_flag = berlin_conference_held
+		has_country_flag = berlin_conference_participant
+		not = { has_country_flag = berlin_conference_received_colony }
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "EVTOPTA2110314"
+		
+		clr_country_flag = berlin_conference_participant
+		clr_country_flag = an_interest_in_africa
+		any_country = {
+			limit = {
+				has_country_flag = berlin_conference_received_colony
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -50
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110320 # Annex vassal
+	title = "EVTNAME2110320"
+	desc = "EVTDESC2110320"
+	picture = "european_imperialism_in_africa"
+		
+	trigger = {
+		has_global_flag = berlin_conference_ongoing
+		has_country_flag = berlin_conference_african_nation
+		overlord = {
+			has_country_flag = berlin_conference_participant
+		}
+		not = {
+			or = {
+				tag = KON
+				tag = EGY
+				tag = SWA
+			}
+		}
+		is_vassal = yes
+		civilized = no
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2110320"
+		
+		any_pop = {
+			consciousness = 2
+			militancy = 4
+		}
+		overlord = {
+			inherit = THIS
+			country_event = 2110322 #Protectorate Annexed
+			set_country_flag = berlin_conference_received_colony
+		}
+		
+		ai_chance = { 
+			factor = 90
+		
+			modifier = {
+				factor = 0.9
+				not = {
+					civilization_progress = 0.8
+				}
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110320"
+		
+		overlord = {
+			war = {
+				target = THIS
+					attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally =  yes
+			}
+			country_event = 2110323 #Protectorate Declines Annexation
+			set_country_flag = berlin_conference_received_colony
+		}
+		
+		ai_chance = { 
+			factor = 10
+		
+			modifier = {
+				factor = 2
+				civilization_progress = 0.8
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = 2110321 # Annex sphered
+	title = "EVTNAME2110321"
+	desc = "EVTDESC2110321"
+	picture = "european_imperialism_in_africa"
+		
+	trigger = {
+		has_global_flag = berlin_conference_ongoing
+		has_country_flag = berlin_conference_african_nation
+		sphere_owner = {
+			has_country_flag = berlin_conference_participant
+		}
+		not = {
+			or = {
+				tag = KON
+				tag = EGY
+				tag = SWA
+			}
+		}
+		is_vassal = no
+		part_of_sphere = yes
+		civilized = no
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2110321"
+		
+		any_pop = {
+			consciousness = 2
+			militancy = 4
+		}
+		sphere_owner = {
+			inherit = THIS
+			country_event = 2110322 #Protectorate Annexed
+			set_country_flag = berlin_conference_received_colony
+		}
+		
+		ai_chance = { 
+			factor = 80
+		
+			modifier = {
+				factor = 0.9
+				not = {
+					civilization_progress = 0.8
+				}
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110321"
+		
+		sphere_owner = {
+			war = {
+				target = THIS
+					attacker_goal = {
+					casus_belli = establish_protectorate_casus_belli
+				}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+				call_ally =  yes
+			}
+			country_event = 2110323 #Protectorate Declines Annexation
+			set_country_flag = berlin_conference_received_colony
+		}
+		
+		ai_chance = { 
+			factor = 2
+		
+			modifier = {
+				factor = 1.5
+				civilization_progress = 0.8
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = 2110322 # FROMCOUNTRY Annexed
+	title = "EVTNAME2110322"
+	desc = "EVTDESC2110322"
+	picture = "european_imperialism_in_africa"
+		
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110322"
+		prestige = 5
+		any_pop = {
+			limit = {
+				or = {
+					is_accepted_culture = yes
+					is_primary_culture = yes
+				}
+			}
+			consciousness = 0.4
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110323 # FROMCOUNTRY Refuses Annexation
+	title = "EVTNAME2110323"
+	desc = "EVTDESC2110323"
+	picture = "european_imperialism_in_africa"
+		
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110323"
+		prestige = -10
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110324 # European Ports in Africa
+	title = "EVTNAME2110324"
+	desc = "EVTDESC2110324"
+	picture = "european_imperialism_in_africa"
+		
+	trigger = {
+		has_global_flag = berlin_conference_ongoing
+		has_country_flag = berlin_conference_african_nation
+		civilized = no
+		any_owned_province = {
+			port = yes
+		}
+		or = {
+			is_vassal = no
+			part_of_sphere = no
+		}
+		not = {
+			tag = EGY
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110324"
+		prestige = -10
+		random_list = {
+			55 = {
+				random_country = {
+					limit = {
+						#and = {
+							has_country_flag = berlin_conference_participant
+							is_greater_power = yes
+							#not = { has_country_flag = berlin_conference_received_port }
+						#}
+					}
+				country_event = 2110325
+				}
+			}
+			45 = {
+				random_country = {
+					limit = {
+						#and = {
+							has_country_flag = berlin_conference_participant
+							is_greater_power = no
+							#not = { has_country_flag = berlin_conference_received_port }
+						#}
+					}
+				country_event = 2110325
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110325 # A Port in FROMCOUNTRY
+	title = "EVTNAME2110325"
+	desc = "EVTDESC2110325"
+	picture = "european_imperialism_in_africa"
+		
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110325"
+		set_country_flag = berlin_conference_received_port
+		prestige = 2
+		FROM = {
+			random_owned = {
+				limit = {
+					is_capital = no
+					continent = africa
+					port = yes
+					not = {
+						is_core = MAD
+					}
+				}
+				secede_province = THIS
+				random_neighbor_province = {
+					limit = {
+						owned_by = FROM
+						is_capital = no
+						continent = africa
+						#port = yes
+						not = {
+							is_core = MAD
+						}
+					}
+					secede_province = THIS
+				}
+				random_neighbor_province = {
+					limit = {
+						owned_by = FROM
+						is_capital = no
+						continent = africa
+						#port = yes
+						not = {
+							is_core = MAD
+						}
+					}
+					secede_province = THIS
+				}
+				#random_neighbor_province = {
+				#	limit = {
+				#		owned_by = FROM
+				#		is_capital = no
+				#		continent = africa
+				#		#port = yes
+				#		not = {
+				#			is_core = MAD
+				#		}
+				#	}
+				#	secede_province = THIS
+				#}
+				#random_neighbor_province = {
+				#	limit = {
+				#		owned_by = FROM
+				#		is_capital = no
+				#		continent = africa
+				#		#port = yes
+				#		not = {
+				#			is_core = MAD
+				#		}
+				#	}
+				#	secede_province = THIS
+				#}
+				#random_neighbor_province = {
+				#	limit = {
+				#		owned_by = FROM
+				#		is_capital = no
+				#		continent = africa
+				#		#port = yes
+				#		not = {
+				#			is_core = MAD
+				#		}
+				#	}
+				#	secede_province = THIS
+				#}
+				#random_neighbor_province = {
+				#	limit = {
+				#		owned_by = FROM
+				#		is_capital = no
+				#		continent = africa
+				#		#port = yes
+				#		not = {
+				#			is_core = MAD
+				#		}
+				#	}
+				#	secede_province = THIS
+				#}
+			}
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+#country_event = {
+#	id = 2110325 # A Port in FROMCOUNTRY
+#	title = "EVTNAME2110325"
+#	desc = "EVTDESC2110325"
+#	picture = "european_imperialism_in_africa"
+#		
+#	is_triggered_only = yes
+#	
+#	allow_multiple_instances = yes
+#	
+#	option = {
+#		name = "EVTOPTA2110325"
+#		set_country_flag = berlin_conference_received_port
+#		prestige = 2
+#		FROM = {
+#			random_owned = {
+#				limit = {
+#					is_capital = no
+#					continent = africa
+#					port = yes
+#					any_neighbor_province = {
+#						owned_by = FROM
+#					}
+#					not = {
+#						is_core = MAD
+#					}
+#				}
+#				secede_province = THIS
+#				random_neighbor_province = {
+#					limit = {
+#						owned_by = FROM
+#						is_capital = no
+#						continent = africa
+#						#port = yes
+#						not = {
+#							is_core = MAD
+#						}
+#					}
+#					secede_province = THIS
+#				}
+#				random_neighbor_province = {
+#					limit = {
+#						owned_by = FROM
+#						is_capital = no
+#						continent = africa
+#						#port = yes
+#						not = {
+#							is_core = MAD
+#						}
+#					}
+#					secede_province = THIS
+#				}
+#			}
+#		}
+#		ai_chance = { 
+#			factor = 100
+#		}
+#	}
+#}
+
+country_event = {
+	id = 2110326 # European colonies expanding one province at a time
+	title = "EVTNAME2110326"
+	desc = "EVTDESC2110326"
+	picture = "european_imperialism_in_africa"
+		
+	trigger = {
+		has_global_flag = berlin_conference_ongoing
+		has_country_flag = berlin_conference_african_nation
+		not = {
+			capital_scope = {
+				or = {
+					continent = europe
+					continent = north_america
+					continent = south_america
+					continent = oceania
+				}
+			}
+		}
+		or = {
+			is_vassal = no
+			#part_of_sphere = no
+		}
+		not = {
+			or = {
+				tag = EGY
+				tag = KON
+				civilized = yes
+			}
+		}
+		any_neighbor_country = {
+			or = {
+				has_country_flag = berlin_conference_participant
+				overlord = { has_country_flag = berlin_conference_participant }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+		
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110326"
+		prestige = -5
+		any_neighbor_country = {
+			limit = {
+				#and = {	
+				or = {
+					has_country_flag = berlin_conference_participant
+					overlord = { has_country_flag = berlin_conference_participant }
+				}
+					#not = { has_country_flag = berlin_conference_received_port }
+				#}
+			}
+			country_event = 2110327
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110327 # A Port in FROMCOUNTRY
+	title = "EVTNAME2110327"
+	desc = "EVTDESC2110327"
+	picture = "european_imperialism_in_africa"
+		
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110327"
+		set_country_flag = berlin_conference_received_colony
+		prestige = 0.5
+		FROM = {
+			random_owned = {
+				limit = {
+					any_neighbor_province = {
+						or = {
+							owned_by = THIS
+							owner = {
+								vassal_of = THIS
+							}
+						}
+					}
+					continent = africa
+					not = {
+						is_core = MAD
+					}
+					owner = {
+						civilized = no
+					}
+				}
+				secede_province = THIS
+			}
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+########################
+## KONGO & MADAGASCAR ##
+########################
+
+country_event = {
+	id = 2110330 # Kongo becomes vassal of a Habsburg monarchy
+	title = "EVTNAME2110330"
+	desc = "EVTDESC2110330"
+	picture = "inheriting_the_kongo"
+	
+	trigger = {
+		or = {
+			KON = {
+				in_sphere = THIS
+			}
+			and = {
+				exists = KON
+				KON = {
+					or = {
+						part_of_sphere = no
+						is_vassal = no
+					}
+				}
+				has_country_flag = berlin_conference_participant
+			}
+		}
+		or = {
+			government = absolute_monarchy
+			government = prussian_constitutionalism
+		}
+		or = {
+			tag = ENG
+			tag = GBR
+			tag = ARN
+			tag = AUS
+			tag = KUK
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110330"
+		create_vassal = KON
+		KON = {
+			government = absolute_monarchy
+			political_reform = none_voting
+			political_reform = appointed
+			political_reform = first_past_the_post
+			political_reform = no_meeting
+			political_reform = underground_parties
+			political_reform = state_press
+			political_reform = no_trade_unions
+			ruling_party_ideology = reactionary
+			country_event = 2110333
+		}
+		KON = {
+			any_owned = {
+				add_core = CNG
+			}
+		}
+		prestige = 5
+		KON = {
+			country_event = 2110331
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110331 # Kongo event about being vassalised
+	title = "EVTNAME2110331"
+	desc = "EVTDESC2110331"
+	picture = "inheriting_the_kongo"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110331"
+		prestige = -50
+		relation = {
+			who = FROM
+			value = -100
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -50
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110332 # Kongo is in sphere but not a vassal
+	title = "EVTNAME2110332"
+	desc = "EVTDESC2110332"
+	picture = "inheriting_the_kongo"
+	
+	trigger = {
+		KON = {
+			in_sphere = THIS
+			is_vassal = no
+			not = {
+				owns = 1932
+				owns = 1956
+				owns = 1958
+				owns = 1972
+				owns = 1973
+				owns = 1974
+				owns = 2624
+				owns = 2000
+				owns = 1983
+				owns = 1999
+			}
+		}
+		has_country_flag = berlin_conference_participant
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+		
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110332"
+		set_country_flag = berlin_conference_received_colony
+		create_vassal = KON
+		prestige = 5
+		KON = {
+			government = absolute_monarchy
+			political_reform = none_voting
+			political_reform = appointed
+			political_reform = first_past_the_post
+			political_reform = no_meeting
+			political_reform = underground_parties
+			political_reform = state_press
+			political_reform = no_trade_unions
+			ruling_party_ideology = reactionary
+			country_event = 2110333
+		}
+		KON = {
+			any_owned = {
+				add_core = CNG
+			}
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110333 # Kongo event about being vassalised
+	title = "EVTNAME2110333"
+	desc = "EVTDESC2110333"
+	picture = "inheriting_the_kongo"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110333"
+		prestige = -50
+		relation = {
+			who = FROM
+			value = -100
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -50
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110334 # Inherit Madagascar
+	title = "EVTNAME2110334"
+	desc = "EVTDESC2110334"
+	picture = "european_imperialism_in_africa"
+	
+	trigger = {
+		has_country_flag = berlin_conference_participant
+		is_greater_power = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+		
+		modifier = {
+			factor = 1.5
+			not = { has_country_flag = berlin_conference_received_colony }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA2110334"
+		set_country_flag = berlin_conference_received_colony
+		prestige = 10
+		any_country = {
+			limit = {
+				any_owned_province = {
+					is_core = MAD
+				}
+				civilized = no
+			}
+			any_owned = {
+				limit = {
+					is_core = MAD
+				}
+				secede_province = THIS
+			}
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110335 # Create Congo Free State
+	title = "EVTNAME2110335"
+	desc = "EVTDESC2110335"
+	picture = "european_imperialism_in_africa"
+	
+	trigger = {
+		has_global_flag = berlin_conference_held
+		is_our_vassal = KON
+		invention = mission_to_civilize
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA2110334"
+		KON = {
+			any_owned = {
+				limit = {
+					not = {
+						pop_majority_culture = bakongo
+					}
+				}
+				remove_core = KON
+			}
+			any_owned = {
+				limit = {
+					not = {
+						is_core = CNG
+					}
+				}
+				secede_province = THIS
+			}
+			change_tag = CNG
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+######################
+## MAMLUK SULTANATE ##
+######################

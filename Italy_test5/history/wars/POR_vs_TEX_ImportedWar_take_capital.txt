@@ -1,0 +1,17 @@
+name = "Portuguese-Texan Imperialist War"
+
+1820.1.14 = {
+	add_attacker = POR
+	add_attacker = MEX
+	add_attacker = DES
+	add_defender = TEX
+	add_defender = NAH
+
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = POR
+		receiver = TEX
+		country = TEX
+		state_province_id = 134
+	}
+}

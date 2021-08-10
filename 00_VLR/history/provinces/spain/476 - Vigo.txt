@@ -1,0 +1,6 @@
+owner=SPA
+add_core=GLC
+add_core=SPA
+trade_goods = fish
+life_rating = 35
+terrain = hills

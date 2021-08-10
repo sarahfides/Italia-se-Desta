@@ -1,0 +1,618 @@
+country_event = { 
+	id = 2111221 #Aragon or Portugal gets event about the future of Spain - Aragon more likely to get it
+	title = "IBR.001.T"
+	desc = "IBR.001.D"
+	picture = "the_spanish_question"
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = ARN
+				ARN = {
+					any_core = {
+						owned_by = THIS
+					}
+				}
+			}
+			AND = {
+				tag = POR
+				POR = {
+					any_core = {
+						owned_by = POR
+					}
+				}
+			}
+		}
+		nationalism_n_imperialism = 1
+		SPA = {
+			exists = yes
+			is_vassal = no
+		}
+		not = {
+			has_global_flag = iberian_question
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 2
+			war = yes
+		}
+		
+		modifier = {
+			factor = 2
+			tag = POR
+		}
+		
+		modifier = {
+			factor = 0.5
+			tag = ARN
+		}
+	}
+	
+	option = {
+		name = "IBR.001.1" #Claim all of Galicia
+		set_global_flag = iberian_question
+		474 = {
+			add_core = THIS
+		}
+		476 = {
+			add_core = THIS
+		}
+		SPA = {
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			limit = {
+				relation = {
+					who = SPA
+					value = 50
+				}
+			}
+			relation = {
+				who = THIS
+				value = -70
+			}
+		}
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		any_country = {
+			limit = {
+				or = {
+					tag = POR
+					tag = ARN
+				}
+				not = {
+					tag = THIS
+				}
+			}
+			country_event = 2111226 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 65
+		}
+	}
+	
+	option = {
+		name = "IBR.001.2" #Split Galicia
+		set_global_flag = iberian_question
+		any_country = {
+			limit = {
+				OR = {
+					tag = POR
+					tag = ARN
+				}
+				NOT = {
+					tag = THIS
+				}
+			}
+			country_event = 2111228 #FROMCOUNTRY proposes partition of Galicia
+		}
+		
+		ai_chance = { 
+			factor = 35
+			
+			modifier = {
+				factor = 0.1
+				OR = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111222 #FROMCOUNTRY claims Galicia
+	title = "IBR.002.T"
+	desc = "IBR.002.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.002.1" #Claim all of Galicia
+		any_greater_power = {
+			limit = {
+				relation = {
+					who = SPA
+					value = 50
+				}
+				not = {
+					or = {
+						tag = ARN
+						tag = POR
+					}
+				}
+			}
+			country_event = 2111222 #FROMCOUNTRY claiming Galicia
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111223 #Spain Seeking Allies
+	title = "IBR.003.T"
+	desc = "IBR.003.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.003.1" #We will aid them
+		any_country = {
+			limit = {
+				OR = {
+					alliance_with = POR
+					relation = {
+						who = POR
+						value = 50
+					}
+				}
+				NOT = {
+					tag = THIS
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		relation = {
+			who = SPA
+			value = 150
+		}
+		diplomatic_influence = {
+			who = SPA
+			value = 150
+		}
+		create_alliance = SPA
+		FROM = {
+			country_event = 2111224 #FROMCOUNTRY accepts
+		}
+		
+		ai_chance = { 
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "IBR.003.2" #We will not intervene
+		relation = {
+			who = SPA
+			value = -100
+		}
+		diplomatic_influence = {
+			who = SPA
+			value = -100
+		}
+		create_alliance = SPA
+		FROM = {
+			country_event = 2111225 #FROMCOUNTRY refuses
+		}
+		
+		ai_chance = { 
+			factor = 90
+			
+			modifier = {
+				factor = 0
+				SPA = {
+					in_sphere_of = THIS
+				}
+			}
+			modifier = {
+				factor = 0
+				alliance_with = SPA
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111224 #FROMCOUNTRY Accepts
+	title = "IBR.004.T"
+	desc = "IBR.004.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.004.1" #We will aid them
+		relation = {
+			who = FROM
+			value = 50
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111225 #FROMCOUNTRY Refuses
+	title = "IBR.005.T"
+	desc = "IBR.005.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.005.1" #We will aid them
+		relation = {
+			who = FROM
+			value = -50
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111226 #FROMCOUNTRY Claims Galicia
+	title = "IBR.006.T"
+	desc = "IBR.006.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.006.1" #Galicia is rightfully ours
+		relation = {
+			who = FROM
+			value = -50
+		}
+		relation = {
+			who = SPA
+			value = -100
+		}
+		FROM = {
+			country_event = 2111227 #FROMCOUNTRY Contests Claims
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 1.5
+				THIS = {
+					tag = ARN
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "IBR.006.2" #We have no interest in this
+		relation = {
+			who = FROM
+			value = 50
+		}
+		relation = {
+			who = SPA
+			value = 50
+		}
+		FROM = {
+			country_event = 2111225 #FROMCOUNTRY refuses
+		}
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 0.25
+				THIS = {
+					tag = ARN
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111227 #FROMCOUNTRY Contests Claims
+	title = "IBR.007.T"
+	desc = "IBR.007.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.007.1" #They have no right!
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 12
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "IBR.007.2" #Let us not escalate this further.
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 1.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111228 #Partitioning of Galicia?
+	title = "IBR.008.T"
+	desc = "IBR.008.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.008.1" #Galicia is rightfully ours!
+		474 = {
+			add_core = THIS
+		}
+		476 = {
+			add_core = THIS
+		}
+		relation = {
+			who = FROM
+			value = -50
+		}
+		relation = {
+			who = SPA
+			value = -100
+		}
+		FROM = {
+			country_event = 2111229 #FROMCOUNTRY Refuses
+		}
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = POR
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = fascist
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "IBR.008.2" #Lets split it.
+		set_global_flag = galicia_split
+		relation = {
+			who = FROM
+			value = 50
+		}
+		relation = {
+			who = SPA
+			value = -100
+		}
+		FROM = {
+			country_event = 2111230 #FROMCOUNTRY Agrees
+		}
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = ARN
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = conservative
+			}
+		}
+	}
+	
+	option = {
+		name = "IBR.008.3" #We have no interest in this
+		prestige = -20
+		relation = {
+			who = SPA
+			value = 50
+		}
+		
+		ai_chance = { 
+			factor = 10
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = ARN
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					OR = {
+						ruling_party_ideology = reactionary
+						ruling_party_ideology = fascist
+						ruling_party_ideology = conservative
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111229 #FROMCOUNTRY Claims Galicia as Their Own
+	title = "IBR.009.T"
+	desc = "IBR.009.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.009.1" #They have no right!
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 12
+		}
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "IBR.009.2" #Let us not escalate this further.
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 40
+			
+			modifier = {
+				factor = 1.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111230 #FROMCOUNTRY Agrees to Partition Plan
+	title = "IBR.010.T"
+	desc = "IBR.010.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.010.1" #They have no right!
+		476 = {
+			add_core = POR
+		}
+		474 = {
+			add_core = ARN
+		}
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111231 #FROMCOUNTRY Has No Interest in Galicia
+	title = "IBR.011.T"
+	desc = "IBR.011.D"
+	picture = "the_spanish_question"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IBR.011.1" #They have no right!
+		476 = {
+			add_core = POR
+		}
+		474 = {
+			add_core = ARN
+		}
+		SPA = {
+			country_event = 2111222 #FROMCOUNTRY claims our lands
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 0.5
+				THIS = {
+					tag = POR
+				}
+			}
+		}
+	}
+}

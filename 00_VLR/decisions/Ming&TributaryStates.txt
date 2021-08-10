@@ -1,0 +1,70 @@
+political_decisions = {
+
+	declare_independence_from_china = { 
+		potential = {
+			or = {
+				vassal_of = MNX
+				vassal_of = CHI
+				vassal_of = QNG
+			}
+		}
+		
+		allow = {
+			war = no
+			AND = {
+				OR = {
+					MNX = {
+						OR = {
+							average_militancy = 7
+							average_consciousness = 7
+							NOT = {
+								relation = {
+									who = THIS
+									value = 50
+								}
+							}
+						}
+					}
+					CHI = {
+						OR = {
+							average_militancy = 7
+							average_consciousness = 7
+							NOT = {
+								relation = {
+									who = THIS
+									value = 50
+								}
+							}
+						}
+					}
+					QNG = {
+						OR = {
+							average_militancy = 7
+							average_consciousness = 7
+							NOT = {
+								relation = {
+									who = THIS
+									value = 50
+								}
+							}
+						}
+					}
+				}
+				average_militancy = 3
+			}
+		}
+		
+		effect = {
+			overlord = {
+				release_vassal = THIS
+				country_event = 2111039 #FROMCOUNTRY declares independence
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+	
+}
+	

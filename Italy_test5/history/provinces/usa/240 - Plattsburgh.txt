@@ -1,0 +1,5 @@
+owner=X18
+controller=X18
+trade_goods = timber
+life_rating = 35
+terrain = woods

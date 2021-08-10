@@ -1,0 +1,107 @@
+graphical_culture = EuropeanGC
+color = { 65 135 195 }
+
+party = {
+	name = "SIS_liberal"
+	start_date = 1821.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = residency
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = colonial_spending_policy
+	trade_policy = free_trade
+	war_policy = anti_military
+}
+
+party = {
+	name = "SIS_liberal_2"
+	start_date = 1895.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = limited_citizenship
+	economic_policy = laissez_faire
+	religious_policy = pluralism
+	social_policy = no_state_interference
+	trade_policy = free_trade
+	war_policy = anti_military
+}
+
+party = {
+	name = "SIS_liberal_3"
+	start_date = 1920.1.1
+	end_date = 2000.1.1
+
+	ideology = liberal
+
+	citizenship_policy = full_citizenship
+	economic_policy = interventionism
+	religious_policy = pluralism
+	social_policy = no_position_set
+	trade_policy = free_trade
+	war_policy = anti_military
+}
+
+party = {
+	name = "SIS_socialist"
+	start_date = 1915.1.1
+	end_date = 2000.1.1
+
+	ideology = socialist
+
+	citizenship_policy = full_citizenship
+	economic_policy = interventionism
+	religious_policy = secularized
+	social_policy = populist_welfare
+	trade_policy = free_trade
+	war_policy = pacifism
+}
+
+#party = {
+#	name = "SIS_communist"
+#	start_date = 1920.1.1
+#	end_date = 2000.1.1
+#
+#	ideology = socialist
+#
+#	citizenship_policy = full_citizenship
+#	economic_policy = state_capitalism
+#	religious_policy = pro_atheism
+#	social_policy = welfare_state
+#	trade_policy = protectionism
+#	war_policy = jingoism
+#}
+
+unit_names= {
+	dreadnought = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	ironclad = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	manowar = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	cruiser = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	frigate = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	monitor = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	clipper_transport = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	steam_transport = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+	commerce_raider = {
+		"Ming Empress" "Pacific Spirit" "Pacific Pricess" "Oriental Princess" "Oriental Majesty" "Oriental Majesty" "Oriental Adventure" "Oriental Spirit" "Pacific Majesty" "Pacific Adventure" "Pacific Maiden" "Empress of the Orient" "Pacific Empress" "Empress of China" "Queen of Shanghai" "Princess of Shanghai" "Empress of Shanghai" "Shanghai Maiden"
+	}
+}

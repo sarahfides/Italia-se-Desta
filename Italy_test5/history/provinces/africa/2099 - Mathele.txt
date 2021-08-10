@@ -1,0 +1,5 @@
+owner=ITA
+add_core=SDA
+trade_goods = grain
+life_rating = 35
+terrain = mountain

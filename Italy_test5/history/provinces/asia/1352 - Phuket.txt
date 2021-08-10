@@ -1,0 +1,8 @@
+owner=PSA
+controller=PSA
+add_core=MLY
+add_core=PSA
+trade_goods = timber
+life_rating = 30
+terrain = hills
+naval_base = 1

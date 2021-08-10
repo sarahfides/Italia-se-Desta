@@ -1,0 +1,7 @@
+owner=VIJ
+add_core=DLH
+add_core=MEW
+add_core=HND
+trade_goods = wool
+life_rating = 32
+terrain = plains

@@ -1,0 +1,16 @@
+name = "3rd Russian Crusade against Transoxiana"
+
+1819.6.7 = {
+	add_attacker = RUS
+	add_attacker = GEO
+	add_attacker = CIR
+	add_defender = TRX
+	add_defender = X02
+
+	war_goal = {
+		casus_belli = acquire_state
+		actor = RUS
+		receiver = TRX
+		state_province_id = 1197
+	}
+}

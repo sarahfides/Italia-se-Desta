@@ -1,0 +1,8 @@
+owner=PSA
+controller=PSA
+add_core=ATJ
+add_core=JAV
+add_core=PSA
+trade_goods = tea
+life_rating = 30
+terrain = mountain

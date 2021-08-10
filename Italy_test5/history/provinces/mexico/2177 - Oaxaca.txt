@@ -1,0 +1,9 @@
+owner=X16
+controller=X16
+add_core=MIX
+add_core=TEO
+add_core=X16
+add_core=ZAP
+trade_goods = grain
+life_rating = 35
+terrain = mountain

@@ -1,0 +1,7 @@
+owner=X17
+controller=X17
+add_core=ARW
+add_core=MCA
+trade_goods = coal
+life_rating = 30
+terrain = mountain

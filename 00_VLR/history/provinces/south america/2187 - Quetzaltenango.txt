@@ -1,0 +1,7 @@
+owner=MEX
+add_core=CCT
+add_core=UCA
+add_core=MEX
+trade_goods = iron
+life_rating = 30
+terrain = jungle

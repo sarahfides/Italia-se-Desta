@@ -1,0 +1,11 @@
+owner=X10
+controller=X07
+add_core=GER
+add_core=MEC
+add_core=X09
+add_core=X10
+trade_goods = fish
+life_rating = 40
+terrain = plains
+naval_base = 1
+fort = 1

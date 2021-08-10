@@ -1,0 +1,5 @@
+owner=KAN
+add_core=KBO
+trade_goods = coal
+life_rating = 35
+terrain = plains

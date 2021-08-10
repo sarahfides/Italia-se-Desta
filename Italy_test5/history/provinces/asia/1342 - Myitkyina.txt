@@ -1,0 +1,8 @@
+owner=KWN
+controller=MNX
+add_core=IDO
+add_core=KCH
+add_core=KWN
+trade_goods = grain
+life_rating = 35
+terrain = mountain

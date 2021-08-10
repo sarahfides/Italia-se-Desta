@@ -1,0 +1,6 @@
+owner=AUS
+add_core=GER
+add_core=AUG
+trade_goods = coal
+life_rating = 40
+terrain = hills

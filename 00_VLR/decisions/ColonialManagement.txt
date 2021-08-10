@@ -1,0 +1,27 @@
+political_decisions = {
+
+	abolish_residential_school_systems = {
+        potential = {
+			has_country_flag = residential_school_systems
+        }
+       
+        allow = {
+			slavery = no_slavery
+			or = {
+				and = {
+					religious_policy = pro_atheism
+					ruling_party_ideology = socialist
+				}
+				ruling_party_ideology = communist
+			}
+        }
+       
+        effect = {
+			country_event = 2110152
+		}
+		
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

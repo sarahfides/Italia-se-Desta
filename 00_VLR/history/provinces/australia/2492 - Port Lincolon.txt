@@ -1,0 +1,9 @@
+owner=AUK
+controller=AUK
+add_core=AUE
+add_core=AUK
+add_core=X20
+add_core=X15
+trade_goods = wool
+life_rating = 30
+terrain = plains

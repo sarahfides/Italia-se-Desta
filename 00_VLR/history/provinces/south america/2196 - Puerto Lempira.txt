@@ -1,0 +1,6 @@
+owner=CLM
+add_core=MEX
+add_core=UCA
+trade_goods = timber
+life_rating = 30
+terrain = plains

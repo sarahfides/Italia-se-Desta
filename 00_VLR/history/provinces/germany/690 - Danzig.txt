@@ -1,0 +1,9 @@
+owner=LIV
+add_core=POL
+add_core=PLC
+add_core=GER
+add_core=LIV
+trade_goods = fish
+life_rating = 40
+terrain = farmlands
+naval_base = 2

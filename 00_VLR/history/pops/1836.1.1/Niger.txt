@@ -1,0 +1,846 @@
+1808 = {
+	slaves=
+	{
+		culture = songhai
+		religion = sunni
+		size= 2740
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 658
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = sunni
+		size= 2798
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = sunni
+		size= 233
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = sunni
+		size= 15
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 25
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = sunni
+		size= 261
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 26145
+	}
+
+	slaves=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 142
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 34
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 314
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 26
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 2
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 3
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 29
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 1156
+	}
+
+}
+1809 = {
+	slaves=
+	{
+		culture = songhai
+		religion = sunni
+		size= 2760
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 469
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = sunni
+		size= 879
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = sunni
+		size= 165
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = sunni
+		size= 369
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 18780
+	}
+
+	slaves=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 197
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 33
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 29
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 5
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 1
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 12
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 1392
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = sunni
+		size= 19
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = sunni
+		size= 17
+	}
+
+	slaves=
+	{
+		culture = songhai
+		religion = shiite
+		size= 238
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = shiite
+		size= 40
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = shiite
+		size= 179
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = shiite
+		size= 34
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = shiite
+		size= 4
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = shiite
+		size= 4
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = shiite
+		size= 75
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = shiite
+		size= 1451
+	}
+
+}
+1810 = {
+	slaves=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 3094
+	}
+
+	soldiers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 724
+	}
+
+	artisans=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 3258
+	}
+
+	clergymen=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 272
+	}
+
+	bureaucrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 18
+	}
+
+	officers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 29
+	}
+
+	aristocrats=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 608
+	}
+
+	farmers=
+	{
+		culture = songhai
+		religion = shamanism
+		size= 28200
+	}
+
+}
+1811 = {
+	slaves=
+	{
+		culture = hausa
+		religion = sunni
+		size= 6027
+	}
+
+	soldiers=
+	{
+		culture = hausa
+		religion = sunni
+		size= 1055
+	}
+
+	artisans=
+	{
+		culture = hausa
+		religion = sunni
+		size= 7383
+	}
+
+	clergymen=
+	{
+		culture = hausa
+		religion = sunni
+		size= 343
+	}
+
+	bureaucrats=
+	{
+		culture = hausa
+		religion = sunni
+		size= 47
+	}
+
+	officers=
+	{
+		culture = hausa
+		religion = sunni
+		size= 42
+	}
+
+	aristocrats=
+	{
+		culture = hausa
+		religion = sunni
+		size= 443
+	}
+
+	farmers=
+	{
+		culture = hausa
+		religion = sunni
+		size= 37393
+	}
+
+}
+1812 = {
+	slaves=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 5961
+	}
+
+	soldiers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 417
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 835
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 156
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 19
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 17
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 350
+	}
+
+	farmers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 13108
+	}
+
+}
+1813 = {
+	soldiers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 5102
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 8201
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 683
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 119
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 146
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 765
+	}
+
+	farmers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 76104
+	}
+
+}
+1814 = {
+	slaves=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 2952
+	}
+
+	soldiers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 162
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 81
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 15
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 2
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 2
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 17
+	}
+
+	farmers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 4888
+	}
+
+	slaves=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 33
+	}
+
+	soldiers=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 2
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 83
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 16
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 2
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 2
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = catholic
+		size= 17
+	}
+
+	slaves=
+	{
+		culture = afro_caribeno
+		religion = catholic
+		size= 1276
+	}
+
+	soldiers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 70
+	}
+
+	artisans=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 305
+	}
+
+	clergymen=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 57
+	}
+
+	bureaucrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 8
+	}
+
+	officers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 6
+	}
+
+	aristocrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 64
+	}
+
+	farmers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 1722
+	}
+
+}
+1815 = {
+	slaves=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 5362
+	}
+
+	soldiers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 1035
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 7245
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 388
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 26
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 41
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 869
+	}
+
+	farmers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 36782
+	}
+
+}
+1816 = {
+	slaves=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 7127
+	}
+
+	soldiers=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 489
+	}
+
+	artisans=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 2199
+	}
+
+	clergymen=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 183
+	}
+
+	bureaucrats=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 24
+	}
+
+	officers=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 20
+	}
+
+	aristocrats=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 411
+	}
+
+	farmers=
+	{
+		culture = kanuri
+		religion = sunni
+		size= 13982
+	}
+
+}
+1817 = {
+	slaves=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 4224
+	}
+
+	soldiers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 380
+	}
+
+	artisans=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 1711
+	}
+
+	clergymen=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 143
+	}
+
+	bureaucrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 19
+	}
+
+	officers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 15
+	}
+
+	aristocrats=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 160
+	}
+
+	farmers=
+	{
+		culture = tuareg
+		religion = sunni
+		size= 12356
+	}
+
+}

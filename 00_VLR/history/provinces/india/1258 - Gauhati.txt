@@ -1,0 +1,8 @@
+owner=SDY
+add_core=ORI
+add_core=ASM
+add_core=HND
+add_core=SDY
+trade_goods = tea
+life_rating = 32
+terrain = jungle

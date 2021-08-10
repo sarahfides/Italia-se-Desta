@@ -1,0 +1,8 @@
+owner=X18
+controller=X18
+add_core=COF
+add_core=JOA
+add_core=X11
+trade_goods = cotton
+life_rating = 35
+terrain = farmlands

@@ -1,0 +1,193 @@
+1326 = {
+	soldiers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 10532
+	}
+
+	artisans=
+	{
+		culture = nepali
+		religion = hindu
+		size= 17935
+	}
+
+	clergymen=
+	{
+		culture = nepali
+		religion = hindu
+		size= 961
+	}
+
+	bureaucrats=
+	{
+		culture = nepali
+		religion = hindu
+		size= 397
+	}
+
+	officers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 307
+	}
+
+	aristocrats=
+	{
+		culture = nepali
+		religion = hindu
+		size= 1614
+	}
+
+	farmers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 197201
+	}
+
+	soldiers=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 3057
+	}
+
+	artisans=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 23418
+	}
+
+	clergymen=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 1254
+	}
+
+	bureaucrats=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 519
+	}
+
+	officers=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 402
+	}
+
+	aristocrats=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 2108
+	}
+
+	farmers=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 49787
+	}
+
+}
+1327 = {
+	soldiers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 7142
+	}
+
+	artisans=
+	{
+		culture = nepali
+		religion = hindu
+		size= 10867
+	}
+
+	clergymen=
+	{
+		culture = nepali
+		religion = hindu
+		size= 582
+	}
+
+	bureaucrats=
+	{
+		culture = nepali
+		religion = hindu
+		size= 148
+	}
+
+	officers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 186
+	}
+
+	aristocrats=
+	{
+		culture = nepali
+		religion = hindu
+		size= 652
+	}
+
+	farmers=
+	{
+		culture = nepali
+		religion = hindu
+		size= 135676
+	}
+
+	soldiers=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 274
+	}
+
+	artisans=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 11700
+	}
+
+	clergymen=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 627
+	}
+
+	bureaucrats=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 159
+	}
+
+	officers=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 201
+	}
+
+	aristocrats=
+	{
+		culture = nepali
+		religion = gelugpa
+		size= 702
+	}
+
+}

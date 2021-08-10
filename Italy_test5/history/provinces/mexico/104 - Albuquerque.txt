@@ -1,0 +1,6 @@
+owner=MSC
+controller=MEX
+add_core=MSC
+trade_goods = cattle
+life_rating = 35
+terrain = steppe

@@ -1,0 +1,8 @@
+owner=KAC
+controller=KAC
+add_core=BUR
+add_core=IDO
+add_core=KAC
+trade_goods = opium
+life_rating = 35
+terrain = hills

@@ -1,0 +1,7 @@
+owner=SMB
+add_core=MLY
+add_core=SMB
+trade_goods = coffee
+life_rating = 15
+terrain = hills
+fort = 1

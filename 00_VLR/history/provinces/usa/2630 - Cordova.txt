@@ -1,0 +1,7 @@
+owner=COL
+controller=COL
+add_core=COL
+add_core=HDA
+trade_goods = fish
+life_rating = 15
+terrain = arctic

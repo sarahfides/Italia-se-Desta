@@ -1,0 +1,8 @@
+owner=MEX
+add_core=LPN
+add_core=PIM
+add_core=MEX
+trade_goods = iron
+life_rating = 35
+terrain = plains
+colonial=2

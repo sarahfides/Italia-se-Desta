@@ -1,0 +1,8 @@
+owner=MUN
+add_core=GER
+add_core=MUN
+add_core=BRA
+add_core=KLE
+trade_goods = grain
+life_rating = 40
+terrain = plains

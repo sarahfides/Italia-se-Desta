@@ -1,0 +1,8 @@
+owner=FRA
+controller=FRA
+add_core=GER
+add_core=MAI
+add_core=HES
+trade_goods = sulphur
+life_rating = 40
+terrain = farmlands

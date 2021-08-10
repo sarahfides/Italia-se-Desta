@@ -1,0 +1,912 @@
+#Sphere of Influence
+
+AFG = {
+	value = 0
+	level = 2
+}
+AIN = {
+	value = 0
+	level = 2
+}
+AJU = {
+	value = 0
+	level = 2
+}
+ALS = {
+	value = 0
+	level = 2
+}
+ARN = {
+	value = 0
+	level = 2
+}
+ATJ = {
+	value = 0
+	level = 2
+}
+AUG = {
+	value = 0
+	level = 2
+}
+AUK = {
+	value = 0
+	level = 2
+}
+AUL = {
+	value = 0
+	level = 2
+}
+AUP = {
+	value = 0
+	level = 2
+}
+AUS = {
+	value = 0
+	level = 2
+}
+BAU = {
+	value = 0
+	level = 2
+}
+BLC = {
+	value = 0
+	level = 2
+}
+BOH = {
+	value = 0
+	level = 2
+}
+BOS = {
+	value = 0
+	level = 2
+}
+BPR = {
+	value = 0
+	level = 2
+}
+BRA = {
+	value = 0
+	level = 2
+}
+BRB = {
+	value = 0
+	level = 2
+}
+BRS = {
+	value = 0
+	level = 2
+}
+BRU = {
+	value = 0
+	level = 2
+}
+BUG = {
+	value = 0
+	level = 2
+}
+BUL = {
+	value = 0
+	level = 2
+}
+CAM = {
+	value = 0
+	level = 2
+}
+CHL = {
+	value = 0
+	level = 2
+}
+CIR = {
+	value = 0
+	level = 2
+}
+CJA = {
+	value = 0
+	level = 2
+}
+CLI = {
+	value = 0
+	level = 2
+}
+CLM = {
+	value = 0
+	level = 2
+}
+COL = {
+	value = 0
+	level = 2
+}
+CRB = {
+	value = 0
+	level = 2
+}
+DAH = {
+	value = 0
+	level = 2
+}
+DAI = {
+	value = -37
+	level = 2
+}
+DES = {
+	value = 0
+	level = 2
+}
+DLH = {
+	value = 0
+	level = 2
+}
+EFR = {
+	value = 0
+	level = 2
+}
+EGY = {
+	value = 0
+	level = 2
+}
+ENG = {
+	value = 0
+	level = 2
+}
+FEO = {
+	value = 0
+	level = 2
+}
+FJL = {
+	value = 0
+	level = 2
+}
+FJV = {
+	value = 0
+	level = 2
+}
+FLA = {
+	value = 0
+	level = 2
+}
+FRA = {
+	value = 0
+	level = 2
+}
+FRI = {
+	value = 0
+	level = 2
+}
+GEO = {
+	value = 0
+	level = 2
+}
+HAI = {
+	value = 0
+	level = 2
+}
+HAM = {
+	value = 0
+	level = 2
+}
+HAT = {
+	value = 0
+	level = 2
+}
+HES = {
+	value = 0
+	level = 2
+}
+HLL = {
+	value = 0
+	level = 2
+}
+HUN = {
+	value = 0
+	level = 2
+}
+HWK = {
+	value = 0
+	level = 2
+}
+HWM = {
+	value = 0
+	level = 2
+}
+ICL = {
+	value = 0
+	level = 2
+}
+ITA = {
+	value = 0
+	level = 2
+}
+JAP = {
+	value = 0
+	level = 2
+}
+KAC = {
+	value = 0
+	level = 2
+}
+KAN = {
+	value = 0
+	level = 2
+}
+KHO = {
+	value = 0
+	level = 2
+}
+KLE = {
+	value = 0
+	level = 2
+}
+KNZ = {
+	value = 0
+	level = 2
+}
+KON = {
+	value = 0
+	level = 2
+}
+KOR = {
+	value = 0
+	level = 2
+}
+KTI = {
+	value = 0
+	level = 2
+}
+KWN = {
+	value = 0
+	level = 2
+}
+LDK = {
+	value = 0
+	level = 2
+}
+LIG = {
+	value = 0
+	level = 2
+}
+LIT = {
+	value = 0
+	level = 2
+}
+LIV = {
+	value = 0
+	level = 2
+}
+LOU = {
+	value = 0
+	level = 2
+}
+LUB = {
+	value = 0
+	level = 2
+}
+LUW = {
+	value = -17
+	level = 2
+}
+MAG = {
+	value = 0
+	level = 2
+}
+MAI = {
+	value = 0
+	level = 2
+}
+MBA = {
+	value = 0
+	level = 2
+}
+MBZ = {
+	value = 0
+	level = 2
+}
+MEW = {
+	value = 0
+	level = 2
+}
+MEX = {
+	value = 0
+	level = 2
+}
+MJZ = {
+	value = 0
+	level = 2
+}
+MKA = {
+	value = 0
+	level = 2
+}
+MKS = {
+	value = 0
+	level = 2
+}
+MLC = {
+	value = 0
+	level = 2
+}
+MNX = {
+	value = 226
+	military_access = yes
+	influence_value = 44
+	level = 3
+}
+MOL = {
+	value = 0
+	level = 2
+}
+MSC = {
+	value = 0
+	level = 2
+}
+MUN = {
+	value = 0
+	level = 2
+}
+NAH = {
+	value = 0
+	level = 2
+}
+NAS = {
+	value = 0
+	level = 2
+}
+NEJ = {
+	value = 0
+	level = 2
+}
+NEP = {
+	value = 0
+	level = 2
+}
+NOR = {
+	value = 0
+	level = 2
+}
+NOV = {
+	value = 0
+	level = 2
+}
+NZK = {
+	value = 0
+	level = 2
+}
+NZM = {
+	value = 0
+	level = 2
+}
+NZR = {
+	value = 0
+	level = 2
+}
+NZT = {
+	value = 0
+	level = 2
+}
+OIR = {
+	value = 0
+	level = 2
+}
+OLD = {
+	value = 0
+	level = 2
+}
+OMA = {
+	value = 0
+	level = 2
+}
+ORI = {
+	value = -49
+	level = 2
+}
+OTO = {
+	value = 0
+	level = 2
+}
+PAL = {
+	value = 0
+	level = 2
+}
+PAT = {
+	value = 0
+	level = 2
+}
+PEU = {
+	value = 0
+	level = 2
+}
+PGR = {
+	value = 91
+	influence_value = 10
+	level = 4
+}
+PHG = {
+	value = 0
+	level = 2
+}
+POL = {
+	value = 0
+	level = 2
+}
+POR = {
+	value = 0
+	level = 2
+}
+PRO = {
+	value = 0
+	level = 2
+}
+PSA = {
+	value = 133
+	influence_value = 20
+	level = 4
+}
+ROT = {
+	value = 0
+	level = 2
+}
+RUS = {
+	value = -19
+	level = 2
+}
+RWA = {
+	value = 0
+	level = 2
+}
+RYU = {
+	value = 0
+	level = 2
+}
+SAX = {
+	value = 0
+	level = 2
+}
+SCA = {
+	value = 0
+	level = 2
+}
+SDY = {
+	value = 0
+	level = 2
+}
+SER = {
+	value = 0
+	level = 2
+}
+SIA = {
+	value = 0
+	level = 2
+}
+SIE = {
+	value = 0
+	level = 2
+}
+SLV = {
+	value = 0
+	level = 2
+}
+SLZ = {
+	value = 0
+	level = 2
+}
+SMB = {
+	value = 0
+	level = 2
+}
+SPA = {
+	value = 0
+	level = 2
+}
+SUN = {
+	value = 0
+	level = 2
+}
+SWA = {
+	value = 0
+	level = 2
+}
+SWI = {
+	value = 0
+	level = 2
+}
+TBZ = {
+	value = 0
+	level = 2
+}
+TDO = {
+	value = 0
+	level = 2
+}
+TEX = {
+	value = 0
+	level = 2
+}
+TGA = {
+	value = 0
+	level = 2
+}
+THU = {
+	value = 0
+	level = 2
+}
+TIB = {
+	value = -13
+	level = 2
+}
+TIW = {
+	value = 0
+	level = 2
+}
+TLC = {
+	value = 0
+	level = 2
+}
+TRX = {
+	value = 0
+	level = 2
+}
+TTE = {
+	value = 0
+	level = 2
+}
+UIL = {
+	value = 0
+	level = 2
+}
+ULM = {
+	value = 0
+	level = 2
+}
+VIJ = {
+	value = 139
+	influence_value = 22
+	level = 2
+}
+WSI = {
+	value = 0
+	level = 2
+}
+X00 = {
+	value = 0
+	level = 2
+}
+X02 = {
+	value = 0
+	level = 2
+}
+X04 = {
+	value = 0
+	level = 2
+}
+X07 = {
+	value = 0
+	level = 2
+}
+X09 = {
+	value = 0
+	level = 2
+}
+X10 = {
+	value = 0
+	level = 2
+}
+X12 = {
+	value = 0
+	level = 2
+}
+X13 = {
+	value = 0
+	level = 2
+}
+X15 = {
+	value = 0
+	level = 2
+}
+X16 = {
+	value = 0
+	level = 2
+}
+X17 = {
+	value = 0
+	level = 2
+}
+X18 = {
+	value = 0
+	level = 2
+}
+X19 = {
+	value = 0
+	level = 2
+}
+X20 = {
+	value = 0
+	level = 2
+}
+YEM = {
+	value = 0
+	level = 2
+}
+YKT = {
+	value = 0
+	level = 2
+}
+ZAF = {
+	value = -4
+	level = 2
+}
+ZAP = {
+	value = 0
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Narai I Suphannaphum"
+	date="1820.9.15"
+	type=land
+	personality="unflinching"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Keo Fa Suphannaphum"
+	date="1820.9.18"
+	type=land
+	personality="disciplined"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Ratsada Nut"
+	date="1820.9.19"
+	type=land
+	personality="soldierly"
+	background="war_college"
+}
+
+leader = {
+	name="Songtham Na Chanthaburi"
+	date="1820.9.21"
+	type=land
+	personality="stalwart"
+	background="bootlicker"
+}
+
+leader = {
+	name="Taksin Kriangsak"
+	date="1820.9.24"
+	type=land
+	personality="resourceful"
+	background="bootlicker"
+}
+
+
+#Armies
+army = {
+	name="Kutai Company"
+	location=1343
+	regiment = {
+		name="1st Mergui Irregulars"
+		type=irregular
+		home=1344
+	}
+	regiment = {
+		name="2nd Mergui Irregulars"
+		type=irregular
+		home=1344
+	}
+}
+
+army = {
+	name="1st Army"
+	location=1348
+	regiment = {
+		name="1st Bangkok Irregulars"
+		type=irregular
+		home=1346
+	}
+	regiment = {
+		name="2nd Bangkok Irregulars"
+		type=irregular
+		home=1346
+	}
+	regiment = {
+		name="1st Chanthaburi Artillery"
+		type=artillery
+		home=1365
+	}
+	regiment = {
+		name="1st Nakhon Sawan Artillery"
+		type=artillery
+		home=1348
+	}
+	regiment = {
+		name="1st Ratchaburi Artillery"
+		type=artillery
+		home=1353
+	}
+	regiment = {
+		name="2nd Ratchaburi Artillery"
+		type=artillery
+		home=1353
+	}
+	regiment = {
+		name="3rd Ratchaburi Irregulars"
+		type=irregular
+		home=1353
+	}
+	regiment = {
+		name="1st Lopburi Artillery"
+		type=artillery
+		home=1347
+	}
+}
+
+navy = {
+	name="1st Fleet"
+	location=2798
+	ship = {
+		name="1st Prachinburi Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Prachinburi Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Prachinburi Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Kampot Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Kampot Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Prachinburi Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Chanthaburi Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Chanthaburi Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Chanthaburi Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="7th Fleet"
+	location=1343
+	ship = {
+		name="1st Nakhon Si Thammarat Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Prachinburi Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kampot Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Mergui Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Nakhon Si Thammarat Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Bangkok Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Moulmein Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+army = {
+	name="2nd Army"
+	location=1330
+	regiment = {
+		name="1st Nakhon Sawan Irregulars"
+		type=irregular
+		home=1348
+	}
+	regiment = {
+		name="3rd Bangkok Irregulars"
+		type=irregular
+		home=1346
+	}
+	regiment = {
+		name="1st Ratchaburi Irregulars"
+		type=irregular
+		home=1353
+	}
+	regiment = {
+		name="3rd Ratchaburi Artillery"
+		type=artillery
+		home=1353
+	}
+	regiment = {
+		name="4th Ratchaburi Artillery"
+		type=artillery
+		home=1353
+	}
+	regiment = {
+		name="1st Bangkok Artillery"
+		type=artillery
+		home=1346
+	}
+	regiment = {
+		name="5th Ratchaburi Artillery"
+		type=artillery
+		home=1353
+	}
+	regiment = {
+		name="2nd Ratchaburi Irregulars"
+		type=irregular
+		home=1353
+	}
+}
+
+army = {
+	name="3rd Army"
+	location=1353
+	regiment = {
+		name="1st Battambang Irregulars"
+		type=irregular
+		home=1366
+	}
+	regiment = {
+		name="1st Nakhon Ratchasima Irregulars"
+		type=irregular
+		home=1350
+	}
+	regiment = {
+		name="1st Lopburi Irregulars"
+		type=irregular
+		home=1347
+	}
+	regiment = {
+		name="4th Ratchaburi Irregulars"
+		type=irregular
+		home=1353
+	}
+}
+
+navy = {
+	name="2nd Fleet"
+	location=1353
+	ship = {
+		name="2nd Prachinburi Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Chanthaburi Frigate"
+		type=frigate
+	}
+	ship = {
+		name="3rd Prachinburi Frigate"
+		type=frigate
+	}
+	ship = {
+		name="3rd Lang Son Frigate"
+		type=frigate
+	}
+	ship = {
+		name="3rd Tourane Frigate"
+		type=frigate
+	}
+}
+

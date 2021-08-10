@@ -1,0 +1,7 @@
+owner=HWK
+controller=HWK
+add_core=AOT
+add_core=HWK
+trade_goods = fish
+life_rating = 15
+terrain = plains

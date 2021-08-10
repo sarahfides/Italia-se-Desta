@@ -1,0 +1,56 @@
+name = "Ming Intervention in the War of the Niger Desert"
+
+1815.12.19 = {
+	add_attacker = ARN
+	add_attacker = ENG
+	add_attacker = NOV
+	add_attacker = UIL
+	add_attacker = FRA
+	add_attacker = OTO
+	add_attacker = HAI
+	add_attacker = X12
+	add_attacker = COL
+	add_attacker = X16
+	add_attacker = LOU
+	add_defender = ZAF
+	add_defender = MNX
+
+	war_goal = {
+		casus_belli = acquire_state
+		actor = ARN
+		receiver = ZAF
+		country = ZAF
+		state_province_id = 1812
+	}
+	#war_goal = {
+	#	casus_belli = cut_down_to_size
+	#	actor = ENG
+	#	receiver = MNX
+	#}
+	war_goal = {
+		casus_belli = humiliate
+		actor = FRA
+		receiver = MNX
+	}
+	war_goal = {
+		casus_belli = demand_treaty_port_cb
+		actor = ENG
+		receiver = MNX
+		country = MNX
+		state_province_id = 1496
+	}
+	war_goal = {
+		casus_belli = demand_treaty_port_cb
+		actor = FRA
+		receiver = MNX
+		country = MNX
+		state_province_id = 1498
+	}
+	war_goal = {
+		casus_belli = acquire_state
+		actor = FRA
+		receiver = ZAF
+		country = ZAF
+		state_province_id = 1879
+	}
+}

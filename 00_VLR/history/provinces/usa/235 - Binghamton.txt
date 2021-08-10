@@ -1,0 +1,8 @@
+owner=X18
+add_core=X18
+add_core=X19
+add_core=IRO
+add_core=LEN
+trade_goods = grain
+life_rating = 35
+terrain = hills

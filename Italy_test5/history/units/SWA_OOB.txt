@@ -1,0 +1,1046 @@
+#Sphere of Influence
+
+AFG = {
+	value = 0
+	level = 2
+}
+AIN = {
+	value = 0
+	level = 2
+}
+AJU = {
+	value = 124
+	influence_value = 18
+	level = 3
+}
+ALH = {
+	value = 0
+	level = 2
+}
+ALS = {
+	value = 0
+	level = 2
+}
+ARN = {
+	value = 0
+	level = 2
+}
+AUG = {
+	value = 0
+	level = 2
+}
+AUK = {
+	value = 0
+	level = 2
+}
+AUL = {
+	value = 0
+	level = 2
+}
+AUP = {
+	value = 0
+	level = 2
+}
+AUS = {
+	value = 0
+	level = 2
+}
+BAU = {
+	value = 0
+	level = 2
+}
+BLC = {
+	value = 0
+	level = 2
+}
+BOH = {
+	value = 0
+	level = 2
+}
+BOS = {
+	value = 0
+	level = 2
+}
+BPR = {
+	value = 0
+	level = 2
+}
+BRA = {
+	value = 0
+	level = 2
+}
+BRB = {
+	value = 0
+	level = 2
+}
+BRS = {
+	value = 0
+	level = 2
+}
+BRU = {
+	value = -21
+	level = 2
+}
+BUG = {
+	value = 31
+	level = 2
+}
+BUL = {
+	value = 0
+	level = 2
+}
+CAM = {
+	value = 0
+	level = 2
+}
+CHL = {
+	value = 0
+	level = 2
+}
+CIR = {
+	value = 0
+	level = 2
+}
+CJA = {
+	value = 0
+	level = 2
+}
+CLI = {
+	value = 0
+	level = 2
+}
+CLM = {
+	value = 0
+	level = 2
+}
+COL = {
+	value = 0
+	level = 2
+}
+CRB = {
+	value = 0
+	level = 2
+}
+DAH = {
+	value = 0
+	level = 2
+}
+DAI = {
+	value = 0
+	level = 2
+}
+DES = {
+	value = 76
+	influence_value = 6
+	level = 2
+}
+DLH = {
+	value = 0
+	level = 2
+}
+EFR = {
+	value = 0
+	level = 2
+}
+EGY = {
+	value = 0
+	level = 2
+}
+ENG = {
+	value = 36
+	level = 2
+}
+FEO = {
+	value = 0
+	level = 2
+}
+FJL = {
+	value = 0
+	level = 2
+}
+FJV = {
+	value = 0
+	level = 2
+}
+FLA = {
+	value = 0
+	level = 2
+}
+FRA = {
+	value = 135
+	influence_value = 21
+	level = 3
+}
+FRI = {
+	value = 0
+	level = 2
+}
+GEO = {
+	value = 0
+	level = 2
+}
+HAI = {
+	value = 0
+	level = 2
+}
+HAM = {
+	value = 0
+	level = 2
+}
+HAT = {
+	value = 0
+	level = 2
+}
+HDJ = {
+	value = 0
+	level = 2
+}
+HES = {
+	value = 0
+	level = 2
+}
+HLL = {
+	value = -31
+	level = 2
+}
+HUN = {
+	value = 0
+	level = 2
+}
+HWK = {
+	value = 0
+	level = 2
+}
+HWM = {
+	value = 0
+	level = 2
+}
+ICL = {
+	value = 0
+	level = 2
+}
+ITA = {
+	value = 0
+	level = 2
+}
+JAP = {
+	value = 0
+	level = 2
+}
+KAC = {
+	value = 0
+	level = 2
+}
+KAN = {
+	value = 0
+	level = 2
+}
+KHO = {
+	value = 0
+	level = 2
+}
+KLE = {
+	value = 0
+	level = 2
+}
+KNZ = {
+	value = 0
+	level = 2
+}
+KON = {
+	value = 0
+	level = 2
+}
+KOR = {
+	value = 0
+	level = 2
+}
+KTI = {
+	value = 0
+	level = 2
+}
+KWN = {
+	value = 0
+	level = 2
+}
+KZN = {
+	value = 0
+	level = 2
+}
+LDK = {
+	value = 0
+	level = 2
+}
+LIG = {
+	value = 0
+	level = 2
+}
+LIT = {
+	value = 0
+	level = 2
+}
+LIV = {
+	value = 0
+	level = 2
+}
+LOU = {
+	value = 0
+	level = 2
+}
+LUB = {
+	value = 0
+	level = 2
+}
+LUW = {
+	value = -17
+	level = 2
+}
+MAG = {
+	value = 0
+	level = 2
+}
+MAI = {
+	value = 0
+	level = 2
+}
+MBA = {
+	value = 164
+	influence_value = 28
+	level = 4
+}
+MBZ = {
+	value = 0
+	level = 2
+}
+MEW = {
+	value = 0
+	level = 2
+}
+MEX = {
+	value = 90
+	influence_value = 10
+	level = 2
+}
+MJZ = {
+	value = 0
+	level = 2
+}
+MKA = {
+	value = 0
+	level = 2
+}
+MKS = {
+	value = 0
+	level = 2
+}
+MLC = {
+	value = 0
+	level = 2
+}
+MNX = {
+	value = 0
+	level = 2
+}
+MOL = {
+	value = 0
+	level = 2
+}
+MSC = {
+	value = 0
+	level = 2
+}
+MUN = {
+	value = 0
+	level = 2
+}
+NAH = {
+	value = 0
+	level = 2
+}
+NAS = {
+	value = 0
+	level = 2
+}
+NEJ = {
+	value = 0
+	level = 2
+}
+NEP = {
+	value = 0
+	level = 2
+}
+NOR = {
+	value = 0
+	level = 2
+}
+NOV = {
+	value = 66
+	influence_value = 4
+	level = 2
+}
+NZK = {
+	value = 0
+	level = 2
+}
+NZM = {
+	value = 0
+	level = 2
+}
+NZR = {
+	value = 0
+	level = 2
+}
+NZT = {
+	value = 0
+	level = 2
+}
+OIR = {
+	value = 0
+	level = 2
+}
+OLD = {
+	value = 0
+	level = 2
+}
+OMA = {
+	value = 126
+	influence_value = 19
+	level = 3
+}
+ORI = {
+	value = 0
+	level = 2
+}
+OTO = {
+	value = 0
+	level = 2
+}
+PAL = {
+	value = 0
+	level = 2
+}
+PAT = {
+	value = 0
+	level = 2
+}
+PEU = {
+	value = 79
+	influence_value = 7
+	level = 2
+}
+PGR = {
+	value = 0
+	level = 2
+}
+PHG = {
+	value = 8
+	level = 2
+}
+POL = {
+	value = 0
+	level = 2
+}
+POR = {
+	value = 0
+	level = 2
+}
+PRO = {
+	value = 0
+	level = 2
+}
+PSA = {
+	value = 0
+	level = 2
+}
+ROT = {
+	value = 0
+	level = 2
+}
+RUS = {
+	value = -19
+	level = 2
+}
+RWA = {
+	value = 0
+	level = 2
+}
+RYU = {
+	value = 0
+	level = 2
+}
+SAX = {
+	value = 0
+	level = 2
+}
+SCA = {
+	value = 0
+	level = 2
+}
+SDY = {
+	value = 0
+	level = 2
+}
+SER = {
+	value = 0
+	level = 2
+}
+SIA = {
+	value = 0
+	level = 2
+}
+SIE = {
+	value = 0
+	level = 2
+}
+SLV = {
+	value = 0
+	level = 2
+}
+SLZ = {
+	value = 0
+	level = 2
+}
+SMB = {
+	value = 0
+	level = 2
+}
+SPA = {
+	value = 0
+	level = 2
+}
+SUN = {
+	value = 0
+	level = 2
+}
+SWA = {
+	value = 0
+	level = 2
+}
+SWI = {
+	value = 0
+	level = 2
+}
+TBZ = {
+	value = 0
+	level = 2
+}
+TDO = {
+	value = 0
+	level = 2
+}
+TEX = {
+	value = 0
+	level = 2
+}
+TGA = {
+	value = 0
+	level = 2
+}
+THU = {
+	value = 0
+	level = 2
+}
+TIB = {
+	value = -17
+	level = 2
+}
+TIW = {
+	value = 0
+	level = 2
+}
+TLC = {
+	value = 0
+	level = 2
+}
+TRX = {
+	value = 0
+	level = 2
+}
+TTE = {
+	value = 0
+	level = 2
+}
+UIL = {
+	value = 0
+	level = 2
+}
+ULM = {
+	value = 0
+	level = 2
+}
+VIJ = {
+	value = 0
+	level = 2
+}
+WSI = {
+	value = 0
+	level = 2
+}
+X00 = {
+	value = 0
+	level = 2
+}
+X02 = {
+	value = 0
+	level = 2
+}
+X04 = {
+	value = 0
+	level = 2
+}
+X07 = {
+	value = 0
+	level = 2
+}
+X09 = {
+	value = 0
+	level = 2
+}
+X10 = {
+	value = 0
+	level = 2
+}
+X12 = {
+	value = 0
+	level = 2
+}
+X13 = {
+	value = 0
+	level = 2
+}
+X15 = {
+	value = 0
+	level = 2
+}
+X16 = {
+	value = 0
+	level = 2
+}
+X17 = {
+	value = 0
+	level = 2
+}
+X18 = {
+	value = -26
+	level = 2
+}
+X19 = {
+	value = 0
+	level = 2
+}
+X20 = {
+	value = 0
+	level = 2
+}
+YEM = {
+	value = 161
+	influence_value = 27
+	level = 4
+}
+YKT = {
+	value = 0
+	level = 2
+}
+ZAF = {
+	value = -4
+	level = 2
+}
+ZAP = {
+	value = 0
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="Yûsuf I"
+	date="1792.2.4"
+	type=land
+	personality="defiant"
+	background="school_of_defense"
+}
+
+leader = {
+	name="Janfar Suja"
+	date="1810.4.4"
+	type=sea
+	personality="soldierly"
+	background="war_college"
+}
+
+leader = {
+	name="Mwinyi Ahmad Wakil"
+	date="1820.4.28"
+	type=sea
+	personality="soldierly"
+	background="war_college"
+}
+
+
+#Armies
+navy = {
+	name="5th Fleet"
+	location=2038
+	ship = {
+		name="1st Angoche Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Kilwa Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Angoche Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Ibo Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Dar Es Salaam Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Angoche Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="4th Angoche Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Tanga Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="5th Angoche Man'o'war"
+		type=manowar
+	}
+}
+
+navy = {
+	name="7th Fleet"
+	location=2901
+	ship = {
+		name="1st Gladstone Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Toliara Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="1st Fleet"
+	location=2902
+	ship = {
+		name="1st Ampanihy Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Ampanihy Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="8th Fleet"
+	location=2911
+	ship = {
+		name="1st Antsiranana Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Moçambique Frigate"
+		type=frigate
+	}
+}
+
+army = {
+	name="4th Army"
+	location=2059
+	regiment = {
+		name="1st Angoche Irregulars"
+		type=irregular
+		home=2061
+	}
+	regiment = {
+		name="1st Ibo Irregulars"
+		type=irregular
+		home=2063
+	}
+	regiment = {
+		name="1st Kilwa Irregulars"
+		type=irregular
+		home=2038
+	}
+	regiment = {
+		name="1st Lindi Irregulars"
+		type=irregular
+		home=2039
+	}
+	regiment = {
+		name="1st Tanga Irregulars"
+		type=irregular
+		home=2037
+	}
+	regiment = {
+		name="1st Moçambique Artillery"
+		type=artillery
+		home=2060
+	}
+	regiment = {
+		name="1st Lindi Artillery"
+		type=artillery
+		home=2039
+	}
+	regiment = {
+		name="2nd Lindi Artillery"
+		type=artillery
+		home=2039
+	}
+	regiment = {
+		name="1st Massekisse Irregulars"
+		type=irregular
+		home=2052
+	}
+	regiment = {
+		name="1st Sofala Artillery"
+		type=artillery
+		home=2057
+	}
+}
+
+navy = {
+	name="2nd Fleet"
+	location=2122
+	ship = {
+		name="1st Dar Es Salaam Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Angoche Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Zanzibar Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Antsiranana Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Antsiranana Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Ibo Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Tolanaro Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Angoche Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="6th Dar Es Salaam Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Ampanihy Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Toliara Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Ampanihy Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Angoche Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Kilwa Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Quelimane Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Angoche Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Tolanaro Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Oporto Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Kilwa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="3rd Ampanihy Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+navy = {
+	name="3rd Fleet"
+	location=3080
+	ship = {
+		name="1st Kilwa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Kilwa Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Tanga Frigate"
+		type=frigate
+	}
+}
+
+army = {
+	name="6th Army"
+	location=2060
+	regiment = {
+		name="1st Harare Irregulars"
+		type=irregular
+		home=2068
+	}
+	regiment = {
+		name="2nd Harare Irregulars"
+		type=irregular
+		home=2068
+	}
+	regiment = {
+		name="1st Zanzibar Irregulars"
+		type=irregular
+		home=2048
+	}
+	regiment = {
+		name="2nd Zanzibar Irregulars"
+		type=irregular
+		home=2048
+	}
+	regiment = {
+		name="1st Zanzibar Cavalry"
+		type=cavalry
+		home=2048
+	}
+	regiment = {
+		name="1st Dar Es Salaam Artillery"
+		type=artillery
+		home=2036
+	}
+	regiment = {
+		name="1st Hwange Artillery"
+		type=artillery
+		home=2072
+	}
+	regiment = {
+		name="1st Kilwa Artillery"
+		type=artillery
+		home=2038
+	}
+	regiment = {
+		name="3rd Harare Irregulars"
+		type=irregular
+		home=2068
+	}
+	regiment = {
+		name="2nd Hwange Artillery"
+		type=artillery
+		home=2072
+	}
+}
+
+army = {
+	name="1st Army"
+	location=2063
+	regiment = {
+		name="2nd Ibo Irregulars"
+		type=irregular
+		home=2063
+	}
+	regiment = {
+		name="2nd Tanga Irregulars"
+		type=irregular
+		home=2037
+	}
+	regiment = {
+		name="3rd Zanzibar Irregulars"
+		type=irregular
+		home=2048
+	}
+	regiment = {
+		name="1st Dar Es Salaam Cavalry"
+		type=cavalry
+		home=2036
+	}
+	regiment = {
+		name="2nd Moçambique Artillery"
+		type=artillery
+		home=2060
+	}
+	regiment = {
+		name="2nd Dar Es Salaam Artillery"
+		type=artillery
+		home=2036
+	}
+	regiment = {
+		name="1st Ibo Artillery"
+		type=artillery
+		home=2063
+	}
+	regiment = {
+		name="2nd Ibo Artillery"
+		type=artillery
+		home=2063
+	}
+	regiment = {
+		name="4th Zanzibar Irregulars"
+		type=irregular
+		home=2048
+	}
+	regiment = {
+		name="2nd Zanzibar Cavalry"
+		type=cavalry
+		home=2048
+	}
+}
+

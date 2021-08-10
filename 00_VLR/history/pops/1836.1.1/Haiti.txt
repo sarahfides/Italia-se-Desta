@@ -1,0 +1,200 @@
+2213 = {
+	slaves=
+	{
+		culture = carribean
+		religion = animist
+		size= 18141
+	}
+
+	soldiers=
+	{
+		culture = carribean
+		religion = animist
+		size= 363
+	}
+
+	artisans=
+	{
+		culture = carribean
+		religion = animist
+		size= 303
+	}
+
+	clergymen=
+	{
+		culture = carribean
+		religion = animist
+		size= 50
+	}
+
+	bureaucrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 26
+	}
+
+	officers=
+	{
+		culture = carribean
+		religion = animist
+		size= 10
+	}
+
+	aristocrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 96
+	}
+
+	slaves=
+	{
+		culture = afro_antillean
+		religion = catholic
+		size= 89302
+	}
+
+	soldiers=
+	{
+		culture = antillien
+		religion = catholic
+		size= 1787
+	}
+
+	artisans=
+	{
+		culture = antillien
+		religion = catholic
+		size= 3994
+	}
+
+	clergymen=
+	{
+		culture = antillien
+		religion = catholic
+		size= 649
+	}
+
+	bureaucrats=
+	{
+		culture = antillien
+		religion = catholic
+		size= 339
+	}
+
+	officers=
+	{
+		culture = antillien
+		religion = catholic
+		size= 130
+	}
+
+	aristocrats=
+	{
+		culture = antillien
+		religion = catholic
+		size= 1258
+	}
+
+}
+2215 = {
+	slaves=
+	{
+		culture = carribean
+		religion = animist
+		size= 15371
+	}
+
+	soldiers=
+	{
+		culture = carribean
+		religion = animist
+		size= 308
+	}
+
+	artisans=
+	{
+		culture = carribean
+		religion = animist
+		size= 346
+	}
+
+	clergymen=
+	{
+		culture = carribean
+		religion = animist
+		size= 25
+	}
+
+	bureaucrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 11
+	}
+
+	officers=
+	{
+		culture = carribean
+		religion = animist
+		size= 5
+	}
+
+	aristocrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 65
+	}
+
+	slaves=
+	{
+		culture = afro_antillean
+		religion = catholic
+		size= 74428
+	}
+
+	soldiers=
+	{
+		culture = antillien
+		religion = catholic
+		size= 1488
+	}
+
+	artisans=
+	{
+		culture = antillien
+		religion = catholic
+		size= 7735
+	}
+
+	clergymen=
+	{
+		culture = antillien
+		religion = catholic
+		size= 558
+	}
+
+	bureaucrats=
+	{
+		culture = antillien
+		religion = catholic
+		size= 259
+	}
+
+	officers=
+	{
+		culture = antillien
+		religion = catholic
+		size= 111
+	}
+
+	aristocrats=
+	{
+		culture = antillien
+		religion = catholic
+		size= 1444
+	}
+
+}

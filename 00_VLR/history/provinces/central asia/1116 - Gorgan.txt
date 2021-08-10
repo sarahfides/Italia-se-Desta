@@ -1,0 +1,9 @@
+owner=KHO
+add_core=X02
+add_core=KHO
+add_core=PER
+add_core=TAB
+trade_goods = wool
+life_rating = 35
+terrain = mountain
+fort = 2

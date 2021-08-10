@@ -1,0 +1,8 @@
+owner=TEX
+controller=POR
+add_core=LPN
+add_core=TEX
+add_core=YAQ
+trade_goods = cattle
+life_rating = 35
+terrain = plains

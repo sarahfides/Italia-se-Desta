@@ -1,0 +1,172 @@
+country_event = { 
+	id = 2111121 #Swiss Neutrality
+	title = "SWI.001.T"
+	desc = "SWI.001.D"
+	picture = "swiss_confederation"
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "SWI.001.1"
+		militancy = -2
+		consciousness = -1
+		prestige = 10
+		neutrality = yes
+		any_country = {
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111122 #Swiss Neutrality recurring events for ai - also fires for international settlements
+	title = "SWI.002.T"
+	desc = "SWI.002.D"
+	
+	trigger = {
+		has_country_flag = neutral_state
+		ai = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+		modifier = {
+			factor = 0.1
+			THIS = {
+				num_of_allies = 1
+			}
+		}
+		modifier = {
+			factor = 0.1
+			THIS = {
+				part_of_sphere = yes
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "SWI.002.1"
+		neutrality = yes
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = -600
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+			end_military_access = SWI
+			relation = {
+				who = THIS
+				value = -400
+			}
+			relation = {
+				who = THIS
+				value = 250
+			}
+		}
+		THIS = {
+			any_country = {
+				diplomatic_influence = {
+					who = FROM
+					value = -600
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111123 #Swiss Neutrality Revoked
+	title = "SWI.003.T"
+	desc = "SWI.003.D"
+	picture = "swiss_confederation"
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "SWI.003.1"
+		militancy = 2
+		consciousness = 1
+		any_country = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#country_event = { 
+#	id = 2111122 #Helvetic Kingdom
+#	title = "EVTNAME2111122"
+#	desc = "EVTDESC2111122"
+#	picture = "swiss_confederation"
+#	
+#	trigger = {
+#		war_with = SWI
+#		is_greater_power = yes
+#		neighbour = SWI
+#		605 = {
+#			controlled_by = THIS
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#		
+#		modifier = {
+#			factor = 0.0001
+#			war = yes
+#		}
+#	}
+#	
+#	fire_only_once = yes
+#	
+#	option = {
+#		name = "EVTOPTA2111122"
+#		SWI = {
+#			country_event = 2111123 #FROMCOUNTRY demands our vassalisation
+#		}
+#		
+#		ai_chance = {
+#			factor = 90
+#		}
+#	}
+#	
+#	option = {
+#		name = "EVTOPTB2111122"
+#		prestige = -10
+#		
+#		ai_chance = {
+#			factor = 10
+#		}
+#	}
+#}

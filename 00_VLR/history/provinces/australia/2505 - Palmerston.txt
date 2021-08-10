@@ -1,0 +1,8 @@
+owner=TIW
+add_core=X20
+add_core=X15
+add_core=ABO
+add_core=TIW
+trade_goods = grain
+life_rating = 20
+terrain = hills

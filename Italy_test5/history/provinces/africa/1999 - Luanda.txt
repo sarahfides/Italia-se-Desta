@@ -1,0 +1,6 @@
+owner=KON
+controller=FRA
+add_core=KON
+trade_goods = coffee
+life_rating = 35
+terrain = plains

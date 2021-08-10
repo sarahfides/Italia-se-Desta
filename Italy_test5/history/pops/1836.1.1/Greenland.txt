@@ -1,0 +1,400 @@
+251 = {
+	soldiers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 53
+	}
+
+	artisans=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 47
+	}
+
+	clergymen=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 8
+	}
+
+	bureaucrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 4
+	}
+
+	officers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 19
+	}
+
+	farmers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 5132
+	}
+
+	soldiers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 113
+	}
+
+	artisans=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 620
+	}
+
+	clergymen=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 101
+	}
+
+	bureaucrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 53
+	}
+
+	officers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 20
+	}
+
+	aristocrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 259
+	}
+
+	farmers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 10219
+	}
+
+}
+2591 = {
+	soldiers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 51
+	}
+
+	artisans=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 46
+	}
+
+	clergymen=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 8
+	}
+
+	bureaucrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 3
+	}
+
+	officers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 19
+	}
+
+	farmers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 5002
+	}
+
+	soldiers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 111
+	}
+
+	artisans=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 603
+	}
+
+	clergymen=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 98
+	}
+
+	bureaucrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 51
+	}
+
+	officers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 20
+	}
+
+	aristocrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 254
+	}
+
+	farmers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 9957
+	}
+
+}
+2632 = {
+	soldiers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 51
+	}
+
+	artisans=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 46
+	}
+
+	clergymen=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 8
+	}
+
+	bureaucrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 3
+	}
+
+	officers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 19
+	}
+
+	farmers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 5002
+	}
+
+	soldiers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 111
+	}
+
+	artisans=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 603
+	}
+
+	clergymen=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 98
+	}
+
+	bureaucrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 51
+	}
+
+	officers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 20
+	}
+
+	aristocrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 254
+	}
+
+	farmers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 9957
+	}
+
+}
+2636 = {
+	soldiers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 51
+	}
+
+	artisans=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 46
+	}
+
+	clergymen=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 8
+	}
+
+	bureaucrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 3
+	}
+
+	officers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 19
+	}
+
+	farmers=
+	{
+		culture = eskaleut
+		religion = animist
+		size= 4986
+	}
+
+	soldiers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 110
+	}
+
+	artisans=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 601
+	}
+
+	clergymen=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 98
+	}
+
+	bureaucrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 51
+	}
+
+	officers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 20
+	}
+
+	aristocrats=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 252
+	}
+
+	farmers=
+	{
+		culture = anglo_canadian
+		religion = catholic
+		size= 9927
+	}
+
+}

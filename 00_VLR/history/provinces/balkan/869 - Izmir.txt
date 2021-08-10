@@ -1,0 +1,6 @@
+owner=EGY
+add_core=TUR
+trade_goods = fish
+life_rating = 35
+terrain = hills
+naval_base = 1

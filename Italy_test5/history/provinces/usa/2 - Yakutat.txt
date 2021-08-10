@@ -1,0 +1,6 @@
+owner=COL
+controller=COL
+add_core=HDA
+trade_goods = fish
+life_rating = 20
+terrain = plains

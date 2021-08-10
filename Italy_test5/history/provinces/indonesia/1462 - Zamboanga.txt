@@ -1,0 +1,9 @@
+owner=ENG
+controller=ZAF
+add_core=MDS
+add_core=TDO
+trade_goods = iron
+life_rating = 30
+terrain = hills
+colonial=2
+naval_base = 2

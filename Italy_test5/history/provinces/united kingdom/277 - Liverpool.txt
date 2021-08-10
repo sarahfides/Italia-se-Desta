@@ -1,0 +1,14 @@
+owner=ENG
+controller=ENG
+add_core=ENG
+add_core=ENL
+trade_goods = fish
+life_rating = 40
+terrain = plains
+naval_base = 2
+state_building=
+{
+	level=1
+	building = steamer_shipyard
+	upgrade = yes
+}

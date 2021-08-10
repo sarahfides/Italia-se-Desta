@@ -1,0 +1,7 @@
+owner=CIR
+add_core=RUS
+trade_goods = cattle
+life_rating = 35
+terrain = steppe
+colonial=2
+naval_base = 2

@@ -1,0 +1,8 @@
+owner=MUN
+controller=MUN
+add_core=GER
+add_core=MUN
+add_core=KLE
+trade_goods = coal
+life_rating = 40
+terrain = plains

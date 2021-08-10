@@ -1,0 +1,7 @@
+owner=TIW
+controller=X20
+add_core=ABO
+add_core=TIW
+trade_goods = cattle
+life_rating = 20
+terrain = desert

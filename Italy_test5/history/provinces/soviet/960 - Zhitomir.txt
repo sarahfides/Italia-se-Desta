@@ -1,0 +1,8 @@
+owner=MOL
+controller=MOL
+add_core=KIE
+add_core=MOL
+add_core=UKR
+trade_goods = grain
+life_rating = 35
+terrain = woods

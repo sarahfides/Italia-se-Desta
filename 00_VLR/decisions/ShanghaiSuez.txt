@@ -1,0 +1,105 @@
+political_decisions = {
+
+	the_future_of_shanghai = {
+        potential = {
+			not = {
+				has_global_flag = shanghai_international_settlement
+			}
+            1538 = {
+				owned_by = THIS
+			}
+			civilized = yes
+			or = {
+				capital_scope = { continent = europe }
+				capital_scope = { continent = north_america }
+				capital_scope = { continent = south_america }
+				capital_scope = { continent = oceania }
+				tag = JAP
+			}
+        }
+       
+        allow = {
+			year = 1860
+			the_historical_theory = yes
+			is_greater_power = yes
+        }
+       
+        effect = {
+			set_global_flag = shanghai_international_settlement
+			set_country_flag = shanghai_major_concession
+			set_country_flag = original_shanghai_owner
+			country_event = 2111181
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	a_concession_in_shanghai = {
+        potential = {
+			has_global_flag = shanghai_international_settlement
+			not = {
+				or = {
+					has_country_flag = shanghai_minor_concession
+					has_country_flag = shanghai_major_concession
+					has_global_flag = considering_new_sis_member
+					has_country_flag = refused_concession_at_sis
+				}
+			}
+			civilized = yes
+			or = {
+				capital_scope = { continent = europe }
+				capital_scope = { continent = north_america }
+				capital_scope = { continent = south_america }
+				capital_scope = { continent = oceania }
+				tag = JAP
+			}
+        }
+       
+        allow = {
+			year = 1860
+			the_historical_theory = yes
+			or = {
+				is_greater_power = yes
+				and = {
+					is_secondary_power = yes
+					capital_scope = {
+						continent = europe
+					}
+				}
+			}
+        }
+       
+        effect = {
+			country_event = 2111182
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	reclaim_shanghai = {
+        potential = {
+			tag = CHI
+			SIS = {
+				exists = yes
+			}
+			not = {
+				has_global_flag = shanghai_reclaimed
+			}
+        }
+       
+        allow = {
+			is_greater_power = yes
+        }
+       
+        effect = {
+			set_global_flag = shanghai_reclaimed
+			country_event = 2111198
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+}

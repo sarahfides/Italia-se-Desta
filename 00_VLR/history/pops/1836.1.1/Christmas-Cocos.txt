@@ -1,0 +1,102 @@
+2244 = {
+	soldiers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 124
+	}
+
+	artisans=
+	{
+		culture = spanish
+		religion = catholic
+		size= 249
+	}
+
+	clergymen=
+	{
+		culture = spanish
+		religion = catholic
+		size= 40
+	}
+
+	bureaucrats=
+	{
+		culture = spanish
+		religion = catholic
+		size= 9
+	}
+
+	officers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 5
+	}
+
+	aristocrats=
+	{
+		culture = spanish
+		religion = catholic
+		size= 52
+	}
+
+	farmers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 5746
+	}
+
+}
+2406 = {
+	soldiers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 166
+	}
+
+	artisans=
+	{
+		culture = spanish
+		religion = catholic
+		size= 666
+	}
+
+	clergymen=
+	{
+		culture = spanish
+		religion = catholic
+		size= 108
+	}
+
+	bureaucrats=
+	{
+		culture = spanish
+		religion = catholic
+		size= 33
+	}
+
+	officers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 13
+	}
+
+	aristocrats=
+	{
+		culture = spanish
+		religion = catholic
+		size= 140
+	}
+
+	farmers=
+	{
+		culture = spanish
+		religion = catholic
+		size= 15517
+	}
+
+}

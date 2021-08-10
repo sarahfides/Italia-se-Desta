@@ -1,0 +1,7 @@
+owner=TIB
+controller=MNX
+add_core=MDO
+add_core=TIB
+trade_goods = coal
+life_rating = 32
+terrain = hills

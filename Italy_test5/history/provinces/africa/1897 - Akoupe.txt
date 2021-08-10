@@ -1,0 +1,6 @@
+owner=ZAF
+controller=ARN
+add_core=ASH
+trade_goods = coffee
+life_rating = 15
+terrain = plains

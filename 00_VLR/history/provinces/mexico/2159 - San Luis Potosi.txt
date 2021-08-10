@@ -1,0 +1,7 @@
+owner=OTO
+add_core=MEX
+add_core=CCM
+add_core=OTO
+trade_goods = grain
+life_rating = 35
+terrain = plains

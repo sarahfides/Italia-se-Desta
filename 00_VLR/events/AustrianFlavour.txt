@@ -1,0 +1,772 @@
+country_event = { 
+	id = 2111141 #Revolution Imminent
+	title = "EVTNAME2111141"
+	desc = "EVTDESC2111141"
+	picture = "the_austrian_revolution"
+	
+	trigger = {
+		tag = AUS
+		not = {
+			or = {
+				has_country_modifier = dreaming_of_a_different_austria
+				has_global_flag = the_austrian_revolution_has_happened
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "EVTOPTA2111141"
+		set_country_flag = currently_in_revolution
+		add_country_modifier = {
+			name = dreaming_of_a_different_austria
+			duration = 3650
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = poor
+			}
+			ideology = {
+				factor = 0.5
+				value = liberal
+			}
+			ideology = {
+				factor = 1.5
+				value = anarcho_liberal
+			}
+			reduce_pop = 0.96
+			militancy = 5
+			consciousness = 3
+		}
+		any_pop = {
+			limit = {
+				type = slaves
+			}
+			ideology = {
+				factor = 5
+				value = anarcho_liberal
+			}
+			militancy = 5
+			consciousness = 3
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = middle
+			}
+			ideology = {
+				factor = 0.5
+				value = liberal
+			}
+			ideology = {
+				factor = 0.5
+				value = anarcho_liberal
+			}
+			reduce_pop = 0.98
+			militancy = 5
+			consciousness = 3
+		}
+		any_pop = {
+			limit = {
+				type = capitalists
+			}
+			ideology = {
+				factor = 1.5
+				value = liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = anarcho_liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+				not = {
+					type = capitalists
+				}
+			}
+			ideology = {
+				factor = 1.5
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_militancy = {
+				factor = 9
+				ideology = anarcho_liberal
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			militancy = 8
+			consciousness = 6
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				or = {
+					government = bourgeois_dictatorship
+					ruling_party_ideology = anarcho_liberal
+					tag = FRA
+				}
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				not = {
+					or = {
+						government = bourgeois_dictatorship
+						ruling_party_ideology = anarcho_liberal
+						tag = FRA
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111141"
+		set_global_flag = the_austrian_revolution_has_happened
+		country_event = 2111142
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { 
+	id = 2111142 #The Austrian Revolution!
+	title = "EVTNAME2111142"
+	desc = "EVTDESC2111142"
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA2111142"
+		government = bourgeois_dictatorship
+		ruling_party_ideology = anarcho_liberal
+		political_reform = universal_weighted_voting
+		political_reform = party_appointed
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = secret_ballots
+		political_reform = quota_immigration
+		political_reform = mandatory_service
+		political_reform = bankruptcy
+		political_reform = no_slavery
+		social_reform = all_voting_pops
+		social_reform = incarceration
+		social_reform = trinket_pensions
+		nationalvalue = nv_equality
+		#any_pop = {
+		#	limit = {
+		#		ideology = conservative
+		#	}
+		#	ideology = {
+		#		factor = 0.3
+		#		value = reactionary
+		#	}
+		#	ideology = {
+		#		factor = 0.1
+		#		value = liberal
+		#	}
+		#	ideology = {
+		#		factor = 0.2
+		#		value = anarcho_liberal
+		#	}
+		#}
+		add_country_modifier = {
+			name = revolutionary_republic
+			duration = 1825
+		}
+		set_global_flag = the_austrian_revolution_has_happened
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = poor
+			}
+			ideology = {
+				factor = 1
+				value = liberal
+			}
+			ideology = {
+				factor = 3
+				value = anarcho_liberal
+			}
+			reduce_pop = 0.93
+		}
+		any_pop = {
+			limit = {
+				type = slaves
+			}
+			ideology = {
+				factor = 5
+				value = anarcho_liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = middle
+			}
+			ideology = {
+				factor = 0.5
+				value = liberal
+			}
+			ideology = {
+				factor = 0.5
+				value = anarcho_liberal
+			}
+			reduce_pop = 0.96
+		}
+		any_pop = {
+			limit = {
+				type = capitalists
+			}
+			ideology = {
+				factor = 2
+				value = liberal
+			}
+			ideology = {
+				factor = 0.2
+				value = anarcho_liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+				not = {
+					type = capitalists
+				}
+			}
+			reduce_pop = 0.2
+			ideology = {
+				factor = 4
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_militancy = {
+				factor = 9
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			militancy = 2
+			consciousness = 4
+		}
+		FRA = {
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				or = {
+					government = bourgeois_dictatorship
+					ruling_party_ideology = anarcho_liberal
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				not = {
+					or = {
+						government = bourgeois_dictatorship
+						ruling_party_ideology = anarcho_liberal
+						tag = FRA
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111143 #The Triumph of the Revolution
+	title = "EVTNAME2111143"
+	desc = "EVTDESC2111143"
+	picture = "the_austrian_revolution"
+	
+	trigger = {
+		tag = AUS
+		or = {
+			ruling_party_ideology = anarcho_liberal
+			government = bourgeois_dictatorship
+		}
+		has_country_modifier = dreaming_of_a_different_austria
+	}
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2111143"
+		prestige = 10
+		remove_country_modifier = dreaming_of_a_different_austria
+		set_global_flag = the_austrian_revolution_has_happened
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = poor
+			}
+			ideology = {
+				factor = 0.4
+				value = conservative
+			}
+			ideology = {
+				factor = 0.2
+				value = reactionary
+			}
+			reduce_pop = 0.93
+		}
+		any_pop = {
+			limit = {
+				type = slaves
+			}
+			ideology = {
+				factor = 5
+				value = anarcho_liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = middle
+			}
+			ideology = {
+				factor = 0.3
+				value = conservative
+			}
+			ideology = {
+				factor = 0.4
+				value = reactionary
+			}
+			reduce_pop = 0.96
+		}
+		any_pop = {
+			limit = {
+				type = capitalists
+			}
+			ideology = {
+				factor = 0.5
+				value = liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+				not = {
+					type = capitalists
+				}
+			}
+			reduce_pop = 0.2
+			ideology = {
+				factor = 9
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_militancy = {
+				factor = 9
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+		FRA = {
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				or = {
+					government = bourgeois_dictatorship
+					ruling_party_ideology = anarcho_liberal
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				not = {
+					or = {
+						government = bourgeois_dictatorship
+						ruling_party_ideology = anarcho_liberal
+						tag = FRA
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111144 #The End of the Revolution
+	title = "EVTNAME2111144"
+	desc = "EVTDESC2111144"
+	
+	trigger = {
+		government = bourgeois_dictatorship
+		not = { 
+			or = {
+				ruling_party_ideology = anarcho_liberal 
+				ruling_party_ideology = socialist
+			}
+		}
+	}
+	
+	major = yes
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = "EVTOPTA2111144"
+		any_pop = {
+			militancy = -2 
+		}
+		political_reform = population_equal_weight
+		government = democracy
+		remove_country_modifier = revolutionary_republic
+		clr_country_flag = radical_republic
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111145 #The Triumph of the Revolution (other countries at start of game)
+	title = "EVTNAME2111145"
+	desc = "EVTDESC2111145"
+	picture = "the_austrian_revolution"
+	
+	trigger = {
+		has_country_flag = radical_republic
+		not = { has_country_modifier = revolutionary_republic }
+		or = {
+			ruling_party_ideology = anarcho_liberal
+			government = bourgeois_dictatorship
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2111145"
+		prestige = 10
+		random_list = {
+			10 = {
+				add_country_modifier = {
+					name = revolutionary_republic
+					duration = 1095
+				}
+			}
+			30 = {
+				add_country_modifier = {
+					name = revolutionary_republic
+					duration = 1825
+				}
+			}
+			30 = {
+				add_country_modifier = {
+					name = revolutionary_republic
+					duration = 2555
+				}
+			}
+			30 = {
+				add_country_modifier = {
+					name = revolutionary_republic
+					duration = 3285
+				}
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = poor
+			}
+			ideology = {
+				factor = 0.5
+				value = anarcho_liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+			ideology = {
+				factor = 0.05
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				type = slaves
+			}
+			ideology = {
+				factor = 5
+				value = anarcho_liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				strata = middle
+			}
+			ideology = {
+				factor = 0.3
+				value = anarcho_liberal
+			}
+			ideology = {
+				factor = 0.2
+				value = liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				type = capitalists
+			}
+			ideology = {
+				factor = 0.5
+				value = liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+				not = {
+					type = capitalists
+				}
+			}
+			ideology = {
+				factor = 9
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = reactionary
+			}
+			scaled_militancy = {
+				factor = 3
+				ideology = conservative
+			}
+		}
+		FRA = {
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				or = {
+					government = bourgeois_dictatorship
+					ruling_party_ideology = anarcho_liberal
+				}
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 150
+			}
+		}
+		any_country = {
+			limit = {
+				is_independant = yes
+				not = {
+					or = {
+						government = bourgeois_dictatorship
+						ruling_party_ideology = anarcho_liberal
+						tag = FRA
+					}
+				}
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+

@@ -1,0 +1,6 @@
+owner=NAH
+add_core=MEX
+add_core=NAH
+trade_goods = grain
+life_rating = 35
+terrain = mountain

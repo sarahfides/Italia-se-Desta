@@ -1,0 +1,64 @@
+guarantee=
+{
+	first="HUN"
+	second="BOS"
+	start_date="1817.4.25"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="HUN"
+	second="SER"
+	start_date="1819.2.20"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="ENG"
+	second="HLL"
+	start_date="1814.3.7"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="POL"
+	second="LIV"
+	start_date="1767.8.23"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="BOH"
+	second="AUG"
+	start_date="1807.6.26"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="ARN"
+	second="SPA"
+	start_date="1814.12.9"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="ITA"
+	second="AUG"
+	start_date="1796.7.24"
+	end_date="1936.1.1"
+}
+
+guarantee=
+{
+	first="VIJ"
+	second="MEW"
+	start_date="1817.2.4"
+	end_date="1936.1.1"
+}
+

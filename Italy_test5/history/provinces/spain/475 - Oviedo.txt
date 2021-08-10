@@ -1,0 +1,8 @@
+owner=FRA
+controller=FRA
+add_core=SPA
+add_core=X03
+trade_goods = coal
+life_rating = 35
+terrain = woods
+naval_base = 2

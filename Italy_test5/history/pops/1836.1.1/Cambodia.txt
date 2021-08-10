@@ -1,0 +1,372 @@
+1364 = {
+	slaves=
+	{
+		culture = khmer
+		religion = theravada
+		size= 1673
+	}
+
+	soldiers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 3719
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = theravada
+		size= 8809
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = theravada
+		size= 636
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 186
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 117
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 1096
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 81643
+	}
+
+}
+1366 = {
+	slaves=
+	{
+		culture = khmer
+		religion = hindu
+		size= 577
+	}
+
+	soldiers=
+	{
+		culture = khmer
+		religion = hindu
+		size= 2321
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = hindu
+		size= 1136
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = hindu
+		size= 95
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = hindu
+		size= 12
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = hindu
+		size= 30
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = hindu
+		size= 212
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = hindu
+		size= 20852
+	}
+
+	slaves=
+	{
+		culture = khmer
+		religion = theravada
+		size= 2058
+	}
+
+	soldiers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 8281
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = theravada
+		size= 9236
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = theravada
+		size= 770
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 92
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 246
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 1724
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 67601
+	}
+
+}
+1367 = {
+	soldiers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 1189
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = theravada
+		size= 5349
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = theravada
+		size= 386
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 113
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 48
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 998
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 51345
+	}
+
+}
+1368 = {
+	soldiers=
+	{
+		culture = khmer
+		religion = animist
+		size= 1404
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = animist
+		size= 282
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = animist
+		size= 24
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = animist
+		size= 3
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = animist
+		size= 5
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = animist
+		size= 52
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = animist
+		size= 23297
+	}
+
+	soldiers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 1879
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = theravada
+		size= 4169
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = theravada
+		size= 347
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 41
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 75
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = theravada
+		size= 779
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = theravada
+		size= 26267
+	}
+
+	soldiers=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 207
+	}
+
+	artisans=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 1158
+	}
+
+	clergymen=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 96
+	}
+
+	bureaucrats=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 12
+	}
+
+	officers=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 21
+	}
+
+	aristocrats=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 216
+	}
+
+	farmers=
+	{
+		culture = khmer
+		religion = mahayana
+		size= 1980
+	}
+
+}

@@ -1,0 +1,6 @@
+owner=KON
+controller=KON
+trade_goods = grain
+life_rating = 15
+terrain = hills
+naval_base = 1

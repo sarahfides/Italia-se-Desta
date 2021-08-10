@@ -1,0 +1,910 @@
+country_event = { 
+	id = 2111031 #The Humiliation of Ming
+	title = "EVTNAME2111031"
+	desc = "EVTDESC2111031"
+	picture = "burning_of_the_books"
+	
+	trigger = {
+		tag = MNX
+		or = {
+			1496 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1498 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1608 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1538 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1566 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1569 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			1481 = {
+				not = {
+					owned_by = THIS
+				}
+			}
+		}
+		not = {
+			or = {
+				has_country_flag = progressive_ming
+				has_country_flag = reactionary_ming
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+		
+		modifier = {
+			factor = 0.5
+			has_recently_lost_war = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_disarmed = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2111031"
+		set_country_flag = progressive_ming
+		prestige = 2
+		add_country_modifier = {
+			name = progressive_ming_government
+			duration = -1
+		}
+		ruling_party_ideology = liberal
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = 5
+			consciousness = 8
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+		}
+		any_pop = {
+			limit = {
+				not = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 2
+			consciousness = 4
+		}
+		
+		ai_chance = { 
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111031"
+		set_country_flag = reactionary_ming
+		prestige = -30
+		ruling_party_ideology = reactionary
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -5
+			consciousness = -5
+			ideology = {
+				factor = 0.1
+				value = reactionary
+			}
+		}
+		any_pop = {
+			limit = {
+				not = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 5
+			consciousness = 8
+		}
+		any_country = {
+			limit = {
+				and = {
+					alliance_with = THIS
+					not = { neighbour = THIS }
+				}
+			}
+			leave_alliance = MNX
+		}
+		country_event = {
+			id = 2111032
+			days = 14
+		}
+		
+		ai_chance = { 
+			factor = 75
+		}
+	}
+}
+
+country_event = { 
+	id = 2111032 #The New Qin
+	title = "EVTNAME2111032"
+	desc = "EVTDESC2111032"
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2111032"
+		set_country_flag = reactionary_ming
+		any_country = {
+			limit = {
+				alliance_with = this
+				not = { neighbour = THIS }
+			}
+			leave_alliance = MNX
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_pop = {
+			reduce_pop = 0.98
+			militancy = 2
+			consciousness = 4
+		}
+		any_pop = {
+			limit = {
+				pop_majority_ideology = liberal
+			}
+			reduce_pop = 0.4
+		}
+		any_pop = {
+			limit = {
+				type = bureaucrats
+				pop_majority_ideology = liberal
+			}
+			reduce_pop = 0.05
+		}
+		add_country_modifier = {
+			name = reactionary_ming_government
+			duration = -1
+		}
+		years_of_research = -10
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111033 #Irrelevant Politics
+	title = "EVTNAME2111033"
+	desc = "EVTDESC2111033"
+	
+	trigger = {
+		or = {
+			has_country_modifier = reactionary_ming_government
+			has_country_modifier = progressive_ming_government
+		}
+		civilized = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2111033"
+		remove_country_modifier = reactionary_ming_government
+		remove_country_modifier = progressive_ming_government
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				militancy = -4
+				consciousness = -2
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111035 #Conquest of Tibet
+	title = "EVTNAME2111035"
+	desc = "EVTDESC2111035"
+	picture = "potala_palace"
+	
+	trigger = {
+		or = {
+			tag = MNX
+			tag = CHI
+		}
+		exists = TIB
+		TIB_1591 = {
+			owned_by = TIB
+		}
+		TIB = {
+			is_vassal = no
+		}
+		not = {
+			has_global_flag = annexation_of_tibet
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 2
+			TIB = {
+				in_sphere = THIS
+			}
+		}
+		modifier = {
+			factor = 2
+			TIB = {
+				vassal_of = THIS
+			}
+		}
+		modifier = {
+			factor = 100
+			alliance_with = TIB
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2111035"
+		set_global_flag = annexation_of_tibet
+		TIB = {
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+		create_alliance = TIB
+		
+		ai_chance = { 
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 0.3
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = reactionary_ming_government
+			}
+			modifier = {
+				factor = 1.2
+				has_country_modifier = progressive_ming_government
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111035"
+		set_global_flag = annexation_of_tibet
+		TIB = {
+			relation = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+		}
+		THIS = {
+			casus_belli = {
+				target = TIB
+				type = conquest
+				months = 60
+			}
+			add_country_modifier = {
+				name = tibetan_woes
+				duration = 60
+			}
+		}
+		
+		ai_chance = { 
+			factor = 60
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 2
+				has_country_modifier = reactionary_ming_government
+			}
+			modifier = {
+				factor = 0.7
+				has_country_modifier = progressive_ming_government
+			}
+			modifier = {
+				factor = 0.8
+				ruling_party_ideology = liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC2111035"
+		set_global_flag = annexation_of_tibet
+		TIB = {
+			relation = {
+				who = THIS
+				value = 50
+			}
+			country_event = 2111036 #China demands vassalisation
+		}
+		
+		ai_chance = { 
+			factor = 30
+			
+			modifier = {
+				factor = 1.2
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 2
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 1.2
+				has_country_modifier = progressive_ming_government
+			}
+			modifier = {
+				factor = 1.2
+				ruling_party_ideology = liberal
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111036 #China demanding annexation
+	title = "EVTNAME2111036"
+	desc = "EVTDESC2111036"
+	picture = "potala_palace"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111036"
+		prestige = -10
+		FROM = {
+			create_vassal = THIS
+			country_event = 2111037 #Tibet has accepted
+		}
+		TIB = {
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				militancy = 3
+				consciousness = 3
+			}
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 0.5
+				civilized = yes
+			}
+			modifier = {
+				factor = 10
+				THIS = {
+					civilized = no
+				}
+				FROM = {
+					civilized = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				THIS = {
+					civilized = yes
+				}
+				FROM = {
+					civilized = no
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					FROM = {
+						brigades_compare = 2
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+			modifier = {
+				factor = 0.5
+				part_of_sphere = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111036"
+		prestige = 10
+		FROM = {
+			country_event = 2111038 #Tibet has refused
+		}
+		TIB = {
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				militancy = -2
+				consciousness = 1
+			}
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.5
+				civilized = yes
+			}
+			modifier = {
+				factor = 0.5
+				THIS = {
+					civilized = no
+				}
+				FROM = {
+					civilized = yes
+				}
+			}
+			modifier = {
+				factor = 10
+				THIS = {
+					civilized = yes
+				}
+				FROM = {
+					civilized = no
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					brigades_compare = 2
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = reactionary
+			}
+			modifier = {
+				factor = 1.5
+				part_of_sphere = yes
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111037 #Tibet has accepted
+	title = "EVTNAME2111037"
+	desc = "EVTDESC2111037"
+	picture = "potala_palace"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111037"
+		prestige = 20
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111038 #Tibet has refused
+	title = "EVTNAME2111038"
+	desc = "EVTDESC2111038"
+	picture = "potala_palace"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA2111038"
+		prestige = -20
+		FROM = {
+			relation = {
+				who = THIS
+				value = -200
+			}
+			leave_alliance = THIS
+		}
+		THIS = {
+			casus_belli = {
+				target = FROM
+				type = conquest
+				months = 60
+			}
+			add_country_modifier = {
+				name = tibetan_woes
+				duration = 60
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111039 #FROMCOUNTRY declares independence
+	title = "MNX.009.T"
+	desc = "MNX.009.D"
+	picture = "defying_the_ming"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "MNX.009.1"
+		relation = {
+			who = FROM
+			value = -200
+		}
+		THIS = {
+			casus_belli = {
+				target = FROM
+				type = make_puppet
+				months = 24
+			}
+		}
+		any_pop = {
+			limit = {
+				and = {
+					or = {
+						pop_majority_ideology = liberal
+						pop_majority_ideology = socialist
+						pop_majority_ideology = radical
+						pop_majority_ideology = communist
+					}
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 2
+			consciousness = 1
+			dominant_issue = {
+				value = anti_military
+				factor = 0.1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = 2111040 #FROMCOUNTRY contests our independence
+				days = 14
+			}
+		}
+		
+		ai_chance = { 
+			factor = 75
+		}
+	}
+	
+	option = {
+		name = "MNX.009.2"
+		prestige = -10
+		relation = {
+			who = FROM
+			value = 50
+		}
+		any_pop = {
+			limit = {
+				and = {
+					not = {
+						or = {
+							pop_majority_ideology = liberal
+							pop_majority_ideology = socialist
+							pop_majority_ideology = radical
+							pop_majority_ideology = communist
+						}
+					}
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 2
+			consciousness = 1
+			dominant_issue = {
+				value = jingoism
+				factor = 0.1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = 2111041 #FROMCOUNTRY agrees to independence
+				days = 14
+			}
+		}
+		
+		ai_chance = { 
+			factor = 25
+		}
+	}
+}
+
+country_event = { 
+	id = 2111040 #FROMCOUNTRY contests our independence
+	title = "MNX.010.T"
+	desc = "MNX.010.D"
+	picture = "defying_the_ming"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "MNX.010.1"
+		prestige = -5
+		FROM = {
+			create_vassal = THIS
+		}
+		any_pop = {
+			limit = {
+				and = {
+					not = {
+						or = {
+							pop_majority_ideology = liberal
+							pop_majority_ideology = socialist
+							pop_majority_ideology = radical
+							pop_majority_ideology = communist
+						}
+					}
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 2
+			consciousness = 1
+			dominant_issue = {
+				value = jingoism
+				factor = 0.1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = 2111042 #FROMCOUNTRY accepts ultimatum
+				days = 14
+			}
+		}
+		
+		ai_chance = { 
+			factor = 15
+		}
+	}
+	
+	option = {
+		name = "MNX.010.2"
+		prestige = 5
+		relation = {
+			who = FROM
+			value = 50
+		}
+		any_pop = {
+			limit = {
+				and = {
+					not = {
+						or = {
+							pop_majority_ideology = liberal
+							pop_majority_ideology = socialist
+							pop_majority_ideology = radical
+							pop_majority_ideology = communist
+						}
+					}
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			militancy = 2
+			consciousness = 1
+			dominant_issue = {
+				value = anti_military
+				factor = 0.1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = 2111043 #FROMCOUNTRY refuses ultimatum
+				days = 14
+			}
+		}
+		
+		ai_chance = { 
+			factor = 85
+		}
+	}
+}
+
+country_event = { 
+	id = 2111041 #FROMCOUNTRY agrees to our independence
+	title = "MNX.011.T"
+	desc = "MNX.011.D"
+	picture = "defying_the_ming"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "MNX.011.1"
+		prestige = 10
+		any_pop = {
+			limit = {
+				and = {
+					not = {
+						or = {
+							pop_majority_ideology = liberal
+							pop_majority_ideology = socialist
+							pop_majority_ideology = radical
+							pop_majority_ideology = communist
+						}
+					}
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			dominant_issue = {
+				value = jingoism
+				factor = 0.1
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -3
+			consciousness = -2
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111042 #FROMCOUNTRY agrees to ultimatum
+	title = "MNX.012.T"
+	desc = "MNX.012.D"
+	picture = "defying_the_ming"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "MNX.012.1"
+		prestige = 5
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -1
+			consciousness = -0.5
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111043 #FROMCOUNTRY refuses ultimatum
+	title = "MNX.013.T"
+	desc = "MNX.013.D"
+	picture = "defying_the_ming"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "MNX.013.1"
+		prestige = -5
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = 1
+			consciousness = 0.5
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

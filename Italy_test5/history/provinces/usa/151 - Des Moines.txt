@@ -1,0 +1,8 @@
+owner=UIL
+controller=LOU
+add_core=OEO
+add_core=UIL
+add_core=WCY
+trade_goods = grain
+life_rating = 35
+terrain = woods

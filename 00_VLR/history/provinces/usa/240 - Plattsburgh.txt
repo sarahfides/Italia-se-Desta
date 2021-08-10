@@ -1,0 +1,6 @@
+owner=X18
+add_core=X18
+add_core=X19
+trade_goods = timber
+life_rating = 35
+terrain = woods

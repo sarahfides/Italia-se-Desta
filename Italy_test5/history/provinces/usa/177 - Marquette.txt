@@ -1,0 +1,12 @@
+owner=NOV
+controller=NOV
+add_core=NOV
+trade_goods = iron
+life_rating = 35
+terrain = forest
+state_building=
+{
+	level=1
+	building = steel_factory
+	upgrade = yes
+}

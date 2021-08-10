@@ -1,0 +1,224 @@
+political_decisions = {
+
+	join_the_german_confederation = {
+        potential = {
+			has_global_flag = german_confederation_created
+            OR = {
+                primary_culture = north_german
+				primary_culture = south_german
+            }
+            NOT = {
+				has_country_flag = german_confederation_member
+            }
+        }
+       
+        allow = {
+            war = no
+        }
+       
+        effect = {
+			set_country_flag = german_confederation_member
+            any_pop = {
+				limit = {
+					or = {
+						has_pop_culture = north_german
+						has_pop_culture = south_german
+					}
+				}
+				militancy = -3
+				consciousness = 1
+			}
+			any_country = {
+				limit = {
+					or = {
+						primary_culture = north_german
+						primary_culture = south_german
+					}
+				}
+				country_event = 2111301 #FROMCOUNTRY joins the German Confederation
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	create_the_zollverein = {
+        potential = {
+			has_country_flag = german_confederation_member
+            NOT = {
+				has_global_flag = zollverein_created
+            }
+			NOT = {
+				tag = AUS
+				tag = BOH
+			}
+        }
+       
+        allow = {
+            war = no
+			is_greater_power = yes
+			industrial_score = 25
+        }
+       
+        effect = {
+			set_global_flag = zollverein_created
+			set_country_flag = zollverein_founder
+			set_country_flag = zollverein_member
+            add_country_modifier = {
+				name = centre_of_the_zollverein
+				duration = -1
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	join_the_zollverein = {
+        potential = {
+			has_country_flag = german_confederation_member
+			has_global_flag = zollverein_created
+            NOT = {
+				has_country_flag = zollverein_member
+            }
+        }
+       
+        allow = {
+            war = no
+        }
+       
+        effect = {
+			set_country_flag = german_confederation_member
+            add_country_modifier = {
+				name = member_of_the_zollverein
+				duration = -1
+			}
+			any_country = {
+				limit = {
+					has_country_flag = zollverein_member
+				}
+				country_event = 2111302 #FROMCOUNTRY joins the Zollverein
+			}
+        }
+		
+        ai_will_do = {
+            factor = 1
+			
+			modifier = {
+				factor = 0
+				not = {
+					any_country = {
+						limit = {
+							has_country_flag = zollverein_founder
+						}
+						relation = {
+							who = THIS
+							value = 50
+						}
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				and = {
+					any_country = {
+						limit = {
+							has_country_flag = zollverein_founder
+						}
+						or = {
+							government = bourgeois_dictatorship
+							government = revolutionary_empire
+						}
+					}
+					THIS = {
+						not = {
+							or = {
+								government = bourgeois_dictatorship
+								government = revolutionary_empire
+							}
+						}
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.1
+				or = {
+					ruling_party_ideology = reactionary
+					ruling_party_ideology = agrarian
+				}
+			}
+        }
+    }
+
+	consolidate_the_confederation = {
+        potential = {
+			has_country_flag = german_confederation_member
+			GER = {
+				any_core = {
+					limit = {
+						not = {
+							or = {
+								is_core = FRA
+								province_id = 573
+								province_id = 572
+								province_id = 571
+								province_id = 586
+								province_id = 587
+								province_id = 588
+								province_id = 591
+							}
+						}
+					}
+					owned_by = FRA
+				}
+			}
+			not = {
+				exists = GER
+			}
+        }
+       
+        allow = {
+			or = {
+				has_country_flag = zollverein_founder
+				and = {
+					is_greater_power = yes
+					random_country = {
+						limit = {
+							has_country_flag = zollverein_founder
+						}
+						is_greater_power = no
+					}
+				}
+			}
+        }
+       
+        effect = {
+			change_tag = GER
+			add_accepted_culture = north_german
+			add_accepted_culture = south_german
+			any_country = {
+				limit = {
+					not = {
+						or = {
+							tag = BOH
+							tag = THIS
+						}
+					}
+					has_country_flag = german_confederation_member
+				}
+				country_event = 2111303 #Event inviting Confederation member to join Germany
+			}
+			any_country = {
+				remove_country_modifier = centre_of_the_zollverein
+				remove_country_modifier = member_of_the_zollverein
+			}
+			country_event = 2111304 #Major event announcing formation of Germany
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

@@ -1,0 +1,282 @@
+country_event = { 
+	id = 2111251 #UK becomes Great Britain
+	title = "ENG.001.T"
+	desc = "ENG.001.D"
+	picture = "end_of_the_union"
+	
+	trigger = {
+		tag = ENG
+		IRE = {
+			exists = yes
+			is_our_vassal = no
+			all_core = {
+				not = {
+					owned_by = ENG
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "ENG.001.1"
+		prestige = -25
+		IRE = {
+			any_owned = {
+				remove_core = ENG
+			}
+		}
+		remove_accepted_culture = irish
+		ENG = {
+			any_owned = {
+				limit = {
+					is_core = ENG
+				}
+				remove_core = ENG
+				add_core = GBR
+			}
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					or = {
+						pop_majority_ideology = conservative
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = fascist
+					}
+				}
+				consciousness = 3
+				militancy = 4
+				dominant_issue = {
+					value = jingoism
+					factor = 0.25
+				}
+			}
+		}
+		change_tag = GBR
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111252 #UK or GB becomes England
+	title = "ENG.002.T"
+	desc = "ENG.002.D"
+	picture = "end_of_the_union"
+	
+	trigger = {
+		or = {
+			tag = ENG
+			tag = GBR
+		}
+		SCO = {
+			exists = yes
+			is_our_vassal = no
+			all_core = {
+				not = {
+					owned_by = THIS
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "ENG.002.1"
+		prestige = -25
+		SCO = {
+			is_our_vassal = no
+			any_owned = {
+				remove_core = THIS
+			}
+		}
+		remove_accepted_culture = scottish
+		remove_accepted_culture = irish
+		THIS = {
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				remove_core = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = THIS
+					not = {
+						is_core = IRE
+					}
+				}
+				add_core = THIS
+			}
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					or = {
+						pop_majority_ideology = conservative
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = fascist
+					}
+				}
+				consciousness = 3
+				militancy = 4
+				dominant_issue = {
+					value = jingoism
+					factor = 0.25
+				}
+			}
+		}
+		change_tag = ENL
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111253 #England loses cores on Wales
+	title = "ENG.003.T"
+	desc = "ENG.003.D"
+	picture = "end_of_the_union"
+	
+	trigger = {
+		tag = ENL
+		WHA = {
+			exists = yes
+			is_our_vassal = no
+			all_core = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			any_owned = {
+				is_core = ENL
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "ENG.003.1"
+		prestige = -10
+		WHA = {
+			any_owned = {
+				remove_core = ENL
+			}
+		}
+		remove_accepted_culture = welsh
+		THIS = {
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					or = {
+						pop_majority_ideology = conservative
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = fascist
+					}
+				}
+				consciousness = 3
+				militancy = 4
+				dominant_issue = {
+					value = jingoism
+					factor = 0.25
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111254 #England loses cores on Cornwall
+	title = "ENG.004.T"
+	desc = "ENG.004.D"
+	picture = "end_of_the_union"
+	
+	trigger = {
+		tag = ENL
+		KER = {
+			exists = yes
+			is_our_vassal = no
+			all_core = {
+				not = {
+					owned_by = THIS
+				}
+			}
+			any_owned = {
+				is_core = ENL
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "ENG.004.1"
+		prestige = -10
+		KER = {
+			any_owned = {
+				remove_core = ENL
+			}
+		}
+		remove_accepted_culture = cornish
+		THIS = {
+			any_pop = {
+				limit = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					or = {
+						pop_majority_ideology = conservative
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = fascist
+					}
+				}
+				consciousness = 3
+				militancy = 4
+				dominant_issue = {
+					value = jingoism
+					factor = 0.25
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

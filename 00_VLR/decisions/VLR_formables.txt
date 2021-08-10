@@ -1,0 +1,398 @@
+political_decisions = {
+
+	form_upv = {
+        potential = {
+            OR = {
+                tag = NOV
+				tag = UIL
+				tag = X19
+            }
+            NOT = {
+				has_global_flag = upv_created
+            }
+        }
+       
+        allow = {
+            is_greater_power = yes
+            prestige = 25
+            war = no
+			nationalism_n_imperialism = 1
+            NOV = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+            UIL = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+            X19 = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+        }
+       
+        effect = {
+			set_global_flag = upv_created
+            prestige = 20
+            change_tag = UPV
+			any_country = {
+				limit = {
+					ai = yes
+					or = {
+						tag = UIL
+						tag = NOV
+						tag = X19
+					}
+					NOT = {
+						has_country_flag = post_colonial_country
+						tag = THIS
+					}
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				annex_to = FROM
+			}
+			any_owned = {
+				limit = {
+					or = {
+						is_core = NOV
+						is_core = UIL
+						is_core = X19
+					}
+				}
+				add_core = UPV
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	form_nfr = {
+        potential = {
+            OR = {
+                tag = LOU
+				tag = COL
+				tag = X12
+            }
+            NOT = {
+				has_global_flag = nfr_created
+            }
+        }
+       
+        allow = {
+            is_greater_power = yes
+            prestige = 25
+            war = no
+			nationalism_n_imperialism = 1
+            LOU = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+            COL = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+            X12 = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+        }
+       
+        effect = {
+			set_global_flag = nfr_created
+            prestige = 20
+            change_tag = NFR
+			any_country = {
+				limit = {
+					ai = yes
+					or = {
+						tag = COL
+						tag = LOU
+						tag = X12
+					}
+					NOT = {
+						has_country_flag = post_colonial_country
+						tag = THIS
+					}
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+				}
+				annex_to = FROM
+			}
+			any_owned = {
+				limit = {
+					or = {
+						is_core = LOU
+						is_core = COL
+						is_core = X12
+					}
+				}
+				add_core = NFR
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	form_grecoitalian_union = {
+        potential = {
+            OR = {
+                primary_culture = north_italian
+				primary_culture = south_italian
+				primary_culture = greek
+            }
+            NOT = {
+                exists = GIU
+            }
+			capital_scope = {
+				continent = europe
+			}
+        }
+       
+        allow = {
+            is_greater_power = yes
+            prestige = 45
+            war = no
+			nationalism_n_imperialism = 1
+            GRE = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+            ITA = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            in_sphere = THIS
+                        }
+                    }
+                }
+            }
+        }
+       
+        effect = {
+            prestige = 20
+            change_tag = GIU
+            add_accepted_culture = greek
+			add_accepted_culture = north_italian
+			add_accepted_culture = south_italian
+            any_country = {
+                limit = {
+                    NOT = {
+                        is_greater_power = yes
+                    }
+					capital_scope = { continent = europe }
+					OR = {
+						primary_culture = north_italian
+						primary_culture = south_italian
+						primary_culture = greek
+					}
+                    in_sphere = THIS
+                }
+                country_event = { id=11101 days=0 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	form_austria_bohemia= {
+        potential = {
+            OR = {
+                tag = AUS
+				tag = BOH
+            }
+            NOT = {
+                exists = AUB
+            }
+        }
+       
+        allow = {
+			war = no
+			nationalism_n_imperialism = 1
+			OR = {
+				AND = {
+					is_greater_power = yes
+					prestige = 45
+					AUS = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+						}
+					}
+					BOH = {
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+								}
+							}
+                        }
+                    }
+                }
+				AND = {
+					GER = {
+						exists = yes
+						is_greater_power = yes
+					}
+					OR = {
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 2 }
+							not = { rank = 4 }
+						}
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 3 }
+							not = { rank = 5 }
+						}
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 4 }
+							not = { rank = 6 }
+						}
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 5 }
+							not = { rank = 7 }
+						}
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 6 }
+							not = { rank = 8 }
+						}
+						AND = {
+							is_greater_power = yes
+							GER = { rank = 7 }
+							not = { rank = 9 }
+						}
+						AND = {
+							is_greater_power = no
+							is_secondary_power = yes
+						}
+					}
+					AUS = {
+						OR = {
+							AND = {
+								exists = no
+								all_core = {
+									owned_by = THIS
+								}
+							}
+							AND = {
+								exists = yes
+								OR = {
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+						}
+					}
+					BOH = {
+						OR = {
+							AND = {
+								exists = no
+								all_core = {
+									owned_by = THIS
+								}
+							}
+							AND = {
+								exists = yes
+								OR = {
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+						}
+					}
+                }
+            }
+        }
+       
+        effect = {
+            prestige = 20
+            change_tag = AUB
+            add_accepted_culture = czech
+			add_accepted_culture = south_german
+            any_country = {
+                limit = {
+                    NOT = {
+                        tag = THIS
+                    }
+					OR = {
+						tag = AUS
+						tag = BOH
+					}
+                }
+                country_event = { id=11101 days=0 }
+            }
+			AUS = {
+				any_core = {
+					add_core = AUB
+				}
+			}
+			BOH = {
+				any_core = {
+					add_core = AUB
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

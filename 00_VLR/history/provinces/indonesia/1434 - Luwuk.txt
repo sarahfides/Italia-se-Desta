@@ -1,0 +1,7 @@
+owner=LUW
+controller=LUW
+add_core=LUW
+add_core=TTE
+trade_goods = timber
+life_rating = 30
+terrain = hills

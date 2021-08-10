@@ -1,0 +1,8 @@
+owner=AJU
+add_core=ETH
+add_core=ADA
+add_core=AJU
+add_core=SOM
+trade_goods = grain
+life_rating = 30
+terrain = hills

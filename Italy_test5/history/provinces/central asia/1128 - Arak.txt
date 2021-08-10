@@ -1,0 +1,8 @@
+owner=KHO
+controller=KHO
+add_core=KHO
+add_core=PER
+add_core=X02
+trade_goods = iron
+life_rating = 35
+terrain = mountain

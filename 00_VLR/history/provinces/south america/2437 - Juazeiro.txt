@@ -1,0 +1,7 @@
+owner=X13
+add_core=X13
+add_core=TPQ
+add_core=BRZ
+trade_goods = tobacco
+life_rating = 35
+terrain = jungle

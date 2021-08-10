@@ -1,0 +1,6 @@
+owner=ARN
+controller=ARN
+trade_goods = wool
+life_rating = 10
+terrain = desert
+colonial=2

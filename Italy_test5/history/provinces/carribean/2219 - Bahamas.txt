@@ -1,0 +1,9 @@
+owner=WSI
+controller=WSI
+add_core=CRB
+add_core=NSS
+add_core=WSI
+trade_goods = cotton
+life_rating = 35
+terrain = plains
+naval_base = 1

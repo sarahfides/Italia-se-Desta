@@ -1,0 +1,7 @@
+owner=X16
+add_core=MEX
+add_core=TLX
+add_core=X16
+trade_goods = grain
+life_rating = 35
+terrain = plains

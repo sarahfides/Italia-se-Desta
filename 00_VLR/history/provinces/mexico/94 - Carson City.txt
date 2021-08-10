@@ -1,0 +1,4 @@
+add_core=X12
+trade_goods = iron
+life_rating = 30
+terrain = desert

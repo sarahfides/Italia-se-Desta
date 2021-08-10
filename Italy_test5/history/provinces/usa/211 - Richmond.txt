@@ -1,0 +1,9 @@
+owner=X18
+controller=X18
+add_core=CAL
+add_core=IRO
+add_core=OSA
+add_core=POW
+trade_goods = tobacco
+life_rating = 35
+terrain = farmlands

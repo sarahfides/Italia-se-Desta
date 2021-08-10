@@ -1,0 +1,12 @@
+owner=AUS
+controller=AUS
+add_core=BUL
+trade_goods = grain
+life_rating = 35
+terrain = marsh
+state_building=
+{
+	level=1
+	building = clipper_shipyard
+	upgrade = yes
+}

@@ -1,0 +1,8 @@
+owner=X16
+add_core=MEX
+add_core=MIX
+add_core=X16
+add_core=ZAP
+trade_goods = grain
+life_rating = 35
+terrain = jungle

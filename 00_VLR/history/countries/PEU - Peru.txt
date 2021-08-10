@@ -1,0 +1,58 @@
+capital = 2293
+primary_culture = brazilian
+culture = zzz_religion_catholic
+religion = catholic
+government = democracy
+plurality = 0
+nationalvalue = nv_order
+literacy = 0.12
+
+civilized = yes
+
+# Social Reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = no_pensions
+school_reforms = no_schools
+
+# political reforms
+slavery=yes_slavery
+vote_franschise=universal_weighted_voting
+upper_house_composition=state_equal_weight
+voting_system=jefferson_method
+public_meetings=yes_meeting
+press_rights=censored_press
+trade_unions=non_socialist
+political_parties=gerrymandering
+
+# New Reforms
+conscription = mandatory_service
+border_policy = quota_immigration
+debt_law = peonage
+penal_system = capital_punishment
+child_labor = child_labor_legal
+citizens_rights = culture_voting_only
+
+ruling_party = PEU_conservative
+upper_house = 
+{
+	fascist = 0
+	liberal = 14
+	conservative = 81
+	reactionary = 5
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+}
+
+# Starting Consciousness
+consciousness = 1.71927
+nonstate_consciousness= 0.143782
+
+# Technologies
+prestige=0
+oob = "PEU_OOB.txt"
+set_country_flag = religi

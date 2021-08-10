@@ -1,0 +1,8 @@
+owner=EGY
+controller=VIJ
+add_core=ARA
+add_core=EGY
+add_core=NEJ
+trade_goods = wool
+life_rating = 10
+terrain = desert

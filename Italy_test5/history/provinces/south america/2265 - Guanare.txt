@@ -1,0 +1,6 @@
+owner=X17
+controller=X17
+add_core=CAB
+trade_goods = coffee
+life_rating = 30
+terrain = plains

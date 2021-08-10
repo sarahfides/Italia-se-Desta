@@ -1,0 +1,290 @@
+country_event = { 
+	id = 2111301 #FROMCOUNTRY joins the German Confederation
+	title = "GER.001.T"
+	desc = "GER.001.D"
+	picture = "german_confederation"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "GER.001.1"
+		prestige = 5
+		any_country = {
+			limit = {
+				has_country_flag = german_confederation_member
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111302 #FROMCOUNTRY joins the Zollverein
+	title = "GER.002.T"
+	desc = "GER.002.D"
+	picture = "zollverein"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "GER.002.1"
+		prestige = 5
+		any_country = {
+			limit = {
+				has_country_flag = zollverein_member
+			}
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = zollverein_founder
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111303 #Join the unified German Empire
+	title = "GER.003.T"
+	desc = "GER.003.D"
+	picture = "proclamation_of_the_german_empire"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "GER.003.1"
+		FROM = {
+			inherit = THIS
+		}
+		
+		ai_chance = { 
+			factor = 95
+			
+			modifier = {
+				factor = 0.05
+				and = {
+					THIS = {
+						not = {
+							or = {
+								government = bourgeois_dictatorship
+								ruling_party_ideology = anarcho_liberal
+							}
+						}
+					}
+					FROM = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				and = {
+					THIS = {
+						not = {
+							government = revolutionary_empire
+						}
+					}
+					FROM = {
+						government = revolutionary_empire
+					}
+				}
+			}
+			modifier = {
+				factor = 0.05
+				and = {
+					THIS = {
+						not = {
+							or = {
+								government = socialist_republic
+								or = {
+									ruling_party_ideology = anarcho_liberal
+									ruling_party_ideology = socialist
+									ruling_party_ideology = communist
+								}
+							}
+						}
+					}
+					FROM = {
+						government = socialist_republic
+					}
+				}
+			}
+			modifier = {
+				factor = 0.3
+				and = {
+					THIS = {
+						not = {
+							or = {
+								government = democracy
+								or = {
+									ruling_party_ideology = anarcho_liberal
+									ruling_party_ideology = socialist
+									ruling_party_ideology = liberal
+								}
+							}
+						}
+					}
+					FROM = {
+						government = democracy
+					}
+				}
+			}
+			modifier = {
+				factor = 0.05
+				and = {
+					THIS = {
+						not = {
+							or = {
+								government = theocracy
+								ruling_party_ideology = reactionary
+							}
+						}
+					}
+					FROM = {
+						government = theocracy
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				and = {
+					THIS = {
+						or = {
+							government = absolute_monarchy
+							government = prussian_constitutionalism
+						}
+					}
+					FROM = {
+						government = hms_government
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "GER.003.1"
+		any_pop = {
+			limit = {
+				or = {
+					has_pop_culture = north_german
+					has_pop_culture = south_german
+				}
+				not = {
+					or = {
+						pop_majority_ideology = reactionary
+						pop_majority_ideology = conservative
+					}
+				}
+			}
+			militancy = 3
+			consciousness = 1
+		}
+		
+		ai_chance = { 
+			factor = 5
+			
+			modifier = {
+				factor = 20
+				and = {
+					or = {
+						tag = AUS
+						tag = BOH
+					}
+					is_greater_power = yes
+				}
+			}
+			modifier = {
+				factor = 5
+				and = {
+					or = {
+						tag = AUS
+						tag = BOH
+					}
+					or = {
+						BOH = {
+							or = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+						AUS = {
+							or = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111304 #The Consolidation of the German Confederation
+	title = "GER.004.T"
+	desc = "GER.004.D"
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "GER.004.1"
+		any_neighbouring_country = {
+			limit = {
+				not = {
+					or = {
+						alliance_with = THIS
+						in_sphere = THIS
+						vassal_of = THIS
+						and = { 
+							or = {
+								primary_culture = north_german
+								primary_culture = south_german
+							}
+							not = {
+								tag = AUS
+							}
+						}						
+					}
+				}
+				relation = {
+					who = THIS
+					value = -50
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

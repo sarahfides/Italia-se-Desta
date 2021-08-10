@@ -1,0 +1,7 @@
+owner=POL
+controller=POL
+add_core=GER
+add_core=X10
+trade_goods = cattle
+life_rating = 40
+terrain = woods

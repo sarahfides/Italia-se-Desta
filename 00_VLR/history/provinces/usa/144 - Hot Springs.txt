@@ -1,0 +1,9 @@
+owner=LOU
+add_core=LOU
+add_core=TEX
+add_core=CAD
+add_core=NTC
+trade_goods = grain
+life_rating = 35
+terrain = plains
+colonial=2

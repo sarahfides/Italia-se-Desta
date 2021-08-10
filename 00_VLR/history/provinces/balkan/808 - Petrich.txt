@@ -1,0 +1,6 @@
+owner=ITA
+add_core=BUL
+add_core=MCD
+trade_goods = wool
+life_rating = 35
+terrain = hills

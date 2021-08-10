@@ -1,0 +1,6 @@
+owner=X18
+controller=X18
+trade_goods = cotton
+life_rating = 35
+terrain = woods
+naval_base = 1

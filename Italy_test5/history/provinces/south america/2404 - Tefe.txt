@@ -1,0 +1,5 @@
+owner=X13
+controller=X13
+trade_goods = tropical_wood
+life_rating = 25
+terrain = jungle

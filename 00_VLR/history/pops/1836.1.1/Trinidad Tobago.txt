@@ -1,0 +1,207 @@
+2237 = {
+	slaves=
+	{
+		culture = carribean
+		religion = animist
+		size= 8145
+	}
+
+	soldiers=
+	{
+		culture = carribean
+		religion = animist
+		size= 179
+	}
+
+	artisans=
+	{
+		culture = carribean
+		religion = animist
+		size= 313
+	}
+
+	clergymen=
+	{
+		culture = carribean
+		religion = animist
+		size= 28
+	}
+
+	bureaucrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 7
+	}
+
+	aristocrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 57
+	}
+
+	farmers=
+	{
+		culture = carribean
+		religion = animist
+		size= 274
+	}
+
+	officers=
+	{
+		culture = carribean
+		religion = animist
+		size= 2
+	}
+
+	slaves=
+	{
+		culture = afro_norse
+		religion = protestant
+		size= 33597
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 739
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 6115
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 567
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 131
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 57
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 1101
+	}
+
+}
+2238 = {
+	slaves=
+	{
+		culture = carribean
+		religion = animist
+		size= 8031
+	}
+
+	soldiers=
+	{
+		culture = carribean
+		religion = animist
+		size= 166
+	}
+
+	artisans=
+	{
+		culture = carribean
+		religion = animist
+		size= 289
+	}
+
+	clergymen=
+	{
+		culture = carribean
+		religion = animist
+		size= 27
+	}
+
+	bureaucrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 7
+	}
+
+	aristocrats=
+	{
+		culture = carribean
+		religion = animist
+		size= 52
+	}
+
+	officers=
+	{
+		culture = carribean
+		religion = animist
+		size= 2
+	}
+
+	slaves=
+	{
+		culture = afro_norse
+		religion = protestant
+		size= 33131
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 681
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 5632
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 523
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 121
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 52
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 1014
+	}
+
+}

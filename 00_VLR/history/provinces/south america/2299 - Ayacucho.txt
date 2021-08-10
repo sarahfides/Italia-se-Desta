@@ -1,0 +1,7 @@
+owner=CHL
+controller=CHL
+add_core=CSU
+add_core=PEU
+trade_goods = cattle
+life_rating = 30
+terrain = mountain

@@ -1,0 +1,606 @@
+country_event = { 
+	id = 2111001 #Getting cores the far east
+	title = "EVTNAME2111001"
+	desc = "EVTDESC2111001"
+	picture = "pacification_of_the_far_east"
+	
+	trigger = {
+		tag = RUS
+		is_greater_power = yes
+		RUS = {
+			all_core = {
+				owned_by = RUS
+			}
+		}
+		year = 1855
+		not = {
+			has_country_flag = far_eastern_cores_given
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111001"
+		set_country_flag = far_eastern_cores_given
+		prestige = 10
+		1184 = {
+			add_core = THIS
+		}
+		2698 = {
+			add_core = THIS
+		}
+		1068 = {
+			add_core = THIS
+		}
+		1187 = {
+			add_core = THIS
+		}
+		1188 = {
+			add_core = THIS
+		}
+		1186 = {
+			add_core = THIS
+		}
+		1190 = {
+			add_core = THIS
+		}
+		2697 = {
+			add_core = THIS
+		}
+		1085 = {
+			add_core = THIS
+		}
+		1084 = {
+			add_core = THIS
+		}
+		2617 = {
+			add_core = THIS
+		}
+		1083 = {
+			add_core = THIS
+		}
+		1084 = {
+			add_core = THIS
+		}
+		1082 = {
+			add_core = THIS
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2111002 #The Circassian Exchange (Circassia)
+	title = "EVTNAME2111002"
+	desc = "EVTDESC2111002"
+	picture = "circassian_exchange"
+	
+	trigger = {
+		tag = RUS
+		RUS = {
+			all_core = {
+				owned_by = RUS
+			}
+		}
+		exists = CIR
+		CIR = {
+			or = {
+				in_sphere = THIS
+				vassal_of = THIS
+			}
+		}
+		has_country_flag = far_eastern_cores_given
+		not = {
+			has_country_flag = circassian_exchange_circassian
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 5
+			is_greater_power = no
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111002"
+		set_country_flag = circassian_exchange_circassian
+		CIR = {
+			country_event = 2111004
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				not = {
+					or = {
+						ruling_party_ideology = fascist
+						ruling_party_ideology = reactionary
+					}
+				}
+			}
+			modifier = {
+				factor = 1.3
+				CIR = {
+					in_sphere = THIS
+				}
+			}
+			modifier = {
+				factor = 1.5
+				CIR = {
+					vassal_of = THIS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111002"
+		set_country_flag = circassian_exchange_circassian
+		CIR = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = CIR
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+						pop_majority_culture = tatar
+					}
+				}
+				add_core = RUS
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = CIR
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+					}
+				}
+				add_core = THIS
+			}
+		}
+		any_greater_power = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				not = {
+					or = {
+						relation = {
+							who = RUS
+							value = 100
+						}
+						alliance_with = RUS
+					}
+				}
+				relation = {
+					who = CIR
+					value = 200
+				}
+				diplomatic_influence = {
+					who = CIR
+					value = 200
+				}
+			}
+		}
+		diplomatic_influence = {
+			who = CIR
+			value = -200
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					CIR = {
+						in_sphere = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					CIR = {
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111003 #The Circassian Exchange (Don-Kuban)
+	title = "EVTNAME2111002"
+	desc = "EVTDESC2111002"
+	picture = "circassian_exchange"
+	
+	trigger = {
+		tag = RUS
+		RUS = {
+			all_core = {
+				owned_by = RUS
+			}
+		}
+		exists = DKU
+		DKU = {
+			or = {
+				in_sphere = THIS
+				vassal_of = THIS
+			}
+		}
+		has_country_flag = far_eastern_cores_given
+		not = {
+			has_country_flag = circassian_exchange_don_kuban
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 5
+			is_greater_power = no
+		}
+		modifier = {
+			factor = 2
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111002"
+		set_country_flag = circassian_exchange_don_kuban
+		DKU = {
+			country_event = 2111004
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				not = {
+					or = {
+						ruling_party_ideology = fascist
+						ruling_party_ideology = reactionary
+					}
+				}
+			}
+			modifier = {
+				factor = 1.3
+				DKU = {
+					in_sphere = THIS
+				}
+			}
+			modifier = {
+				factor = 1.5
+				DKU = {
+					vassal_of = THIS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111002"
+		set_country_flag = circassian_exchange_don_kuban
+		DKU = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = DKU
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+						pop_majority_culture = tatar
+					}
+				}
+				add_core = RUS
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = DKU
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+					}
+				}
+				add_core = THIS
+			}
+		}
+		any_greater_power = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				not = {
+					or = {
+						relation = {
+							who = RUS
+							value = 100
+						}
+						alliance_with = RUS
+					}
+				}
+				relation = {
+					who = DKU
+					value = 200
+				}
+				diplomatic_influence = {
+					who = DKU
+					value = 200
+				}
+			}
+		}
+		diplomatic_influence = {
+			who = DKU
+			value = -200
+		}
+		
+		ai_chance = { 
+			factor = 50
+			
+			modifier = {
+				factor = 1.3
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					DKU = {
+						in_sphere = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					DKU = {
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111004 #The Circassian Exchange (Circassia)
+	title = "EVTNAME2111004"
+	desc = "EVTDESC2111004"
+	picture = "circassian_exchange"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTB2111004"
+		prestige = 5
+		any_owned = {
+			limit = {
+				and = {
+					not = {
+						is_core = THIS
+					}
+					or = {
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+						pop_majority_culture = tatar
+					}
+				}
+			}
+			add_core = RUS
+			secede_province = RUS
+		}
+		RUS = {
+			any_owned = {
+				limit = {
+					or = {
+						pop_majority_culture = caucasian_minor 
+						province_id = 1055
+						province_id = 1057
+					}
+				}
+				add_core = THIS
+				secede_province = THIS
+			}
+			create_vassal = THIS
+		}
+		
+		ai_chance = { 
+			factor = 70
+			
+			modifier = {
+				factor = 1.1
+				not = {
+					or = {
+						ruling_party_ideology = fascist
+						ruling_party_ideology = reactionary
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				CIR = {
+					in_sphere = RUS
+				}
+			}
+			modifier = {
+				factor = 2
+				CIR = {
+					vassal_of = RUS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2111002"
+		prestige = 10
+		RUS = {
+			country_event = 2111005
+		}
+		
+		ai_chance = { 
+			factor = 30
+			
+			modifier = {
+				factor = 1.5
+				or = {
+					ruling_party_ideology = fascist
+					ruling_party_ideology = reactionary
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					THIS = {
+						in_sphere = RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				not = {
+					THIS = {
+						vassal_of = RUS
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2111005 #The Circassian Exchange was Refused
+	title = "EVTNAME2111005"
+	desc = "EVTDESC2111005"
+	picture = "circassian_war"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTB2111005"
+		prestige = -15
+		add_casus_belli = {
+			target = CIR
+			type = humiliate
+			months = 24
+		}
+		FROM = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = THIS
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+						pop_majority_culture = tatar
+					}
+				}
+				add_core = RUS
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					or = {
+						is_core = FROM
+						is_core = CRI
+						is_core = UKR
+						pop_majority_culture = ukrainian
+					}
+				}
+				add_core = THIS
+			}
+		}
+		any_greater_power = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				not = {
+					or = {
+						relation = {
+							who = RUS
+							value = 100
+						}
+						alliance_with = RUS
+					}
+				}
+				relation = {
+					who = FROM
+					value = 200
+				}
+				diplomatic_influence = {
+					who = FROM
+					value = 200
+				}
+			}
+		}
+		diplomatic_influence = {
+			who = CIR
+			value = -200
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

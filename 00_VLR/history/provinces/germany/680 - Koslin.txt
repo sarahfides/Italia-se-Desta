@@ -1,0 +1,9 @@
+owner=X09
+add_core=POL
+add_core=PLC
+add_core=GER
+add_core=X10
+add_core=X09
+trade_goods = grain
+life_rating = 40
+terrain = woods

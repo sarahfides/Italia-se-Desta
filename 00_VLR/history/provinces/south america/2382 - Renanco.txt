@@ -1,0 +1,6 @@
+owner=CHL
+add_core=CHL
+add_core=CUA
+trade_goods = wool
+life_rating = 35
+terrain = plains

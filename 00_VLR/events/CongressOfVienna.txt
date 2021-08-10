@@ -1,0 +1,5471 @@
+country_event = { 
+	id = 2110401 #The Congress of $CAPITAL$?
+	title = "vienna.001.T"
+	desc = "vienna.001.D"
+	picture = "the_congress_of_vienna"
+	
+	trigger = {
+		is_greater_power = yes
+		rank = 8
+		capital_scope = {
+			continent = europe
+		}
+		not = {
+			or = {
+				has_global_flag = congress_of_vienna_ongoing
+				has_global_flag = congress_of_vienna_ended
+				has_country_flag = declined_to_host_congress_of_vienna
+			}
+		}
+		or = {
+			tag = FRA
+			tag = ENG
+			tag = SCA
+			tag = RUS
+			tag = ITA
+		}
+		or = {
+			or = {
+				BOH = {
+					war_with = AUS
+				}
+				BOH = {
+					war_with = POL
+				}
+				BUL = {
+					war_with = HUN
+				}
+				BUL = {
+					war_with = SER
+				}
+			}
+			year = 1830
+		}
+		war = no
+		or = {
+			has_global_flag = austrian_revolution_has_happened
+			AUS = {
+				has_country_modifier = dreaming_of_a_different_austria
+			}
+		}
+	}
+	
+	allow_multiple_instances =  yes
+	
+	fire_only_once = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "vienna.001.1"
+		set_global_flag = congress_of_vienna_ongoing
+		set_country_flag = congress_of_vienna_host
+		set_country_flag = congress_of_vienna_participant
+		any_country = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				is_greater_power = yes
+			}
+			country_event = 2110402 #Invitation to congress of vienna
+		}
+		country_event = {
+			id = 2110403 #Opening of the Congress
+			days = 30
+		}
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "vienna.001.2"
+		set_country_flag = declined_to_host_congress_of_vienna
+		prestige = -20
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { 
+	id = 2110402 #Invitation to a Great Congress
+	title = "vienna.002.T"
+	desc = "vienna.002.D"
+	picture = "the_congress_of_vienna"
+	
+	is_triggered_only  = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "vienna.002.1"
+		set_country_flag = congress_of_vienna_participant
+		prestige = 5
+		
+		ai_chance = {
+			factor = 99
+		}
+	}
+	
+	option = {
+		name = "vienna.002.2"
+		prestige = -50
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { 
+	id = 2110403 #The Congress of $CAPITAL$
+	title = "vienna.003.T"
+	desc = "vienna.003.D"
+	
+	is_triggered_only  = yes
+	
+	fire_only_once = yes
+	
+	major = yes	
+	
+	option = {
+		name = "vienna.003.1"
+		set_global_flag = congress_of_vienna_topic_1_austria
+		prestige = 50
+		AUS = {
+			set_variable = {
+				which = congress_of_vienna_topic_1_austria
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_1_austria_answer_given
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#################
+##             ##
+##   AUSTRIA   ##
+##             ##
+################# 
+
+country_event = { 
+	id = 2110404 #The Austrian Question
+	title = "vienna.004.T"
+	desc = "vienna.004.D"
+	picture = "vienna_austria"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_participant
+		has_global_flag = congress_of_vienna_topic_1_austria
+		not = { has_country_flag = congress_of_vienna_topic_1_austria_answer_given }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_topic_1_austria_answer_given
+	}
+	
+	option = {
+		name = "vienna.004.1" #Support Austria
+		set_country_flag = likes_austria
+		AUS = {
+			change_variable = {
+				which = congress_of_vienna_topic_1_austria
+				value = -1
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 35
+			
+			modifier = {
+				factor = 100
+				tag = AUS
+			}
+			modifier = {
+				factor = 2
+				is_our_vassal = AUS
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = AUS
+			}
+			modifier = {
+				factor = 2
+				alliance_with = AUS
+			}
+			#modifier = {
+			#	factor = 1.5
+			#	AUS = {
+			#		overlord = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 1.25
+			#	AUS = {
+			#		sphere_leader = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 0
+				any_core = {
+					owned_by = AUS
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_province = {
+					is_core = AUS
+				}
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = AUS
+			}
+			modifier = {
+				factor = 0
+				or = {
+					tag = BUL
+					tag = SER
+					tag = BOS
+					tag = HUN
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = AUS
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = AUS
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = AUS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				and = {
+					not = {
+						government = bourgeois_dictatorship
+					}
+					AUS = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.004.2" #Indifferent
+		prestige = -10
+		AUS = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 1.5
+				not = { neighbour = AUS }
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.004.3" #Hostile to Austria
+		set_country_flag = dislikes_austria
+		AUS = {
+			change_variable = {
+				which = congress_of_vienna_topic_1_austria
+				value = 1
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		
+		ai_chance = {
+			factor = 55
+			
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+			modifier = {
+				factor = 0.5
+				is_our_vassal = AUS
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = AUS
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = AUS
+			}
+			#modifier = {
+			#	factor = 0.75
+			#	AUS = {
+			#		overlord = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.75
+			#	AUS = {
+			#		sphere_leader = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 10
+				any_core = {
+					owned_by = AUS
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					is_core = AUS
+				}
+			}
+			modifier = {
+				factor = 1.5
+				truce_with = AUS
+			}
+			modifier = {
+				factor = 10
+				or = {
+					tag = SER
+					tag = BOS
+					tag = HUN
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					relation = {
+						who = AUS
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					relation = {
+						who = AUS
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				not = {
+					relation = {
+						who = AUS
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = AUG
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = AUG
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = AUG
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = ROT
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = ROT
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = ROT
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = SLZ
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = SLZ
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = SLZ
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				tag = ITA
+			}
+			modifier = {
+				factor = 2
+				and = {
+					government = bourgeois_dictatorship
+					AUS = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110405 #Austria Supported
+	title = "vienna.005.T"
+	desc = "vienna.005.D"
+	
+	trigger = {
+		tag = AUS
+		AUS = {
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_1_austria
+					value = 1
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_1_austria
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			AUS = {
+				check_variable = {
+					which = congress_of_vienna_topic_1_austria
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_1_austria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.005.1"
+		clr_global_flag = congress_of_vienna_topic_1_austria
+		set_global_flag = congress_of_vienna_topic_2_bulgaria
+		set_country_flag = austria_supported
+		BUL = {
+			set_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given
+		}
+		any_pop = {
+			limit = {
+				not = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -3
+			consciousness = -2
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110406 #Austria Dismembered
+	title = "vienna.006.T"
+	desc = "vienna.006.D"
+	
+	trigger = {
+		tag = AUS
+		AUS = {
+			check_variable = {
+				which = congress_of_vienna_topic_1_austria
+				value = 1
+			}
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_1_austria
+					value = 3
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_1_austria
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_1_austria
+		set_global_flag = congress_of_vienna_topic_2_bulgaria
+		BUL = {
+			set_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			AUS = {
+				check_variable = {
+					which = congress_of_vienna_topic_1_austria
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			AUS = {
+				not = {
+					check_variable = {
+						which = congress_of_vienna_topic_1_austria
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_1_austria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.006.1" #Accept
+		prestige = -50
+		set_country_flag = austria_dismembered
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = AUS
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		any_owned = {
+			limit = {
+				is_core = ROM
+				not = {
+					or = {
+						province_id = 653
+						province_id = 665
+						province_id = 667
+						province_id = 664
+						province_id = 666
+						province_id = 818
+						province_id = 674
+					}
+				}
+			}
+			secede_province = MOL
+			add_core = MOL
+		}
+		any_owned = {
+			limit = {
+				is_core = ROM
+				or = {
+					province_id = 653
+					province_id = 665
+					province_id = 667
+					province_id = 664
+					province_id = 666
+				}
+			}
+			secede_province = SIE
+			add_core = SIE
+		}
+		any_owned = {
+			limit = {
+				is_core = SER
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				is_core = BUL
+			}
+			secede_province = BUL
+		}
+		any_owned = {
+			limit = {
+				is_core = SLO
+			}
+			secede_province = CLI
+		}
+		any_owned = {
+			limit = {
+				is_core = SLV
+			}
+			secede_province = SLV
+		}
+		any_owned = {
+			limit = {
+				is_core = BOH
+				not = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+			}
+			secede_province = BOH
+		}
+		BUL = {
+			set_country_flag = received_lands_from_austria
+		}
+		
+		ai_chance = {  
+			factor = 70
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.006.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_1_austria_min
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_austria
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_participant
+				not = {
+					has_country_flag = likes_austria
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		
+		ai_chance = {   
+			factor = 30
+			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.8
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110407 #Austria Dismantled
+	title = "vienna.007.T"
+	desc = "vienna.007.D"
+	
+	trigger = {
+		tag = AUS
+		AUS = {
+			check_variable = {
+				which = congress_of_vienna_topic_1_austria
+				value = 3
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_1_austria
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_1_austria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_1_austria
+		set_global_flag = congress_of_vienna_topic_2_bulgaria
+		BUL = {
+			set_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given
+		}
+	}
+	
+	option = {
+		name = "vienna.007.1" #Accept
+		prestige = -50
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = AUS
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 8
+			consciousness = 4
+		}
+		any_owned = {
+			limit = {
+				is_core = ROM
+				not = {
+					or = {
+						province_id = 653
+						province_id = 665
+						province_id = 667
+						province_id = 664
+						province_id = 666
+						province_id = 818
+						province_id = 674
+					}
+				}
+			}
+			secede_province = MOL
+			add_core = MOL
+		}
+		any_owned = {
+			limit = {
+				is_core = ROM
+				or = {
+					province_id = 653
+					province_id = 665
+					province_id = 667
+					province_id = 664
+					province_id = 666
+				}
+			}
+			secede_province = SIE
+			add_core = SIE
+		}
+		any_owned = {
+			limit = {
+				is_core = SER
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				is_core = BUL
+			}
+			secede_province = BUL
+		}
+		any_owned = {
+			limit = {
+				is_core = ROT
+			}
+			secede_province = ROT
+		}
+		any_owned = {
+			limit = {
+				is_core = AUG
+				not = {
+					is_core = THIS
+				}
+			}
+			secede_province = AUG
+		}
+		any_owned = {
+			limit = {
+				is_core = SLO
+			}
+			secede_province = CLI
+		}
+		any_owned = {
+			limit = {
+				is_core = SLV
+			}
+			secede_province = SLV
+		}
+		any_owned = {
+			limit = {
+				is_core = ULM
+			}
+			secede_province = ULM
+		}
+		any_owned = {
+			limit = {
+				is_core = KNZ
+			}
+			secede_province = KNZ
+		}
+		any_owned = {
+			limit = {
+				is_core = BOH
+			}
+			secede_province = BOH
+		}
+		BUL = {
+			set_country_flag = received_lands_from_austria
+		}
+		
+		ai_chance = {   
+			factor = 60
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.007.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_1_austria_max
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			country_event = {
+				id = 2110408
+				days = 3
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_austria
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		
+		ai_chance = {  
+			factor = 30
+			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.8
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110408 #FROMCOUNTRY refusing to comply!
+	title = "vienna.008.T"
+	desc = "vienna.008.D"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.008.1" #Accept
+		relation = {
+			who = FROM 
+			value = -100
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -100
+		}
+		
+		
+		ai_chance = {   
+			factor = 60
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+
+##################
+##              ##
+##   BULGARIA   ##
+##              ##
+################## 
+
+country_event = { 
+	id = 2110414 #The Bulgarian Juggernaut
+	title = "vienna.014.T"
+	desc = "vienna.014.D"
+	picture = "vienna_bulgaria"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_participant
+		has_global_flag = congress_of_vienna_topic_2_bulgaria
+		not = { has_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given
+	}
+	
+	option = {
+		name = "vienna.014.1" #Support Bulgaria
+		set_country_flag = likes_bulgaria
+		BUL = {
+			change_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = -1
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				tag = BUL
+			}
+			modifier = {
+				factor = 2
+				is_our_vassal = BUL
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = BUL
+			}
+			modifier = {
+				factor = 2
+				alliance_with = BUL
+			}
+			#modifier = {
+			#	factor = 1.5
+			#	BUL = {
+			#		overlord = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 1.25
+			#	BUL = {
+			#		sphere_leader = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 0
+				any_core = {
+					owned_by = BUL
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_province = {
+					is_core = BUL
+				}
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = BUL
+			}
+			modifier = {
+				factor = 0
+				or = {
+					tag = SER
+					tag = BOS
+					tag = HUN
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = BUL
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = BUL
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = BUL
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				and = {
+					not = {
+						government = bourgeois_dictatorship
+					}
+					BUL = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.014.2" #Indifferent
+		prestige = -10
+		BUL = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 1.5
+				not = { neighbour = BUL }
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.014.3" #Hostile to Bulgaria
+		set_country_flag = dislikes_bulgaria
+		BUL = {
+			change_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 1
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		
+		ai_chance = {
+			factor = 60
+			
+			modifier = {
+				factor = 0
+				tag = BUL
+			}
+			modifier = {
+				factor = 0.5
+				is_our_vassal = BUL
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = BUL
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = BUL
+			}
+			#modifier = {
+			#	factor = 0.75
+			#	BUL = {
+			#		overlord = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.75
+			#	BUL = {
+			#		sphere_leader = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 10
+				any_core = {
+					owned_by = BUL
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					is_core = BUL
+				}
+			}
+			modifier = {
+				factor = 1.5
+				truce_with = BUL
+			}
+			modifier = {
+				factor = 10
+				or = {
+					tag = SER
+					tag = BOS
+					tag = HUN
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					relation = {
+						who = BUL
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					relation = {
+						who = BUL
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				not = {
+					relation = {
+						who = BUL
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = HUN
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = HUN
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = HUN
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = SER
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = SER
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = SER
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = BOS
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = BOS
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = BOS
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				tag = ITA
+			}
+			modifier = {
+				factor = 1.3
+				BUL = {
+					has_country_flag = received_lands_from_austria
+				}
+			}
+			modifier = {
+				factor = 2
+				and = {
+					government = bourgeois_dictatorship
+					BUL = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110415 #Bulgaria Supported
+	title = "vienna.015.T"
+	desc = "vienna.015.D"
+	
+	trigger = {
+		tag = BUL
+		BUL = {
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_2_bulgaria
+					value = 1
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_2_bulgaria
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			BUL = {
+				check_variable = {
+					which = congress_of_vienna_topic_2_bulgaria
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.015.1"
+		clr_global_flag = congress_of_vienna_topic_2_bulgaria
+		set_global_flag = congress_of_vienna_topic_3_bohemia
+		BOH = {
+			set_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_3_bohemia_answer_given
+		}
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BUL
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 1
+		}
+		any_owned = {
+			limit = {
+				is_core = HUN
+				not = {
+					province_id = 792
+				}
+			}
+			secede_province = HUN
+		}
+		any_owned = {
+			limit = {
+				is_core = BOS
+			}
+			secede_province = SER
+		}
+		SER = {
+			inherit = BOS
+		}
+		792 = {
+			random_list = {
+				50 = {
+					secede_province = HUN
+				}
+				50 = {
+					secede_province = SER
+				}
+			}
+		}
+		795 = {
+			secede_province = BUL
+		}
+		786 = {
+			secede_province = SER
+		}
+		787 = {
+			secede_province = SER
+		}
+		BUL = {
+			any_owned = {
+				limit = {
+					is_core = SER
+				}
+				add_core = THIS
+			}
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -150
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 150
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 150
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 50
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 50
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -70
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -120
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 120
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 120
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 80
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.2
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.015.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_2_bulgaria_cut_down
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_bulgaria
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_participant
+				not = {
+					has_country_flag = likes_bulgaria
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		BUL = {
+			any_owned = {
+				limit = {
+					is_core = SER
+				}
+				add_core = THIS
+			}
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -150
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 150
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 150
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 50
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 50
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -70
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -120
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 120
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 120
+				}
+			}
+		}
+		
+		ai_chance = {   
+			factor = 30
+			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.5
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110416 #Bulgaria Dismembered
+	title = "vienna.016.T"
+	desc = "vienna.016.D"
+	
+	trigger = {
+		tag = BUL
+		BUL = {
+			check_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 1
+			}
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_2_bulgaria
+					value = 3
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_2_bulgaria
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_2_bulgaria
+		set_global_flag = congress_of_vienna_topic_3_bohemia
+		BOH = {
+			set_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_3_bohemia_answer_given
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			BUL = {
+				check_variable = {
+					which = congress_of_vienna_topic_2_bulgaria
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			BUL = {
+				not = {
+					check_variable = {
+						which = congress_of_vienna_topic_2_bulgaria
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.016.1" #Accept
+		prestige = -50
+		set_country_flag = conference_of_vienna_dismembered
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BUL
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		any_owned = {
+			limit = {
+				is_core = HUN
+				not = {
+					province_id = 792
+				}
+			}
+			secede_province = HUN
+		}
+		any_owned = {
+			limit = {
+				is_core = SER
+				not = {
+					or = {
+						province_id = 798
+						province_id = 799
+					}
+				}
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				is_core = BOS
+				not = {
+					or = {
+						province_id = 786
+						province_id = 787
+					}
+				}
+			}
+			secede_province = BOS
+		}
+		792 = {
+			random_list = {
+				50 = {
+					secede_province = HUN
+				}
+				50 = {
+					secede_province = SER
+				}
+			}
+		}
+		786 = {
+			secede_province = SER
+		}
+		787 = {
+			secede_province = SER
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -60
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 100
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 100
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 100
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 100
+				}
+			}
+		}
+		
+		ai_chance = {   
+			factor = 60
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.016.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_2_bulgaria_min
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_bulgaria
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_participant
+				not = {
+					has_country_flag = likes_bulgaria
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -60
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 100
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 100
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 100
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 100
+				}
+			}
+		}
+		
+		ai_chance = {   
+			factor = 40
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110417 #Bulgaria Dismantled
+	title = "vienna.017.T"
+	desc = "vienna.017.D"
+	
+	trigger = {
+		tag = BUL
+		BUL = {
+			check_variable = {
+				which = congress_of_vienna_topic_2_bulgaria
+				value = 3
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_2_bulgaria
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_2_bulgaria
+		set_global_flag = congress_of_vienna_topic_3_bohemia
+		BOH = {
+			set_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_3_bohemia_answer_given
+		}
+	}
+	
+	option = {
+		name = "vienna.017.1" #Accept
+		prestige = -50
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BUL
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		any_owned = {
+			limit = {
+				is_core = HUN
+				not = {
+					province_id = 792
+				}
+			}
+			secede_province = HUN
+		}
+		any_owned = {
+			limit = {
+				is_core = SER
+			}
+			secede_province = SER
+		}
+		any_owned = {
+			limit = {
+				is_core = BOS
+			}
+			secede_province = BOS
+		}
+		792 = {
+			random_list = {
+				50 = {
+					secede_province = HUN
+				}
+				50 = {
+					secede_province = BOS
+				}
+			}
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 100
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 100
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 100
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 100
+				}
+			}
+		}
+		
+		ai_chance = {   
+			factor = 60
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.017.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_2_bulgaria_max
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			country_event = {
+				id = 2110408
+				days = 3
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_bulgaria
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		SER = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = -60
+				}
+				diplomatic_influence = {
+					who = SER
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = SER
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SER
+					value = 100
+				}
+			}
+		}
+		HUN = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = -20
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = HUN
+					value = 100
+				}
+				diplomatic_influence = {
+					who = HUN
+					value = 100
+				}
+			}
+		}
+		BOS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bulgaria
+				}
+				relation = {
+					who = BOS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 100
+				}
+			}
+		}
+		
+		ai_chance = {   
+			factor = 40
+			
+			modifier = {
+				factor = 1.5
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.5
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+
+#################
+##             ##
+##   BOHEMIA   ##
+##             ##
+################# 
+
+country_event = { 
+	id = 2110424 #The Rise of Bohemia
+	title = "vienna.024.T"
+	desc = "vienna.024.D"
+	picture = "vienna_prague"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_participant
+		has_global_flag = congress_of_vienna_topic_3_bohemia
+		not = { has_country_flag = congress_of_vienna_topic_3_bohemia_answer_given }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_topic_3_bohemia_answer_given
+	}
+	
+	option = {
+		name = "vienna.024.1" #Support Bohemia
+		set_country_flag = likes_bohemia
+		BOH = {
+			change_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = -1
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				tag = BOH
+			}
+			modifier = {
+				factor = 2
+				is_our_vassal = BOH
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = BOH
+			}
+			modifier = {
+				factor = 2
+				alliance_with = BOH
+			}
+			#modifier = {
+			#	factor = 1.5
+			#	BOH = {
+			#		overlord = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 1.25
+			#	BOH = {
+			#		sphere_leader = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 0
+				any_core = {
+					owned_by = BOH
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_province = {
+					is_core = BOH
+				}
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = BOH
+			}
+			modifier = {
+				factor = 0
+				or = {
+					tag = AUS
+					tag = POL
+					tag = SAX
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = BOH
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = BOH
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = BOH
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				and = {
+					not = {
+						government = bourgeois_dictatorship
+					}
+					BOH = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.024.2" #Indifferent
+		prestige = -10
+		BOH = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 1.5
+				not = { neighbour = BOH }
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.024.3" #Hostile to Bohemia
+		set_country_flag = dislikes_bohemia
+		BOH = {
+			change_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 1
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		
+		ai_chance = {
+			factor = 60
+			
+			modifier = {
+				factor = 0
+				tag = BOH
+			}
+			modifier = {
+				factor = 0.5
+				is_our_vassal = BOH
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = BOH
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = BOH
+			}
+			#modifier = {
+			#	factor = 0.75
+			#	BOH = {
+			#		overlord = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.75
+			#	BOH = {
+			#		sphere_leader = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 10
+				any_core = {
+					owned_by = BOH
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					is_core = BOH
+				}
+			}
+			modifier = {
+				factor = 1.5
+				truce_with = BOH
+			}
+			modifier = {
+				factor = 10
+				or = {
+					tag = POL
+					tag = AUS
+					tag = SAX
+				}
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					relation = {
+						who = BOH
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					relation = {
+						who = BOH
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				not = {
+					relation = {
+						who = BOH
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = POL
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = POL
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = POL
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = SAX
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = SAX
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = SAX
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = AUG
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = AUG
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = AUG
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.1
+				or = {
+					688 = {
+						owned_by = BOH
+					}
+					689 = {
+						owned_by = BOH
+					}
+					632 = {
+						owned_by = BOH
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				629 = {
+					owned_by = BOH
+				}
+			}
+			modifier = {
+				factor = 2
+				and = {
+					government = bourgeois_dictatorship
+					BOH = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110425 #Bohemia Supported
+	title = "vienna.025.T"
+	desc = "vienna.025.D"
+	
+	trigger = {
+		tag = BOH
+		BOH = {
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_3_bohemia
+					value = 1
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_3_bohemia
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			BOH = {
+				check_variable = {
+					which = congress_of_vienna_topic_3_bohemia
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_3_bohemia_answer_given }
+			}
+		}
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_3_bohemia
+		set_global_flag = congress_of_vienna_topic_4_low_countries
+		HLL = {
+			set_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_4_low_countries_answer_given
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.025.1"
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BOH
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 1
+		}
+		POL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = POL
+					value = -150
+				}
+				diplomatic_influence = {
+					who = POL
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = POL
+					value = 150
+				}
+				diplomatic_influence = {
+					who = POL
+					value = 150
+				}
+			}
+		}
+		AUG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = -150
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = 150
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = 150
+				}
+			}
+		}
+		SAX = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = -150
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = 150
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = 150
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110426 #Bohemia Dismembered
+	title = "vienna.026.T"
+	desc = "vienna.026.D"
+	
+	trigger = {
+		tag = BOH
+		BOH = {
+			check_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 1
+			}
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_3_bohemia
+					value = 3
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_3_bohemia
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_3_bohemia
+		set_global_flag = congress_of_vienna_topic_4_low_countries
+		HLL = {
+			set_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_4_low_countries_answer_given
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			BOH = {
+				check_variable = {
+					which = congress_of_vienna_topic_3_bohemia
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			BOH = {
+				not = {
+					check_variable = {
+						which = congress_of_vienna_topic_3_bohemia
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_3_bohemia_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.026.1" #Accept
+		prestige = -50
+		set_country_flag = conference_of_vienna_dismembered
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BOH
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		any_owned = {
+			limit = {
+				is_core = POL
+				province_id = 681
+			}
+			secede_province = POL
+		}
+		any_owned = {
+			limit = {
+				is_core = SAX
+				or = {
+					province_id = 562
+					province_id = 563
+				}
+			}
+			secede_province = SAX
+		}
+		any_owned = {
+			limit = {
+				is_core = AUG
+			}
+			secede_province = AUG
+		}
+		release_vassal = SIE
+		POL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = POL
+					value = -60
+				}
+				diplomatic_influence = {
+					who = POL
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = POL
+					value = 100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = 100
+				}
+			}
+		}
+		SAX = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = -40
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = 100
+				}
+			}
+		}
+		AUG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = BOS
+					value = -20
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = -50
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = BOS
+					value = 100
+				}
+				diplomatic_influence = {
+					who = BOS
+					value = 100
+				}
+			}
+		}
+		SIE = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 70
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.026.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_3_bohemia_min
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_bohemia
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_participant
+				not = {
+					has_country_flag = likes_bohemia
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		POL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = POL
+					value = -100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = POL
+					value = 100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = 100
+				}
+			}
+		}
+		SAX = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = 100
+				}
+			}
+		}
+		AUG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = -100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = 100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = 100
+				}
+			}
+		}
+		SIE = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 30
+			
+			modifier = {
+				factor = 1.3
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.8
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110427 #Bohemia Dismantled
+	title = "vienna.027.T"
+	desc = "vienna.027.D"
+	
+	trigger = {
+		tag = BOH
+		BOH = {
+			check_variable = {
+				which = congress_of_vienna_topic_3_bohemia
+				value = 3
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_3_bohemia
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_3_bohemia_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_3_bohemia
+		set_global_flag = congress_of_vienna_topic_4_low_countries
+		HLL = {
+			set_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 0.1
+			}
+			set_country_flag = congress_of_vienna_topic_4_low_countries_answer_given
+		}
+	}
+	
+	option = {
+		name = "vienna.027.1" #Accept
+		prestige = -50
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = BOH
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		any_owned = {
+			limit = {
+				is_core = POL
+				not = {
+					is_core = SAX
+				}
+			}
+			secede_province = POL
+		}
+		any_owned = {
+			limit = {
+				is_core = SAX
+			}
+			secede_province = SAX
+		}
+		any_owned = {
+			limit = {
+				is_core = AUG
+			}
+			secede_province = AUG
+		}
+		release_vassal = SIE
+		release_vassal = SLV
+		POL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = POL
+					value = -100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = POL
+					value = 100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = 100
+				}
+			}
+		}
+		SAX = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = 100
+				}
+			}
+		}
+		AUG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = -100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = 100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = 100
+				}
+			}
+		}
+		SIE = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		SLV = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SLV
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SLV
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SLV
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SLV
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 60
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.027.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_3_bohemia_max
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			country_event = {
+				id = 2110408
+				days = 3
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_bohemia
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 24
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		POL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = POL
+					value = -100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = POL
+					value = 100
+				}
+				diplomatic_influence = {
+					who = POL
+					value = 100
+				}
+			}
+		}
+		SAX = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SAX
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SAX
+					value = 100
+				}
+			}
+		}
+		AUG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = -100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = AUG
+					value = 100
+				}
+				diplomatic_influence = {
+					who = AUG
+					value = 100
+				}
+			}
+		}
+		SIE = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SIE
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SIE
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		SLV = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_bohemia
+				}
+				relation = {
+					who = SLV
+					value = -100
+				}
+				diplomatic_influence = {
+					who = SLV
+					value = -100
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_bohemia
+				}
+				relation = {
+					who = SLV
+					value = 100
+				}
+				diplomatic_influence = {
+					who = SLV
+					value = 100
+				}
+			}
+			BOH = {
+				relation = {
+					who = THIS
+					value = -50
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -100
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 40
+			
+			modifier = {
+				factor = 1.3
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.8
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+
+#######################
+##                   ##
+##   LOW COUNTRIES   ##
+##                   ##
+#######################
+
+country_event = { 
+	id = 2110434 #The Low Countries
+	title = "vienna.034.T"
+	desc = "vienna.034.D"
+	picture = "vienna_dutch_unionism"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_participant
+		has_global_flag = congress_of_vienna_topic_4_low_countries
+		not = { has_country_flag = congress_of_vienna_topic_4_low_countries_answer_given }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_topic_4_low_countries_answer_given
+	}
+	
+	option = {
+		name = "vienna.034.1" #Support Greater Holland only
+		set_country_flag = likes_liege
+		HLL = {
+			change_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = -1
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 40
+			
+			modifier = {
+				factor = 100
+				tag = LIG
+			}
+			modifier = {
+				factor = 2
+				is_our_vassal = LIG
+			}
+			modifier = {
+				factor = 2
+				is_sphere_leader_of = LIG
+			}
+			modifier = {
+				factor = 2
+				alliance_with = LIG
+			}
+			#modifier = {
+			#	factor = 1.5
+			#	BOH = {
+			#		overlord = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 1.25
+			#	BOH = {
+			#		sphere_leader = {
+			#			alliance_with = THIS
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 0
+				any_core = {
+					owned_by = LIG
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_owned_province = {
+					is_core = LIG
+				}
+			}
+			modifier = {
+				factor = 0.5
+				truce_with = LIG
+			}
+			modifier = {
+				factor = 2
+				tag = FRA
+			}
+			modifier = {
+				factor = 0.5
+				tag = ENG
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = LIG
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 1.3
+				relation = {
+					who = LIG
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = LIG
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				and = {
+					not = {
+						government = bourgeois_dictatorship
+					}
+					HLL = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.034.2" #Indifferent
+		prestige = -10
+		HLL = {
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 1.5
+				not = { 
+					neighbour = BOH 
+					tag = ENG
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.034.3" #Support United Netherlands
+		set_country_flag = dislikes_liege
+		HLL = {
+			change_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 1
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		
+		ai_chance = {
+			factor = 60
+			
+			modifier = {
+				factor = 0
+				tag = LIG
+			}
+			modifier = {
+				factor = 0.1
+				tag = FRA
+			}
+			modifier = {
+				factor = 1.5
+				tag = ENG
+			}
+			modifier = {
+				factor = 0.5
+				is_our_vassal = LIG
+			}
+			modifier = {
+				factor = 0.5
+				is_sphere_leader_of = LIG
+			}
+			modifier = {
+				factor = 0.5
+				alliance_with = LIG
+			}
+			#modifier = {
+			#	factor = 0.75
+			#	BOH = {
+			#		overlord = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.75
+			#	BOH = {
+			#		sphere_leader = {
+			#			relation = {
+			#				who = THIS
+			#				value = 100
+			#			}
+			#		}
+			#	}
+			#}
+			modifier = {
+				factor = 10
+				any_core = {
+					owned_by = LIG
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					is_core = LIG
+				}
+			}
+			modifier = {
+				factor = 0.3
+				tag = FRA
+			}
+			modifier = {
+				factor = 1.5
+				truce_with = HLL
+			}
+			modifier = {
+				factor = 10
+				tag = HLL
+			}
+			modifier = {
+				factor = 1.2
+				not = {
+					relation = {
+						who = LIG
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					relation = {
+						who = LIG
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				not = {
+					relation = {
+						who = LIG
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				relation = {
+					who = HLL
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 1.2
+				relation = {
+					who = HLL
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relation = {
+					who = HLL
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 2
+				and = {
+					government = bourgeois_dictatorship
+					HLL = {
+						government = bourgeois_dictatorship
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110435 #Greater Holland
+	title = "vienna.035.T"
+	desc = "vienna.035.D"
+	
+	trigger = {
+		tag = HLL
+		HLL = {
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_4_low_countries
+					value = 1
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_4_low_countries
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			HLL = {
+				check_variable = {
+					which = congress_of_vienna_topic_4_low_countries
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_4_low_countries_answer_given }
+			}
+		}
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_4_low_countries
+		set_global_flag = congress_of_vienna_topic_5_germany
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			set_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = 0.1
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.035.1"
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = -2
+			consciousness = -2
+		}
+		relation = {
+			who = LIG
+			value = -100
+		}
+		any_country = {
+			limit = {
+				any_owned_province = {
+					is_core = HLL
+				}
+				not = {
+					or = {
+						tag = LIG
+						tag = HLL
+					}
+				}
+			}
+			country_event = {
+				id = 2110436
+				days = 30
+			}
+		}
+		LIG = {
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_liege
+				}
+				relation = {
+					who = LIG
+					value = -150
+				}
+				diplomatic_influence = {
+					who = LIG
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = likes_liege
+				}
+				relation = {
+					who = LIG
+					value = 150
+				}
+				diplomatic_influence = {
+					who = LIG
+					value = 150
+				}
+			}
+		}
+		HLL = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_liege
+				}
+				relation = {
+					who = HLL
+					value = -150
+				}
+				diplomatic_influence = {
+					who = HLL
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_liege
+				}
+				relation = {
+					who = HLL
+					value = 150
+				}
+				diplomatic_influence = {
+					who = HLL
+					value = 150
+				}
+			}
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110436 #Countries get event to be annexed by Holland
+	title = "vienna.036.T"
+	desc = "vienna.035.D"
+	picture = "vienna_dutch_unionism"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "vienna.036.1" #Accept
+		any_owned = {
+			limit = {
+				controlled_by_rebels = yes
+			}
+			change_controller = THIS
+		}
+		any_owned = {
+			limit = {
+				is_core = NET
+			}
+			secede_province = FROM
+		}
+		
+		ai_chance = {  
+			factor = 70
+			
+			modifier = {
+				factor = 0.85
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 1.3
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.036.2" #Refuse
+		set_country_flag = congress_of_vienna_topic_4_low_countries_refused_annexation
+		any_country = {
+			limit = {
+				has_country_flag = likes_liege 
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = dislikes_liege
+			}
+			relation = {
+				who = THIS
+				value = -150
+			}
+		}
+		HLL = {
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		
+		ai_chance = {  
+			factor = 30
+			
+			modifier = {
+				factor = 1.3
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 0.8
+				and = {
+					is_greater_power = no
+					is_secondary_power = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110437 #United Netherlands
+	title = "vienna.037.T"
+	desc = "vienna.037.D"
+	
+	trigger = {
+		tag = HLL
+		HLL = {
+			check_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 1
+			}
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_4_low_countries
+					value = 3
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_4_low_countries
+	}
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_4_low_countries
+		set_global_flag = congress_of_vienna_topic_5_germany
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			set_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = 0.1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			HLL = {
+				check_variable = {
+					which = congress_of_vienna_topic_4_low_countries
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			HLL = {
+				not = {
+					check_variable = {
+						which = congress_of_vienna_topic_4_low_countries
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_4_low_countries_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "vienna.037.1" #Accept
+		prestige = 20
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = -2
+			consciousness = -2
+		}
+		change_tag = NET
+		any_country = {
+			limit = {
+				any_owned_province = {
+					is_core = NET
+				}
+				not = {
+					or = {
+						tag = FRA
+						tag = HLL
+						tag = NET
+						tag = LIG
+					}
+				}
+			}
+			country_event = {
+				id = 2110436
+				days = 30
+			}
+		}
+		THIS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_liege
+				}
+				relation = {
+					who = THIS
+					value = -150
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_liege
+				}
+				relation = {
+					who = THIS
+					value = 150
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = 150
+				}
+			}
+		}
+		LIG = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_liege
+				}
+				relation = {
+					who = LIG
+					value = -150
+				}
+				diplomatic_influence = {
+					who = LIG
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_liege
+				}
+				relation = {
+					who = LIG
+					value = 150
+				}
+				diplomatic_influence = {
+					who = LIG
+					value = 150
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110438 #Greater Netherlands
+	title = "vienna.037.T"
+	desc = "vienna.037.D"
+	
+	trigger = {
+		tag = HLL
+		HLL = {
+			check_variable = {
+				which = congress_of_vienna_topic_4_low_countries
+				value = 3
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_4_low_countries
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_4_low_countries_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_4_low_countries
+		set_global_flag = congress_of_vienna_topic_5_germany
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			set_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = 0.1
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.038.1" #Accept
+		prestige = 50
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = -4
+			consciousness = -4
+		}
+		change_tag = NET
+		NET = {
+			add_accepted_culture = flemish
+		}
+		LIG = {
+			any_owned = {
+				limit = {
+					is_core = LIG
+				}
+				add_core = NET
+			}
+		}
+		any_country = {
+			limit = {
+				any_owned_province = {
+					is_core = NET
+				}
+				not = {
+					or = {
+						tag = FRA
+						tag = HLL
+						tag = NET
+					}
+				}
+			}
+			country_event = {
+				id = 2110436
+				days = 30
+			}
+		}
+		THIS = {
+			any_country = {
+				limit = {
+					has_country_flag = likes_liege
+				}
+				relation = {
+					who = THIS
+					value = -150
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = -150
+				}
+			}
+			any_country = {
+				limit = {
+					has_country_flag = dislikes_liege
+				}
+				relation = {
+					who = THIS
+					value = 150
+				}
+				diplomatic_influence = {
+					who = THIS
+					value = 150
+				}
+			}
+		}
+		
+		ai_chance = {  
+			factor = 100
+		}
+	}
+}
+
+#################
+##             ##
+##   GERMANY   ##
+##             ##
+#################
+
+country_event = { 
+	id = 2110444 #The German Question
+	title = "vienna.044.T"
+	desc = "vienna.044.D"
+	picture = "vienna_germania"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_participant
+		has_global_flag = congress_of_vienna_topic_5_germany
+		not = { has_country_flag = congress_of_vienna_topic_5_germany_answer_given }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_topic_5_germany_answer_given
+	}
+	
+	option = {
+		name = "vienna.044.1" #Support German Confederation
+		set_country_flag = likes_germany
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			change_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = 1
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+			}
+			relation = {
+				who = THIS
+				value = 25
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 50
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				or = {
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "vienna.044.2" #Oppose German Confederation
+		set_country_flag = dislikes_germany
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_host
+			}
+			change_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = -1
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -50
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 0
+				or = {
+					primary_culture = north_german
+					primary_culture = south_german
+				}
+			}			
+		}
+	}
+}
+
+country_event = { 
+	id = 2110445 #Creation of the German Confederation
+	title = "vienna.045.T"
+	desc = "vienna.045.D"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_host
+		THIS = {
+			check_variable = {
+				which = congress_of_vienna_topic_5_germany
+				value = 1
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_5_germany
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			THIS = {
+				not = {
+					check_variable = {
+						which = congress_of_vienna_topic_5_germany
+						value = 1
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_5_germany_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_5_germany
+		set_global_flag = congress_of_vienna_aob
+		set_global_flag = german_confederation_created
+	}
+	
+	option = {
+		name = "vienna.045.1"
+		clr_global_flag = congress_of_vienna_topic_5_germany
+		set_global_flag = congress_of_vienna_aob
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110446 #No German Confederation
+	title = "vienna.046.T"
+	desc = "vienna.046.D"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_host
+		THIS = {
+			not = {
+				check_variable = {
+					which = congress_of_vienna_topic_5_germany
+					value = 1
+				}
+			}
+		}
+		has_global_flag = congress_of_vienna_topic_5_germany
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+		
+		modifier = {
+			factor = 10
+			THIS = {
+				check_variable = {
+					which = congress_of_vienna_topic_5_germany
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			any_greater_power = {
+				has_country_flag = congress_of_vienna_participant
+				not = { has_country_flag = congress_of_vienna_topic_5_germany_answer_given }
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	immediate = {
+		clr_global_flag = congress_of_vienna_topic_5_germany
+		set_global_flag = congress_of_vienna_aob
+	}
+	
+	option = {
+		name = "vienna.046.1"
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+#################
+##             ##
+##   SPHERES   ##
+##             ##
+#################
+
+country_event = { 
+	id = 2110454 #Spheres of Influence on the Continent
+	title = "vienna.054.T"
+	desc = "vienna.054.D"
+	picture = "vienna_great_powers"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_host
+		has_global_flag = congress_of_vienna_aob
+		not = { has_global_flag = congress_of_vienna_aob_spheres_1 }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		set_global_flag = congress_of_vienna_aob_spheres_1
+	}
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "vienna.054.1" #Major nations sphered
+		random_list = { #Liege to France
+			80 = {
+				FRA = {
+					diplomatic_influence = {
+						who = LIG
+						value = 400
+					}
+				}
+			}
+			5 = {
+				ENG = {
+					diplomatic_influence = {
+						who = LIG
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ENG = {
+					diplomatic_influence = {
+						who = LIG
+						value = 200
+					}
+				}
+				FRA = {
+					diplomatic_influence = {
+						who = LIG
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Switzerland to France
+			80 = {
+				FRA = {
+					diplomatic_influence = {
+						who = SWI
+						value = 400
+					}
+				}
+			}
+			5 = {
+				ITA = {
+					diplomatic_influence = {
+						who = SWI
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ITA = {
+					diplomatic_influence = {
+						who = SWI
+						value = 200
+					}
+				}
+				FRA = {
+					diplomatic_influence = {
+						who = SWI
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Netherlands to the UK
+			80 = {
+				ENG = {
+					diplomatic_influence = {
+						who = NET
+						value = 400
+					}
+				}
+			}
+			5 = {
+				FRA = {
+					diplomatic_influence = {
+						who = NET
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ENG = {
+					diplomatic_influence = {
+						who = NET
+						value = 200
+					}
+				}
+				FRA = {
+					diplomatic_influence = {
+						who = NET
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Holland to the UK
+			80 = {
+				ENG = {
+					diplomatic_influence = {
+						who = HLL
+						value = 400
+					}
+				}
+			}
+			5 = {
+				FRA = {
+					diplomatic_influence = {
+						who = HLL
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ENG = {
+					diplomatic_influence = {
+						who = HLL
+						value = 200
+					}
+				}
+				FRA = {
+					diplomatic_influence = {
+						who = HLL
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Portugal to the UK
+			80 = {
+				ENG = {
+					diplomatic_influence = {
+						who = POR
+						value = 400
+					}
+				}
+			}
+			5 = {
+				FRA = {
+					diplomatic_influence = {
+						who = POR
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ENG = {
+					diplomatic_influence = {
+						who = POR
+						value = 200
+					}
+				}
+				FRA = {
+					diplomatic_influence = {
+						who = POR
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Poland to the Russia
+			80 = {
+				RUS = {
+					diplomatic_influence = {
+						who = POL
+						value = 400
+					}
+				}
+			}
+			5 = {
+				SCA = {
+					diplomatic_influence = {
+						who = POL
+						value = 400
+					}
+				}
+			}
+			15 = {
+				SCA = {
+					diplomatic_influence = {
+						who = POL
+						value = 200
+					}
+				}
+				RUS = {
+					diplomatic_influence = {
+						who = POL
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Bulgaria to the Russia
+			80 = {
+				RUS = {
+					diplomatic_influence = {
+						who = BUL
+						value = 400
+					}
+				}
+			}
+			5 = {
+				ITA = {
+					diplomatic_influence = {
+						who = BUL
+						value = 400
+					}
+				}
+			}
+			15 = {
+				ITA = {
+					diplomatic_influence = {
+						who = BUL
+						value = 200
+					}
+				}
+				RUS = {
+					diplomatic_influence = {
+						who = BUL
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Serbia to the Italy
+			80 = {
+				ITA = {
+					diplomatic_influence = {
+						who = SER
+						value = 400
+					}
+				}
+			}
+			5 = {
+				RUS = {
+					diplomatic_influence = {
+						who = SER
+						value = 400
+					}
+				}
+			}
+			15 = {
+				RUS = {
+					diplomatic_influence = {
+						who = SER
+						value = 200
+					}
+				}
+				ITA = {
+					diplomatic_influence = {
+						who = SER
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Austria to the Italy
+			80 = {
+				ITA = {
+					diplomatic_influence = {
+						who = AUS
+						value = 400
+					}
+				}
+			}
+			5 = {
+				random_country = {
+					limit = {
+						has_country_flag = congress_of_vienna_participant
+					}
+					diplomatic_influence = {
+						who = AUS
+						value = 400
+					}
+				}
+			}
+			15 = {
+				random_country = {
+					limit = {
+						has_country_flag = congress_of_vienna_participant
+					}
+					diplomatic_influence = {
+						who = AUS
+						value = 200
+					}
+				}
+				ITA = {
+					diplomatic_influence = {
+						who = AUS
+						value = 200
+					}
+				}
+			}
+		}
+		random_list = { #Aragon to the France
+			80 = {
+				FRA = {
+					diplomatic_influence = {
+						who = ARN
+						value = 400
+					}
+				}
+			}
+			5 = {
+				random_country = {
+					limit = {
+						has_country_flag = congress_of_vienna_participant
+					}
+					diplomatic_influence = {
+						who = ARN
+						value = 400
+					}
+				}
+			}
+			15 = {
+				random_country = {
+					limit = {
+						has_country_flag = congress_of_vienna_participant
+					}
+					diplomatic_influence = {
+						who = ARN
+						value = 200
+					}
+				}
+				ITA = {
+					diplomatic_influence = {
+						who = ARN
+						value = 200
+					}
+				}
+			}
+		}
+		random_country = { #Other powers allocated randomly
+			limit = {
+				part_of_sphere = no
+				capital_scope = {
+					continent = europe
+				}
+			}
+			random_list = { 
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { 
+	id = 2110455 #Spheres of Influence on the Continent
+	title = "vienna.055.T"
+	desc = "vienna.055.D"
+	picture = "vienna_great_powers"
+	
+	trigger = {
+		part_of_sphere = no
+		is_greater_power = no
+		capital_scope = {
+			continent = europe
+		}
+		has_global_flag = congress_of_vienna_aob
+		has_global_flag = congress_of_vienna_aob_spheres_1
+		not = { has_country_flag = congress_of_vienna_aob_spheres_2 }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		set_country_flag = congress_of_vienna_aob_spheres_2
+	}
+	
+	option = {
+		name = "vienna.055.1" #Random allocation to a sphere
+		#random_country = {
+		#	limit = {
+		#		has_country_flag = congress_of_vienna_participant
+		#	}
+			random_list = { 
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+				33 = {
+					random_country = {
+						limit = {
+							has_country_flag = congress_of_vienna_participant
+						}
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+			}
+		#}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#############
+##         ##
+##   END   ##
+##         ##
+#############
+
+country_event = { 
+	id = 2110499 #End of the Conference
+	title = "vienna.099.T"
+	desc = "vienna.099.D"
+	
+	trigger = {
+		has_country_flag = congress_of_vienna_host
+		has_global_flag = congress_of_vienna_aob_spheres_1
+		not = { has_global_flag = congress_of_vienna_ended }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_global_flag = congress_of_vienna_ended
+	}
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	allow_multiple_instances = no
+	
+	option = {
+		name = "vienna.099.1" #Prestige for participants & cleanup
+		any_country = {
+			limit = {
+				has_country_flag = congress_of_vienna_participant
+			}
+			prestige = 20
+			any_pop = {
+				limit = {
+					not = {
+						or = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+				}
+				consciousness = 2
+			}
+		}
+		any_country = {
+			clr_global_flag = congress_of_vienna_ongoing
+			clr_country_flag = congress_of_vienna_participant
+			clr_country_flag = congress_of_vienna_host
+			clr_global_flag = congress_of_vienna_topic_aob
+			clr_global_flag = congress_of_vienna_aob_spheres_1
+			clr_country_flag = congress_of_vienna_aob_spheres_2
+			clr_country_flag = congress_of_vienna_topic_1_austria_answer_given
+			clr_country_flag = congress_of_vienna_topic_2_bulgaria_answer_given
+			clr_country_flag = congress_of_vienna_topic_3_bohemia_answer_given
+			clr_country_flag = congress_of_vienna_topic_4_low_countries_answer_given
+			clr_country_flag = congress_of_vienna_topic_5_germany_answer_given
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

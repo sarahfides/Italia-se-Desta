@@ -1,0 +1,100 @@
+397 = {
+	soldiers=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 1027
+	}
+
+	artisans=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 4388
+	}
+
+	clergymen=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 317
+	}
+
+	bureaucrats=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 97
+	}
+
+	officers=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 39
+	}
+
+	aristocrats=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 409
+	}
+
+	farmers=
+	{
+		culture = wallonian
+		religion = catholic
+		size= 45112
+	}
+
+	soldiers=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 283
+	}
+
+	artisans=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 1509
+	}
+
+	clergymen=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 109
+	}
+
+	bureaucrats=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 34
+	}
+
+	officers=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 13
+	}
+
+	aristocrats=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 141
+	}
+
+	farmers=
+	{
+		culture = wallonian
+		religion = protestant
+		size= 12047
+	}
+
+}

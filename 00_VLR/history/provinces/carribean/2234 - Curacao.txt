@@ -1,0 +1,8 @@
+owner=HAI
+add_core=X17
+add_core=CLM
+add_core=HAI
+trade_goods = tobacco
+life_rating = 35
+terrain = hills
+naval_base = 1

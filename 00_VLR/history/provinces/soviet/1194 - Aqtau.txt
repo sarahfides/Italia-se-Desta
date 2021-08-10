@@ -1,0 +1,6 @@
+owner=KHO
+add_core=RUS
+controller=KHO
+trade_goods = opium
+life_rating = 25
+terrain = steppe

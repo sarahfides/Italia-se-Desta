@@ -1,0 +1,6 @@
+owner=SAX
+add_core=GER
+add_core=SAX
+trade_goods = coal
+life_rating = 40
+terrain = woods

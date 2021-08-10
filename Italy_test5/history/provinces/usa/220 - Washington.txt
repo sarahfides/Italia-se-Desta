@@ -1,0 +1,6 @@
+owner=X18
+controller=X18
+trade_goods = grain
+life_rating = 35
+terrain = farmlands
+naval_base = 2

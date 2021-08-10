@@ -1,0 +1,5 @@
+owner=ZAF
+trade_goods = wool
+life_rating = 35
+terrain = desert
+colonial=2

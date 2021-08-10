@@ -1,0 +1,9 @@
+owner=LIG
+add_core=BEL
+add_core=BRB
+add_core=FLA
+add_core=LIG
+add_core=NET
+trade_goods = sulphur
+life_rating = 35
+terrain = plains

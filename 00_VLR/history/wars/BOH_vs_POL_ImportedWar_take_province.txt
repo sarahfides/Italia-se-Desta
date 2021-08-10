@@ -1,0 +1,19 @@
+name = "Bohemian-Moravian Conquest of Western Poland"
+
+1820.12.9 = {
+	add_attacker = BOH
+	add_attacker = SIE
+	add_attacker = SLV
+	add_attacker = SAX
+	add_attacker = FRI
+	add_attacker = X09
+	add_defender = POL
+	add_defender = CLI
+
+	war_goal = {
+		casus_belli = acquire_state
+		actor = BOH
+		receiver = POL
+		state_province_id = 703
+	}
+}

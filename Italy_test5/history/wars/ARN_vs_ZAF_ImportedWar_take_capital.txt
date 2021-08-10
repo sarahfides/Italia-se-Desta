@@ -1,0 +1,25 @@
+name = "Aragonese-Macina Imperialist War"
+
+1815.12.19 = {
+	add_attacker = ARN
+	add_attacker = ENG
+	add_attacker = NOV
+	add_attacker = UIL
+	add_attacker = FRA
+	add_attacker = OTO
+	add_attacker = HAI
+	add_attacker = X12
+	add_attacker = COL
+	add_attacker = X16
+	add_attacker = LOU
+	add_defender = ZAF
+	add_defender = MNX
+
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = ARN
+		receiver = ZAF
+		country = ZAF
+		state_province_id = 1812
+	}
+}

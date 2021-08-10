@@ -1,0 +1,424 @@
+# Id 6016825 conflicts HPM Serf Cleanup
+# title desc 17620 conflicts with Vanilla/mods Fascist Soup-Kitchens (17621)
+country_event = {
+	id = 6016826
+	title = "NGTR.001.T"
+	desc = "NGTR.001.D"
+	picture = "Poor"
+	
+	trigger = {
+		money = 3000000
+		}
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			money = 3100000
+		}
+		modifier = {
+			factor = 0.1
+			money = 3200000
+		}
+		modifier = {
+			factor = 0.1
+			money = 3300000
+		}
+		modifier = {
+			factor = 0.1
+			money = 3400000
+		}
+		modifier = {
+			factor = 0.1
+			money = 3500000
+		}
+		modifier = {
+			factor = 0.1
+			money = 3600000
+		}
+		modifier = {
+			factor = 0.1
+			money = 37000000
+		}
+	}
+	option = {
+		name = "NGTR.001.1"
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = poor
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+		random_pop = {
+			limit = {
+				AND = {
+					NOT = { cash_reserves = 500 }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+					strata = middle
+				}
+			}
+			money = 2500
+			location = {
+				owner = { 
+					money = -2500
+				}
+			}
+		}
+	}
+}

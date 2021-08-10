@@ -1,0 +1,5 @@
+owner=TTE
+add_core=TTE
+trade_goods = fish
+life_rating = 30
+terrain = hills

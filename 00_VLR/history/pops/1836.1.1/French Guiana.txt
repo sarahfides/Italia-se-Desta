@@ -1,0 +1,200 @@
+2241 = {
+	soldiers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 63
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 111
+	}
+
+	clergymen=
+	{
+		culture = guajiro
+		religion = animist
+		size= 6
+	}
+
+	aristocrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 14
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 2974
+	}
+
+	bureaucrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 2
+	}
+
+	officers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 249
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 2073
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 96
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 45
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 19
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 249
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 9738
+	}
+
+}
+2246 = {
+	soldiers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 56
+	}
+
+	artisans=
+	{
+		culture = guajiro
+		religion = animist
+		size= 99
+	}
+
+	clergymen=
+	{
+		culture = guajiro
+		religion = animist
+		size= 6
+	}
+
+	aristocrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 11
+	}
+
+	farmers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 2640
+	}
+
+	bureaucrats=
+	{
+		culture = guajiro
+		religion = animist
+		size= 2
+	}
+
+	officers=
+	{
+		culture = guajiro
+		religion = animist
+		size= 1
+	}
+
+	soldiers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 221
+	}
+
+	artisans=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 1840
+	}
+
+	clergymen=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 86
+	}
+
+	bureaucrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 39
+	}
+
+	officers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 17
+	}
+
+	aristocrats=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 221
+	}
+
+	farmers=
+	{
+		culture = boeroe
+		religion = protestant
+		size= 8647
+	}
+
+}

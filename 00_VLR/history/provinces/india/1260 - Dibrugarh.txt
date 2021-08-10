@@ -1,0 +1,6 @@
+owner=SDY
+add_core=KCH
+add_core=SDY
+trade_goods = tea
+life_rating = 32
+terrain = jungle

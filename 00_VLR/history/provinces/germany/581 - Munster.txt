@@ -1,0 +1,7 @@
+owner=MUN
+add_core=GER
+add_core=KLE
+add_core=MUN
+trade_goods = coal
+life_rating = 40
+terrain = woods

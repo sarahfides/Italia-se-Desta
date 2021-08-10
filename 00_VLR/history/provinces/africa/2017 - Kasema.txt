@@ -1,0 +1,6 @@
+owner=KON
+add_core=KIK
+add_core=LBA
+trade_goods = cattle
+life_rating = 15
+terrain = plains

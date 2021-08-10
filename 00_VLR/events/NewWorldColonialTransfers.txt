@@ -1,0 +1,537 @@
+country_event = { 
+	id = 2110001 # Colony requesting expansion
+	title = "EVTNAME2110001"
+	desc = "EVTDESC2110001"
+	picture = "colonial_transfers"
+	
+	trigger = {
+		not = {
+			has_country_modifier = colony_expansion_refused
+		}
+		civilized = yes
+		is_vassal = yes
+		capital_scope = {
+			not = {
+				or = {
+					continent = europe
+					continent = asia
+				}
+			}
+		}
+		overlord = {
+			any_owned_province = {
+				is_core = THIS
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+            factor = 0.8 #increase likelihood to happen
+            overlord = {
+				relation = {
+					who = THIS
+					value = 100
+				}
+			}
+        }
+		
+		modifier = {
+            factor = 1.2 #increase likelihood to happen
+            overlord = {
+				not = {
+					relation = {
+						who = THIS
+						value = 50
+					}
+				}
+			}
+        }
+		
+		modifier = {
+           factor = 0.9 #decreases likelihood to happen
+           rank = 16
+        }
+		
+		modifier = {
+           factor = 0.9 #decreases likelihood to happen
+           rank = 13
+        }
+		
+		modifier = {
+           factor = 0.9 #decreases likelihood to happen
+           rank = 10
+        }
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110001"
+		overlord = {
+			country_event = 2110002
+		}
+		ai_chance = { factor = 95 }
+	}
+	
+	option = {
+		name = "EVTOPTB2110001"
+		prestige = -5
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {
+	id = 2110002 # Colony requests expansion
+	title = "EVTNAME2110002"
+	desc = "EVTDESC2110002"
+	picture = "colonial_transfers"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110002"
+		#any_country = {
+		#	limit = {
+		#		is_our_vassal = yes
+		#		civilized = no
+		#		any_owned_province = {
+		#			is_core = FROM
+		#		}
+		#	}
+		#	annex_to = FROM
+		#	#any_owned_province = {
+		#	#	limit = {
+		#	#		is_core = FROM
+		#	#	}
+		#	#	secede_province = THIS
+		#	#}
+		#}
+		any_owned = {
+			limit = {
+				is_core = FROM
+			}
+			secede_province = FROM
+		}
+		relation = {
+			who = FROM
+			value = 100
+		}
+		FROM = {
+			country_event = 2110003
+		}
+		ai_chance = { 
+		
+			factor = 60
+		
+			modifier = {
+				factor = 1.1 #decreases likelihood to happen
+				relation = {
+					who = FROM
+					value = 50
+				}
+			}
+		
+			modifier = {
+				factor = 1.2 #decreases likelihood to happen
+				relation = {
+					who = FROM
+					value = 100
+				}
+			}
+		
+			modifier = {
+				factor = 1.3 #decreases likelihood to happen
+				relation = {
+					who = FROM
+					value = 150
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110002"
+		FROM = {
+			country_event = 2110004
+		}
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+		ai_chance = { 
+		
+			factor = 40
+		
+			modifier = {
+				factor = 1.1 #decreases likelihood to happen
+				not = {
+					relation = {
+						who = FROM
+						value = 100
+					}
+				}
+			}
+		
+			modifier = {
+				factor = 1.2 #decreases likelihood to happen
+				not = {
+					relation = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+		
+			modifier = {
+				factor = 1.3 #decreases likelihood to happen
+				not = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+		
+			modifier = {
+				factor = 1.5 #decreases likelihood to happen
+				not = {
+					relation = {
+						who = FROM
+						value = -50
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110003 # Expansion granted
+	title = "EVTNAME2110003"
+	desc = "EVTDESC2110003"
+	picture = "colonial_transfers"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110003"
+		prestige = 2
+		
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			consciousness = 0.5
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -2
+		}
+	}
+}
+
+country_event = { 
+	id = 2110004 # Expansion refused
+	title = "EVTNAME2110004"
+	desc = "EVTDESC2110004"
+	picture = "colonial_transfers"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110004"
+		
+		add_country_modifier = {
+			name = colony_expansion_refused
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = 2
+		}
+	}
+}
+
+country_event = {
+	id = 2110020 #Annexing native minors that are cores
+	title = "EVTNAME2110020"
+	desc = "EVTDESC2110020"
+	picture = "native_wars"
+	
+	trigger = {
+		civilized = yes
+		is_vassal = yes
+		capital_scope = {
+			not = {
+				or = {
+					continent = europe
+					continent = asia
+				}
+			}
+		}
+		war = no
+		overlord = {
+			war = no
+		}
+		any_neighbor_country = {
+			civilized = no
+			any_owned_province = {
+				is_core = THIS
+			}
+			not = {
+				number_of_states = 3
+			}
+			is_vassal = no
+			not = {
+				relation = {
+					who = THIS
+					value = 100
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110020" #escalate
+		
+		random_country = {
+			limit = {
+				civilized = no
+				any_owned_province = {
+					is_core = THIS
+				}
+				neighbour = THIS
+				not = {
+					war_with = THIS
+				}
+				not = {
+					number_of_states = 3
+				}
+				is_vassal = no
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+			country_event = 2110021
+		}
+		badboy = 10
+		
+		ai_chance = {
+			factor = 80
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110020" #De-escalate
+		
+		prestige = -10
+		any_country = {
+			limit = {
+				civilized = no
+				neighbour = THIS
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = 2110021 #Annexing native minors that are cores
+	title = "EVTNAME2110021"
+	desc = "EVTDESC2110021"
+	picture = "native_wars"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110021" #escalate
+		
+		FROM = {
+			#overlord = {
+				war = {
+					target = THIS
+						attacker_goal = {
+						casus_belli = annex_core_country
+					}
+					defender_goal = {
+						casus_belli = status_quo
+					}
+					call_ally =  yes
+				}
+			#}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#country_event = { 
+#	id = 2110031 # Daring Pioneers
+#	title = "EVTNAME2110031"
+#	desc = "EVTDESC2110031"
+#	picture = "colonial_transfers"
+#	
+#	trigger = {
+#		civilized = yes
+#		capital_scope = {
+#			or = {
+#				continent = north_america
+#				continent = south_america
+#				continent = oceania
+#				continent = africa
+#			}
+#		}
+#		any_owned_province = {
+#			and = {
+#				is_overseas = no
+#				has_empty_adjacent_province = yes
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#		#months = 36
+#	}
+#	
+#	allow_multiple_instances = yes
+#	
+#	option = {
+#		name = "EVTOPTA2110001"
+#		#any_owned = {
+#		#	limit = {
+#		#		is_overseas = no
+#		#		has_empty_adjacent_province = yes
+#		#	}
+#		#	random_list = {
+#		#		50 = {
+#		#			owner = { 
+#		#				prestige = -2
+#		#			}
+#		#		}
+#		#		30 = {
+#		#			owner = { prestige = 2 }
+#		#			random_empty_neighbor_province = {
+#		#				secede_province = THIS
+#		#			}
+#		#		}
+#		#		10 = {
+#		#			owner = { prestige = 5 }
+#		#			random_empty_neighbor_province = {
+#		#				secede_province = THIS
+#		#				add_core = THIS
+#		#			}
+#		#		}
+#		#	}
+#		#}
+#		#random_owned = {
+#		#	limit = {
+#		#		not = {
+#		#			any_neighbor_province = {
+#		#				empty = no
+#		#			}
+#		#		}
+#		#	}
+#		#	owner = { prestige = 2 }
+#		#	random_empty_neighbor_province = {
+#		#		secede_province = THIS
+#		#	}
+#		#}
+#		#random_owned = {
+#		#	limit = {
+#		#		has_empty_adjacent_province = yes
+#		#	}
+#		#	owner = { prestige = 2 }
+#		#	random_empty_neighbor_province = {
+#		#		secede_province = THIS
+#		#	}
+#		#}
+#		#random_owned = {
+#		#	limit = {
+#		#		has_empty_adjacent_province = yes
+#		#	}
+#		#	random = {
+#		#		chance = 60
+#		#		random_empty_neighbor_province = {
+#		#			secede_province = THIS
+#		#		}
+#		#	}
+#		#}
+#		random_owned = {
+#			limit = {
+#				has_empty_adjacent_province = yes
+#			}
+#			province_event = 2110032
+#		}
+#		ai_chance = { factor = 100 }
+#	}
+#}
+
+#province_event = { 
+#	id = 2110032 # Daring Pioneers
+#	title = "EVTNAME2110031"
+#	desc = "EVTDESC2110031"
+#	picture = "colonial_transfers"
+#	
+#	is_triggered_only = yes
+#	
+#	allow_multiple_instances = yes
+#	
+#	option = {
+#		name = "EVTOPTA2110001"
+#		random_empty_neighbor_province = {
+#			secede_province = THIS
+#		}
+#		ai_chance = { factor = 100 }
+#	}
+#}

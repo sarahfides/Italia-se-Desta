@@ -1,0 +1,157 @@
+sprite = 10
+strata = poor
+allowed_to_vote = no
+is_slave = yes
+color = { 17 17 17 }
+unemployment = yes
+
+rebel =
+{
+	cavalry = 0.0
+	artillery = 0.0
+	cuirassier = 0.0
+	dragoon = 0.0
+	guard = 0.0
+	hussar = 0.0
+	infantry = 0.0
+	irregular = 1
+}
+
+
+everyday_needs = {
+	coal = 1
+}
+
+luxury_needs = {
+	opium = 1
+}
+
+ideologies = {
+	communist = {
+		factor = 4
+		
+		modifier = {
+			factor = 0
+			NOT = { is_ideology_enabled = communist }
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.10
+		}
+		modifier = {
+			factor = 1.5	
+			social_reform_want = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.10
+		}
+		modifier = {
+			factor = 1.5	
+			political_reform_want = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			slavery = yes_slavery
+		}
+	}
+	anarcho_liberal = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			is_ideology_enabled = communist
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.10
+		}
+		modifier = {
+			factor = 1.5	
+			social_reform_want = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			social_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.05
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.10
+		}
+		modifier = {
+			factor = 1.5	
+			political_reform_want = 0.15
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			political_reform_want = 0.20
+		}
+		modifier = {
+			factor = 1.5
+			slavery = yes_slavery
+		}
+	}
+	liberal = {
+		factor = 4
+		modifier = {
+			factor = 1.5
+			slavery = freedom_of_womb
+		}
+	}
+	conservative = {
+		factor = 1
+	}
+	socialist = {
+		factor = 3
+		
+		modifier = {
+			factor = 0
+			NOT = { is_ideology_enabled = socialist }
+		}
+	}
+}
+issues = {
+	full_citizenship =  {
+		factor = 3
+	}
+	no_slavery = {
+		factor = 5
+	}
+	freedom_of_womb = {
+		factor = 3
+	}
+	yes_slavery = {
+		factor = 1
+	}
+} 

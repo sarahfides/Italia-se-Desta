@@ -1,0 +1,6 @@
+owner=AUS
+add_core=GER
+add_core=KNZ
+trade_goods = grain
+life_rating = 40
+terrain = plains

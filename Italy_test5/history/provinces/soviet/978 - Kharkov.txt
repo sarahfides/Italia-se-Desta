@@ -1,0 +1,13 @@
+owner=RUS
+controller=RUS
+add_core=KIE
+add_core=UKR
+trade_goods = coal
+life_rating = 35
+terrain = plains
+state_building=
+{
+	level=1
+	building = explosives_factory
+	upgrade = yes
+}

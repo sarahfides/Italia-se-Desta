@@ -1,0 +1,8 @@
+owner=CLM
+controller=CLM
+add_core=CHM
+trade_goods = wool
+life_rating = 35
+terrain = farmlands
+colonial=2
+naval_base = 1

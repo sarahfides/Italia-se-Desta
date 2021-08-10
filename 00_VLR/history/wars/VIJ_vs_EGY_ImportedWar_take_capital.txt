@@ -1,0 +1,15 @@
+name = "Vijaynagari-Mamluk War"
+
+1818.3.10 = {
+	add_attacker = VIJ
+	add_defender = EGY
+	add_defender = MKA
+	add_defender = MBA
+
+	war_goal = {
+		casus_belli = humiliate
+		actor = VIJ
+		receiver = EGY
+		country = EGY
+	}
+}

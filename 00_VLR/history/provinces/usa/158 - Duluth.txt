@@ -1,0 +1,9 @@
+owner=LOU
+controller=LOU
+add_core=LOU
+add_core=CYN
+add_core=SIO
+trade_goods = iron
+life_rating = 35
+terrain = forest
+colonial=2

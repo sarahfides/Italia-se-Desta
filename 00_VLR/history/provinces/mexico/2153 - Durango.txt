@@ -1,0 +1,6 @@
+owner=NAH
+add_core=NAH
+add_core=MEX
+trade_goods = cattle
+life_rating = 35
+terrain = woods

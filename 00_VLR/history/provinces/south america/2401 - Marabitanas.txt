@@ -1,0 +1,6 @@
+add_core=X13
+add_core=X17
+add_core=CLM
+trade_goods = tobacco
+life_rating = 25
+terrain = jungle

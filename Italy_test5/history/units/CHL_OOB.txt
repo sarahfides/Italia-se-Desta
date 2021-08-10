@@ -1,0 +1,1316 @@
+#Sphere of Influence
+
+AFG = {
+	value = 0
+	level = 2
+}
+AIN = {
+	value = 0
+	level = 2
+}
+AJU = {
+	value = 0
+	level = 2
+}
+ALS = {
+	value = 0
+	level = 2
+}
+ARN = {
+	value = 0
+	level = 2
+}
+ASH = {
+	value = 0
+	level = 2
+}
+AUG = {
+	value = 0
+	level = 2
+}
+AUK = {
+	value = 0
+	level = 2
+}
+AUL = {
+	value = 0
+	level = 2
+}
+AUP = {
+	value = 0
+	level = 2
+}
+AUS = {
+	value = 0
+	level = 2
+}
+BAU = {
+	value = 0
+	level = 2
+}
+BLC = {
+	value = 0
+	level = 2
+}
+BNG = {
+	value = 0
+	level = 2
+}
+BOH = {
+	value = 0
+	level = 2
+}
+BOS = {
+	value = 0
+	level = 2
+}
+BPR = {
+	value = 0
+	level = 2
+}
+BRA = {
+	value = 0
+	level = 2
+}
+BRB = {
+	value = 0
+	level = 2
+}
+BRS = {
+	value = 0
+	level = 2
+}
+BRU = {
+	value = 0
+	level = 2
+}
+BUG = {
+	value = 0
+	level = 2
+}
+BUL = {
+	value = -4
+	level = 2
+}
+BUR = {
+	value = 0
+	level = 2
+}
+CAD = {
+	value = 0
+	level = 2
+}
+CAM = {
+	value = 0
+	level = 2
+}
+CAQ = {
+	value = 0
+	level = 2
+}
+CHG = {
+	value = 0
+	level = 2
+}
+CHL = {
+	value = 0
+	level = 2
+}
+CHT = {
+	value = 0
+	level = 2
+}
+CIR = {
+	value = 0
+	level = 2
+}
+CJA = {
+	value = 152
+	military_access = yes
+	influence_value = 75
+	level = 5
+}
+CLI = {
+	value = 0
+	level = 2
+}
+CLM = {
+	value = 94
+	influence_value = 11
+	level = 2
+}
+COL = {
+	value = -13
+	level = 2
+}
+CRB = {
+	value = 0
+	level = 2
+}
+DAH = {
+	value = 0
+	level = 2
+}
+DAI = {
+	value = 0
+	level = 2
+}
+DES = {
+	value = 55
+	influence_value = 1
+	level = 2
+}
+DGB = {
+	value = 0
+	level = 2
+}
+DLH = {
+	value = 0
+	level = 2
+}
+EFR = {
+	value = 0
+	level = 2
+}
+EGY = {
+	value = 0
+	level = 2
+}
+ENG = {
+	value = 0
+	level = 2
+}
+FJL = {
+	value = 0
+	level = 2
+}
+FJV = {
+	value = 0
+	level = 2
+}
+FRA = {
+	value = -11
+	level = 2
+}
+FRI = {
+	value = 0
+	level = 2
+}
+GEO = {
+	value = 0
+	level = 2
+}
+HAI = {
+	value = -12
+	level = 2
+}
+HAM = {
+	value = 0
+	level = 2
+}
+HES = {
+	value = 0
+	level = 2
+}
+HLL = {
+	value = 0
+	level = 2
+}
+HUN = {
+	value = 0
+	level = 2
+}
+HWK = {
+	value = 0
+	level = 2
+}
+HWM = {
+	value = 0
+	level = 2
+}
+ICL = {
+	value = 0
+	level = 2
+}
+ITA = {
+	value = -7
+	level = 2
+}
+JAP = {
+	value = 0
+	level = 2
+}
+KAC = {
+	value = 0
+	level = 2
+}
+KAN = {
+	value = 0
+	level = 2
+}
+KAZ = {
+	value = 0
+	level = 2
+}
+KCX = {
+	value = 0
+	level = 2
+}
+KHA = {
+	value = 0
+	level = 2
+}
+KHO = {
+	value = 0
+	level = 2
+}
+KLE = {
+	value = 0
+	level = 2
+}
+KNZ = {
+	value = 0
+	level = 2
+}
+KON = {
+	value = 0
+	level = 2
+}
+KOR = {
+	value = 0
+	level = 2
+}
+KTI = {
+	value = 0
+	level = 2
+}
+KWN = {
+	value = 0
+	level = 2
+}
+KZN = {
+	value = 0
+	level = 2
+}
+LDK = {
+	value = 0
+	level = 2
+}
+LIG = {
+	value = 0
+	level = 2
+}
+LIT = {
+	value = 0
+	level = 2
+}
+LIV = {
+	value = 0
+	level = 2
+}
+LNA = {
+	value = 0
+	level = 2
+}
+LOU = {
+	value = 64
+	influence_value = 3
+	level = 2
+}
+LUB = {
+	value = 0
+	level = 2
+}
+LUW = {
+	value = -17
+	level = 2
+}
+MAG = {
+	value = 0
+	level = 2
+}
+MBA = {
+	value = 0
+	level = 2
+}
+MBZ = {
+	value = 0
+	level = 2
+}
+MEW = {
+	value = 0
+	level = 2
+}
+MEX = {
+	value = 5
+	level = 2
+}
+MJZ = {
+	value = 0
+	level = 2
+}
+MKA = {
+	value = 0
+	level = 2
+}
+MKS = {
+	value = 0
+	level = 2
+}
+MLC = {
+	value = 0
+	level = 2
+}
+MNX = {
+	value = 0
+	level = 2
+}
+MOL = {
+	value = 0
+	level = 2
+}
+MSC = {
+	value = 0
+	level = 2
+}
+MUN = {
+	value = 0
+	level = 2
+}
+NAH = {
+	value = 0
+	level = 2
+}
+NAS = {
+	value = 0
+	level = 2
+}
+NEJ = {
+	value = 0
+	level = 2
+}
+NEP = {
+	value = 0
+	level = 2
+}
+NOR = {
+	value = 0
+	level = 2
+}
+NOV = {
+	value = 0
+	level = 2
+}
+NZK = {
+	value = 0
+	level = 2
+}
+NZM = {
+	value = 0
+	level = 2
+}
+NZR = {
+	value = 0
+	level = 2
+}
+NZT = {
+	value = 0
+	level = 2
+}
+OIR = {
+	value = 0
+	level = 2
+}
+OLD = {
+	value = 0
+	level = 2
+}
+OMA = {
+	value = 0
+	level = 2
+}
+ORI = {
+	value = 0
+	level = 2
+}
+OTO = {
+	value = -12
+	level = 2
+}
+PAT = {
+	value = 0
+	level = 2
+}
+PEU = {
+	value = -10
+	level = 2
+}
+PGR = {
+	value = 0
+	level = 2
+}
+PHG = {
+	value = 0
+	level = 2
+}
+POL = {
+	value = 0
+	level = 2
+}
+POR = {
+	value = 0
+	level = 2
+}
+PSA = {
+	value = 0
+	level = 2
+}
+ROT = {
+	value = 0
+	level = 2
+}
+RUS = {
+	value = -19
+	level = 2
+}
+RWA = {
+	value = 0
+	level = 2
+}
+RYU = {
+	value = 0
+	level = 2
+}
+SAX = {
+	value = 71
+	influence_value = 5
+	level = 2
+}
+SCA = {
+	value = 0
+	level = 2
+}
+SDY = {
+	value = 0
+	level = 2
+}
+SER = {
+	value = 0
+	level = 2
+}
+SIA = {
+	value = 0
+	level = 2
+}
+SIE = {
+	value = 0
+	level = 2
+}
+SLV = {
+	value = 0
+	level = 2
+}
+SLZ = {
+	value = 0
+	level = 2
+}
+SMB = {
+	value = 0
+	level = 2
+}
+SOL = {
+	value = 0
+	level = 2
+}
+SPA = {
+	value = 0
+	level = 2
+}
+SUN = {
+	value = 0
+	level = 2
+}
+SWA = {
+	value = 0
+	level = 2
+}
+SWI = {
+	value = 0
+	level = 2
+}
+TDO = {
+	value = 0
+	level = 2
+}
+TEX = {
+	value = 0
+	level = 2
+}
+TGA = {
+	value = 0
+	level = 2
+}
+TIB = {
+	value = -17
+	level = 2
+}
+TIW = {
+	value = 0
+	level = 2
+}
+TLC = {
+	value = 0
+	level = 2
+}
+TRX = {
+	value = 0
+	level = 2
+}
+TTE = {
+	value = 0
+	level = 2
+}
+UIL = {
+	value = 0
+	level = 2
+}
+ULM = {
+	value = 0
+	level = 2
+}
+VIJ = {
+	value = 0
+	level = 2
+}
+WOL = {
+	value = 0
+	level = 2
+}
+WSI = {
+	value = 0
+	level = 2
+}
+X00 = {
+	value = 0
+	level = 2
+}
+X02 = {
+	value = 0
+	level = 2
+}
+X04 = {
+	value = 0
+	level = 2
+}
+X07 = {
+	value = 0
+	level = 2
+}
+X09 = {
+	value = 0
+	level = 2
+}
+X10 = {
+	value = 0
+	level = 2
+}
+X12 = {
+	value = 49
+	level = 2
+}
+X13 = {
+	value = -69
+	level = 2
+}
+X15 = {
+	value = 0
+	level = 2
+}
+X16 = {
+	value = 46
+	level = 2
+}
+X17 = {
+	value = 0
+	level = 2
+}
+X18 = {
+	value = 0
+	level = 2
+}
+X19 = {
+	value = 0
+	level = 2
+}
+X20 = {
+	value = 0
+	level = 2
+}
+YEM = {
+	value = 0
+	level = 2
+}
+YKT = {
+	value = 0
+	level = 2
+}
+ZAF = {
+	value = -4
+	level = 2
+}
+ZAP = {
+	value = 0
+	level = 2
+}
+
+#Leaders
+leader = {
+	name="José Manuel de Vasconcelos"
+	date="1785.7.16"
+	type=land
+	personality="soldierly"
+	background="war_college"
+}
+
+leader = {
+	name="Joaquim Martins de Mascarenhas"
+	date="1799.6.20"
+	type=sea
+	personality="active_p"
+	background="engineer"
+}
+
+leader = {
+	name="Afonso da Câmara"
+	date="1812.10.3"
+	type=sea
+	personality="disciplined"
+	background="cavalry_school"
+}
+
+leader = {
+	name="Estevão Coutinho"
+	date="1814.1.11"
+	type=land
+	personality="resolute"
+	background="generals_aide"
+}
+
+leader = {
+	name="Miguel de Tavares"
+	date="1818.8.14"
+	type=land
+	personality="stalwart"
+	background="brownnoser"
+}
+
+leader = {
+	name="Marco Martins de Mascarenhas"
+	date="1820.3.21"
+	type=land
+	personality="earnest"
+	background="armchair_general"
+}
+
+leader = {
+	name="Gaspar de Sousa"
+	date="1820.3.24"
+	type=land
+	personality="inspiring"
+	background="aristocrat"
+}
+
+
+#Armies
+navy = {
+	name="1st Fleet"
+	location=2348
+	ship = {
+		name="1st Valparaíso Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Montevideo Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Rawson Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st La Serena Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Viedma Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Paysandú Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Valparaíso Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Viedma Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="2nd Paysandú Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Paysandú Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="3rd Viedma Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Melo Man'o'war"
+		type=manowar
+	}
+}
+
+army = {
+	name="2nd Army"
+	location=2296
+	regiment = {
+		name="1st Río Gallegos Infantry"
+		type=infantry
+		home=2399
+	}
+	regiment = {
+		name="1st Curacó Artillery"
+		type=artillery
+		home=2395
+	}
+	regiment = {
+		name="1st San Rafael Artillery"
+		type=artillery
+		home=2390
+	}
+}
+
+navy = {
+	name="5th Fleet"
+	location=2990
+	ship = {
+		name="1st Montevideo Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st La Rochelle Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Carmen Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Valparaíso Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="8th Fleet"
+	location=2987
+	ship = {
+		name="2nd Montevideo Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Puerto Deseado Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Paysandú Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st La Plata Frigate"
+		type=frigate
+	}
+	ship = {
+		name="3rd Montevideo Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="4th Fleet"
+	location=2989
+	ship = {
+		name="1st Viedma Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Copiapó Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Viña del Mar Frigate"
+		type=frigate
+	}
+	ship = {
+		name="1st Santo Domingo Frigate"
+		type=frigate
+	}
+}
+
+army = {
+	name="Grand Company"
+	location=2347
+	regiment = {
+		name="1st Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="2nd Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="3rd Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="4th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="5th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="6th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="1st Buenos Aires Infantry"
+		type=infantry
+		home=2348
+	}
+}
+
+army = {
+	name="50th Army"
+	location=2290
+	regiment = {
+		name="1st Cusco Infantry"
+		type=infantry
+		home=2302
+	}
+	regiment = {
+		name="1st Cuiabá Artillery"
+		type=artillery
+		home=2418
+	}
+	regiment = {
+		name="1st Forte do Príncipe Infantry"
+		type=infantry
+		home=2550
+	}
+	regiment = {
+		name="2nd Cuiabá Artillery"
+		type=artillery
+		home=2418
+	}
+}
+
+army = {
+	name="Independent Army"
+	location=2307
+	regiment = {
+		name="7th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="8th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="9th Rawson Infantry"
+		type=infantry
+		home=2396
+	}
+	regiment = {
+		name="1st La Paz Infantry"
+		type=infantry
+		home=2310
+	}
+	regiment = {
+		name="2nd La Paz Infantry"
+		type=infantry
+		home=2310
+	}
+	regiment = {
+		name="3rd La Paz Infantry"
+		type=infantry
+		home=2310
+	}
+	regiment = {
+		name="1st Vila Bela Infantry"
+		type=infantry
+		home=2417
+	}
+}
+
+army = {
+	name="3rd Army"
+	location=2303
+	regiment = {
+		name="1st San Ignacio Infantry"
+		type=infantry
+		home=2317
+	}
+	regiment = {
+		name="1st Roboré Infantry"
+		type=infantry
+		home=2318
+	}
+	regiment = {
+		name="1st Potosí Artillery"
+		type=artillery
+		home=2314
+	}
+	regiment = {
+		name="2nd San Ignacio Infantry"
+		type=infantry
+		home=2317
+	}
+	regiment = {
+		name="2nd Potosí Artillery"
+		type=artillery
+		home=2314
+	}
+}
+
+army = {
+	name="Silver Company"
+	location=2315
+	regiment = {
+		name="1st Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+	regiment = {
+		name="1st Valparaíso Infantry"
+		type=infantry
+		home=2325
+	}
+	regiment = {
+		name="2nd Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+	regiment = {
+		name="3rd Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+	regiment = {
+		name="4th Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+	regiment = {
+		name="5th Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+	regiment = {
+		name="6th Santiago Infantry"
+		type=infantry
+		home=2324
+	}
+}
+
+army = {
+	name="4th Army"
+	location=2315
+	regiment = {
+		name="1st Encarnación Artillery"
+		type=artillery
+		home=2341
+	}
+	regiment = {
+		name="1st Huancavelica Artillery"
+		type=artillery
+		home=2296
+	}
+	regiment = {
+		name="1st Cusco Artillery"
+		type=artillery
+		home=2302
+	}
+}
+
+army = {
+	name="10th Army"
+	location=2417
+	regiment = {
+		name="1st Paysandú Infantry"
+		type=infantry
+		home=2345
+	}
+	regiment = {
+		name="1st Guarapuava Infantry"
+		type=infantry
+		home=2458
+	}
+	regiment = {
+		name="1st Chuquisaca Artillery"
+		type=artillery
+		home=2313
+	}
+	regiment = {
+		name="1st Neuquén Infantry"
+		type=infantry
+		home=2391
+	}
+	regiment = {
+		name="1st Dourados Artillery"
+		type=artillery
+		home=2416
+	}
+}
+
+army = {
+	name="5th Army"
+	location=2307
+	regiment = {
+		name="1st Viedma Infantry"
+		type=infantry
+		home=2392
+	}
+	regiment = {
+		name="1st Bariloche Infantry"
+		type=infantry
+		home=2394
+	}
+	regiment = {
+		name="1st San Juan Artillery"
+		type=artillery
+		home=2387
+	}
+	regiment = {
+		name="2nd Curacó Artillery"
+		type=artillery
+		home=2395
+	}
+	regiment = {
+		name="1st Punta Arenas Artillery"
+		type=artillery
+		home=2334
+	}
+	regiment = {
+		name="1st Porvenir Infantry"
+		type=infantry
+		home=2335
+	}
+	regiment = {
+		name="1st Calingasta Artillery"
+		type=artillery
+		home=2388
+	}
+	regiment = {
+		name="3rd Curacó Artillery"
+		type=artillery
+		home=2395
+	}
+}
+
+army = {
+	name="20th Army"
+	location=2296
+	regiment = {
+		name="1st Reconquista Infantry"
+		type=infantry
+		home=2362
+	}
+	regiment = {
+		name="1st Assis Infantry"
+		type=infantry
+		home=2453
+	}
+}
+
+navy = {
+	name="2nd Fleet"
+	location=3157
+	ship = {
+		name="1st Valparaíso Frigate"
+		type=frigate
+	}
+	ship = {
+		name="2nd Viña del Mar Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="6th Fleet"
+	location=3002
+	ship = {
+		name="1st Iquique Frigate"
+		type=frigate
+	}
+}
+
+navy = {
+	name="3rd Fleet"
+	location=3048
+	ship = {
+		name="2nd Montevideo Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Puerto Deseado Man'o'war"
+		type=manowar
+	}
+	ship = {
+		name="1st Puerto Deseado Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Rawson Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Copiapó Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st La Plata Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Rawson Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Viedma Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Melo Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Amiens Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Montevideo Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Ponape Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st La Serena Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Melo Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Osorno Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Montevideo Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="2nd Amiens Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="5th Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="6th Paysandú Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Amiens Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Valparaíso Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="1st Caen Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="3rd Rawson Clipper Transport"
+		type=clipper_transport
+	}
+	ship = {
+		name="4th Rawson Clipper Transport"
+		type=clipper_transport
+	}
+}
+
+army = {
+	name="7th Army"
+	location=2417
+	regiment = {
+		name="1st Villa Ángela Artillery"
+		type=artillery
+		home=2365
+	}
+	regiment = {
+		name="3rd Cuiabá Artillery"
+		type=artillery
+		home=2418
+	}
+}
+
+navy = {
+	name="7th Fleet"
+	location=2348
+	ship = {
+		name="1st Paraná Frigate"
+		type=frigate
+	}
+	ship = {
+		name="4th Montevideo Frigate"
+		type=frigate
+	}
+}
+

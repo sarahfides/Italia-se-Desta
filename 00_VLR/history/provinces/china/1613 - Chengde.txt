@@ -1,0 +1,6 @@
+owner=MNX
+add_core=MNX
+add_core=YAN
+trade_goods = iron
+life_rating = 32
+terrain = plains

@@ -1,0 +1,102 @@
+2131 = {
+	soldiers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 622
+	}
+
+	artisans=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 1245
+	}
+
+	clergymen=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 202
+	}
+
+	bureaucrats=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 94
+	}
+
+	officers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 25
+	}
+
+	aristocrats=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 261
+	}
+
+	farmers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 28677
+	}
+
+}
+2133 = {
+	soldiers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 166
+	}
+
+	artisans=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 332
+	}
+
+	clergymen=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 54
+	}
+
+	bureaucrats=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 24
+	}
+
+	officers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 6
+	}
+
+	aristocrats=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 69
+	}
+
+	farmers=
+	{
+		culture = nouvellien
+		religion = catholic
+		size= 7646
+	}
+
+}

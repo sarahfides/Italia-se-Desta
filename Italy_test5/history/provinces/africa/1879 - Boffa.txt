@@ -1,0 +1,6 @@
+owner=ZAF
+controller=ARN
+trade_goods = fruit
+life_rating = 15
+terrain = plains
+naval_base = 1

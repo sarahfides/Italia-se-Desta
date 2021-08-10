@@ -1,0 +1,3839 @@
+country_event = { 
+	id = 2110101 # Colony gets event about slavery
+	title = "EVTNAME2110101"
+	desc = "EVTDESC2110101"
+	picture = "slavery_question"
+	
+	trigger = {
+		or = {
+			is_vassal = yes
+			is_substate = yes
+		}
+		or = {
+			slavery = yes_slavery
+			slavery = freedom_of_womb
+		}
+		not = {
+			has_country_modifier = slavery_question_cooldown
+		}
+		capital_scope = {
+			not = {
+				or = {
+					continent = europe
+					continent = asia
+				}
+			}
+		}
+		overlord = {
+			not = {
+				has_country_modifier = slavery_question_cooldown
+			}
+			slavery = no_slavery
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = { 
+		months = 48
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slavery = yes_slavery
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 16
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 13
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 10
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slaves = 0.2
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slaves = 0.4
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slaves = 0.6
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slaves = 0.8
+        }
+	}
+	
+	option = {
+		name = "EVTOPTA2110101"
+		overlord = {
+			country_event = 2110102
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = 2110102 # Slavery in $FROMCOUNTRY$
+	title = "EVTNAME2110102"
+	desc = "EVTDESC2110102"
+	picture = "slavery_question"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110102"
+		country_event = 2110103
+		ai_chance = { factor = 90 }
+	}
+	
+	option = {
+		name = "EVTOPTB2110102"
+		prestige = -5
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		slaves = {
+			militancy = 4
+			consciousness = 4
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			dominant_issue = {
+				value = full_citizenship
+				factor = 0.3
+			}
+		}
+		any_country = {
+			limit = {
+				slavery = no_slavery
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					slavery = no_slavery
+					slavery = freedom_of_womb
+				}
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+			}
+			country_event = 2110104
+		}
+		FROM = {
+			add_country_modifier = {
+				name = slavery_question_cooldown
+				duration = 1825
+			}
+			relation = {
+				who = THIS
+				value = 100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 100
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { 
+	id = 2110103 # Slavery abolished
+	title = "EVTNAME2110103"
+	desc = "EVTDESC2110103"
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110103"
+		clr_country_flag = decided_no_slavery
+		clr_country_flag = decided_freedom_of_womb
+		set_country_flag = decided_no_slavery
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				or = {
+					slavery = yes_slavery
+					slavery = freedom_of_womb
+				}
+			}
+			clr_country_flag = decided_no_slavery
+			clr_country_flag = decided_freedom_of_womb
+			country_event = 2110105
+		}
+		any_country = {
+			limit = {
+				or = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+				civilized = yes
+				or = {
+					slavery = yes_slavery
+					slavery = freedom_of_womb
+				}
+			}
+			dominant_issue = {
+				value = no_slavery
+				factor = 0.1
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 2110104 # Slavery allowed to continue
+	title = "EVTNAME2110104"
+	desc = "EVTDESC2110104"
+	picture = "slavery_question"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110002"
+		slaves = {
+			militancy = 4
+			consciousness = 4
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			dominant_issue = {
+				value = no_slavery
+				factor = 0.3
+			}
+		}
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 2110105 # Slavery reform event
+	title = "EVTNAME2110105"
+	desc = "EVTDESC2110105"
+	picture = "slavery_question"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110005"
+		set_country_flag = decided_no_slavery
+		political_reform = no_slavery
+		FROM = {
+			relation = {
+				who = THIS
+				value = -100
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -50
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = 2110106 # Overlord has slavery but colony has abolished it
+	title = "EVTNAME2110106"
+	desc = "EVTDESC2110106"
+	picture = "slavery_question"
+	
+	trigger = {
+		or = {
+			is_vassal = yes
+			is_substate = yes
+		}
+		or = {
+			and = {
+				slavery = no_slavery
+				overlord = {
+					not = {
+						or = {
+							has_country_modifier = slavery_question_cooldown
+							has_country_flag = slavery_legalisation_question
+						}
+					}
+					or = {
+						slavery = freedom_of_womb
+						slavery = yes_slavery
+					}
+				}
+			}
+			and = {
+				slavery = freedom_of_womb
+				overlord = {
+					not = {
+						or = {
+							has_country_modifier = slavery_question_cooldown
+							has_country_flag = slavery_legalisation_question
+						}
+					}
+					slavery = yes_slavery
+				}
+			}
+		}
+		not = {
+			has_country_modifier = slavery_question_cooldown
+		}
+		capital_scope = {
+			not = {
+				or = {
+					continent = europe
+					continent = asia
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = { 
+		months = 48
+		
+		modifier = {
+           factor = 0.7 #increases likelihood to happen
+           slavery = no_slavery
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           slavery = freedom_of_womb
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 16
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 13
+        }
+		
+		modifier = {
+           factor = 0.9 #increases likelihood to happen
+           rank = 10
+        }
+	}
+	
+	option = {
+		name = "EVTOPTA2110106"
+		overlord = {
+			set_country_flag = slavery_legalisation_question
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = 2110107 # Enforcing freedom of womb
+	title = "EVTNAME2110107"
+	desc = "EVTDESC2110107"
+	picture = "slavery_question"
+	
+	trigger = {
+		has_country_flag = slavery_legalisation_question
+		slavery = freedom_of_womb
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = { 
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2110107"
+		prestige = -5
+		clr_country_flag = slavery_legalisation_question
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			dominant_issue = {
+				value = no_slavery
+				factor = 0.3
+			}
+		}
+		slaves = {
+			militancy = 2
+			consciousness = 2
+		}
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				slavery = no_slavery
+			}
+			clr_country_flag = decided_no_slavery
+			clr_country_flag = decided_freedom_of_womb
+			set_country_flag = overlord_says_freedom_of_womb
+		}		
+		ai_chance = { 
+			factor = 90
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = liberal
+			} 
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = socialist
+			} 
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = communist
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110107"
+		clr_country_flag = slavery_legalisation_question
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		country_event = 2110103	
+		ai_chance = { 
+			factor = 10
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = reactionary
+			}
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = fascist
+			}
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = liberal
+			} 
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = socialist
+			} 
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = communist
+			} 
+		}
+	}
+}
+
+country_event = { 
+	id = 2110108 # Enforcing freedom of womb event
+	title = "EVTNAME2110108"
+	desc = "EVTDESC2110108"
+	picture = "slavery_question"
+	
+	trigger = {
+		has_country_flag = overlord_says_freedom_of_womb
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110108"
+		clr_country_flag = overlord_says_freedom_of_womb
+		clr_country_flag = decided_no_slavery
+		set_country_flag = decided_freedom_of_womb
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		political_reform = freedom_of_womb
+		any_pop = {
+			limit = {
+				and = {
+					or = {
+						is_primary_culture = no
+						is_accepted_culture = no
+					}
+					or = {
+						or = {
+							is_culture_group = african_diaspora_cultures
+							is_culture_group = central_african
+							is_culture_group = east_african
+							is_culture_group = west_african
+							is_culture_group = southern_african
+							is_culture_group = anti_human #aliens
+							is_culture_group = non_human #dogs and dragons apparently
+							is_culture_group = native_carribean
+						}
+						or = {
+							and = {
+								or = {
+									is_culture_group = native_central_american
+									is_culture_group = native_north_american
+									is_culture_group = native_south_american
+									is_culture_group = oceanic
+									is_culture_group = southeast_asian
+									is_culture_group = south_asian
+									is_culture_group = far_east_asian
+									is_culture_group = east_asian
+									is_culture_group = central_asian
+								}
+								or = {
+									pop_type = farmers
+									pop_type = labourers
+								}
+							}
+						}
+					}
+					not = {
+						or = {
+							strata = rich
+							strata = middle
+						}
+					}
+				}
+			}
+			pop_type = slaves
+		}
+		slaves = {
+			militancy = 5
+			consciousness = 5
+		}
+		overlord = {
+			relation = {
+				who = THIS
+				value = -150
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = 2110109 # Enforcing slavery
+	title = "EVTNAME2110109"
+	desc = "EVTDESC2110109"
+	picture = "slavery_question"
+	
+	trigger = {
+		has_country_flag = slavery_legalisation_question
+		slavery = yes_slavery
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = { 
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA2110109"
+		prestige = -5
+		clr_country_flag = slavery_legalisation_question
+		clr_country_flag = decided_no_slavery
+		clr_country_flag = decided_freedom_of_womb
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			dominant_issue = {
+				value = no_slavery
+				factor = 0.3
+			}
+		}
+		slaves = {
+			militancy = 2
+			consciousness = 2
+		}
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				or = {
+					slavery = no_slavery
+					slavery = freedom_of_womb
+				}
+			}
+			clr_country_flag = decided_no_slavery
+			clr_country_flag = decided_freedom_of_womb
+			set_country_flag = overlord_says_legalise_slavery
+			political_reform = yes_slavery
+		}		
+		ai_chance = { 
+			factor = 90
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = liberal
+			} 
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = socialist
+			} 
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = communist
+			} 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110109"
+		clr_country_flag = slavery_legalisation_question
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		country_event = 2110103
+		
+		ai_chance = { 
+			factor = 10
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = reactionary
+			}
+		
+			modifier = {
+				factor = 0 #decreases likelihood to happen
+				ruling_party_ideology = fascist
+			}
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = liberal
+			} 
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = socialist
+			} 
+		
+			modifier = {
+				factor = 10 #increases likelihood to happen
+				ruling_party_ideology = communist
+			} 
+		}
+	}
+}
+
+country_event = { 
+	id = 2110110 # Enforcing slavery event
+	title = "EVTNAME2110110"
+	desc = "EVTDESC2110110"
+	picture = "slavery_question"
+	
+	trigger = {
+		has_country_flag = overlord_says_legalise_slavery
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110110"
+		clr_country_flag = decided_no_slavery
+		clr_country_flag = decided_freedom_of_womb
+		political_reform = yes_slavery
+		clr_country_flag = overlord_says_legalise_slavery
+		add_country_modifier = {
+			name = slavery_question_cooldown
+			duration = 1825
+		}
+		
+		any_pop = {
+			limit = {
+				and = {
+					or = {
+						is_primary_culture = no
+						is_accepted_culture = no
+					}
+					or = {
+						or = {
+							is_culture_group = african_diaspora_cultures
+							is_culture_group = central_african
+							is_culture_group = east_african
+							is_culture_group = west_african
+							is_culture_group = southern_african
+							is_culture_group = anti_human #aliens
+							is_culture_group = non_human #dogs and dragons apparently
+							is_culture_group = native_carribean
+						}
+						or = {
+							and = {
+								or = {
+									is_culture_group = native_central_american
+									is_culture_group = native_north_american
+									is_culture_group = native_south_american
+									is_culture_group = oceanic
+									is_culture_group = southeast_asian
+									is_culture_group = south_asian
+									is_culture_group = far_east_asian
+									is_culture_group = east_asian
+									is_culture_group = central_asian
+								}
+								or = {
+									pop_type = farmers
+									pop_type = labourers
+								}
+							}
+						}
+					}
+					not = {
+						or = {
+							strata = rich
+							strata = middle
+						}
+					}
+				}
+			}
+			pop_type = slaves
+		}
+		slaves = {
+			militancy = 5
+			consciousness = 5
+		}
+		overlord = {
+			relation = {
+				who = THIS
+				value = -150
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -100
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = 2110111 # Enforcing slavery domestically
+	title = "EVTNAME2110111"
+	desc = "EVTDESC2110111"
+	picture = "slavery_question"
+	
+	trigger = {
+		civilized = yes
+		or = {
+			slavery = yes_slavery
+			slavery = freedom_of_womb
+		}
+		not = {
+			has_country_flag = slavery_enforced_domestically
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110111"
+		set_country_flag = slavery_enforced_domestically
+		clr_country_flag = decided_freedom_of_womb
+		clr_country_flag = decided_no_slavery
+		any_pop = {
+			limit = {
+				and = {
+					or = {
+						is_primary_culture = no
+						is_accepted_culture = no
+					}
+					or = {
+						or = {
+							is_culture_group = african_diaspora_cultures
+							is_culture_group = central_african
+							is_culture_group = east_african
+							is_culture_group = west_african
+							is_culture_group = southern_african
+							is_culture_group = anti_human #aliens
+							is_culture_group = non_human #dogs and dragons apparently
+							is_culture_group = native_carribean
+						}
+						or = {
+							and = {
+								or = {
+									is_culture_group = native_central_american
+									is_culture_group = native_north_american
+									is_culture_group = native_south_american
+									is_culture_group = oceanic
+									is_culture_group = southeast_asian
+									is_culture_group = south_asian
+									is_culture_group = far_east_asian
+									is_culture_group = east_asian
+									is_culture_group = central_asian
+								}
+								or = {
+									pop_type = farmers
+									pop_type = labourers
+								}
+							}
+						}
+					}
+					not = {
+						or = {
+							strata = rich
+							strata = middle
+						}
+					}
+				}
+			}
+			pop_type = slaves
+		}
+		slaves = {
+			militancy = 5
+			consciousness = 5
+		}
+		any_owned = {
+			remove_province_modifier = residential_school_systems_local
+		}
+		remove_country_modifier = residential_school_systems
+	}
+}
+
+country_event = { 
+	id = 2110112 # Enforcing emancipation domestically
+	title = "EVTNAME2110112"
+	desc = "EVTDESC2110112"
+	picture = "slavery_question"
+	
+	trigger = {
+		civilized = yes
+		slavery = no_slavery
+		has_country_flag = slavery_enforced_domestically
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110112"
+		clr_country_flag = slavery_enforced_domestically
+		clr_country_flag = decided_no_slavery
+		clr_country_flag = decided_freedom_of_womb
+		set_country_flag = decided_no_slavery
+	}
+}
+
+###################
+## REGIME CHANGE ##
+###################
+
+country_event = {
+	id = 2110120 # Colony has different form of govt
+	title = "EVTNAME2110120"
+	desc = "EVTDESC2110120"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		civilized = yes
+		or = {
+			is_vassal = yes
+			is_substate = yes
+		}
+		capital_scope = {
+			not = {
+				or = {
+					continent = europe
+					continent = asia
+					continent = africa
+				}
+			}
+		}
+		overlord = {
+			not = {
+				has_country_flag = reform_the_colonies
+			}
+			invention = paternalism
+		}
+		not = {
+			has_country_flag = recently_made_a_puppet
+		}
+		or = {
+			and = {
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = theocracy
+					}
+				}
+				overlord = {
+					government = absolute_monarchy
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+					}
+				}
+				overlord = {
+					government = prussian_constitutionalism
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = hms_government
+						government = prussian_constitutionalism
+					}
+				}
+				overlord = {
+					government = hms_government
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = hms_government
+						government = democracy
+					}
+				}
+				overlord = {
+					government = democracy
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = democracy
+						government = bourgeois_dictatorship
+					}
+				}
+				overlord = {
+					government = bourgeois_dictatorship
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = presidential_dictatorship
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+				}
+				overlord = {
+					or = {
+						government = presidential_dictatorship
+						government = fascist_dictatorship
+						government = proletarian_dictatorship
+					}
+				}
+			}
+			and = {
+				not = {
+					or = {
+						government = theocracy
+						government = absolute_monarchy
+						government = presidential_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+				overlord = {
+					government = theocracy
+				}
+			}
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	mean_time_to_happen = { 
+		months = 12
+		
+		modifier = {
+			factor = 3
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2110120"
+		
+		overlord = {
+			set_country_flag = reform_the_colonies
+		}
+	}
+}
+
+country_event = {
+	id = 2110121 # Govt is absolute monarchy
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = absolute_monarchy
+		or = {
+			ruling_party_ideology = reactionary
+			ruling_party_ideology = conservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = theocracy
+					}
+				}
+			}
+			country_event = 2110122
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110122 # Reform to absolute_monarchy
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = none_voting
+		political_reform = appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 1.3
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110123 # Govt is prussian constitutionalism
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = prussian_constitutionalism
+		or = {
+			ruling_party_ideology = reactionary
+			ruling_party_ideology = conservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					or = {
+						government = absolute_monarchy
+						government = prussian_constitutionalism
+					}
+				}
+			}
+			country_event = 2110124
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110124 # Reform to prussian_constitutionalism
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = landed_voting
+		political_reform = appointed
+		political_reform = first_past_the_post
+		political_reform = yes_meeting
+		political_reform = harassment
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = prussian_constitutionalism
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 1.3
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110125 # Govt is hm government
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = hms_government
+		or = {
+			ruling_party_ideology = liberal
+			ruling_party_ideology = conservative
+			ruling_party_ideology = socialist
+			ruling_party_ideology = reactionary
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					or = {
+						government = hms_government
+						government = prussian_constitutionalism
+					}
+				}
+			}
+			country_event = 2110126
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110126 # Reform to hms_government
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = universal_weighted_voting
+		political_reform = state_equal_weight
+		political_reform = first_past_the_post
+		political_reform = yes_meeting
+		political_reform = harassment
+		political_reform = free_press
+		political_reform = non_socialist
+		government = hms_government
+		ruling_party_ideology = conservative
+		election = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 1.1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110127 # Govt is democracy
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = democracy
+		or = {
+			ruling_party_ideology = liberal
+			ruling_party_ideology = conservative
+			ruling_party_ideology = socialist
+			ruling_party_ideology = reactionary
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					government = democracy
+				}
+			}
+			country_event = 2110128
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110128 # Reform to democracy
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = universal_voting
+		political_reform = state_equal_weight
+		political_reform = proportional_representation
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		political_reform = free_press
+		political_reform = non_socialist
+		government = democracy
+		ruling_party_ideology = liberal
+		election = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.8
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 1.5
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 1.3
+				government = hms_government
+			}
+			
+			modifier = {
+				factor = 1.4
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 1.6
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110129 # Govt is presidential dictatorship
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies_dictatorship"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = presidential_dictatorship
+		or = {
+			ruling_party_ideology = reactionary
+			ruling_party_ideology = conservative
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					government = presidential_dictatorship
+				}
+			}
+			country_event = 2110130
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110130 # Reform to presidential dictatorship
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies_dictatorship"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 1
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110131 # Govt is bourgeois dictatorship
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies_bourgeois"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = bourgeois_dictatorship
+		ruling_party_ideology = anarcho_liberal
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					or = {
+						government = bourgeois_dictatorship
+						government = democracy
+					}
+				}
+			}
+			country_event = 2110132
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110132 # Reform to bourgeois dictatorship
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies_bourgeois"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		government = bourgeois_dictatorship
+		ruling_party_ideology = anarcho_liberal
+		political_reform = universal_weighted_voting
+		political_reform = population_equal_weight
+		political_reform = party_appointed
+		political_reform = yes_meeting
+		political_reform = free_press
+		political_reform = all_trade_unions
+		political_reform = secret_ballots
+		political_reform = quota_immigration
+		political_reform = mandatory_service
+		political_reform = bankruptcy
+		political_reform = no_slavery
+		social_reform = all_voting_pops
+		social_reform = incarceration
+		social_reform = trinket_pensions
+		nationalvalue = nv_equality
+		set_country_flag = radical_republic
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0.7
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0.8
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110133 # Govt is proletarian dictatorship
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies_communist"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					government = proletarian_dictatorship
+				}
+			}
+			country_event = 2110134
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110134 # Reform to proletarian dictatorship
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies_communist"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = state_controlled
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		nationalize = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110135 # Govt is fascist dictatorship
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies_fascist"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = fascist_dictatorship
+		ruling_party_ideology = fascist
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					government = fascist_dictatorship
+				}
+			}
+			country_event = 2110136
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110136 # Reform to fascist dictatorship
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies_fascist"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = fascist_dictatorship
+		ruling_party_ideology = fascist
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 1.3
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0.2
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110137 # Govt is theocracy
+	title = "EVTNAME2110121"
+	desc = "EVTDESC2110121"
+	picture = "governance_of_the_colonies"
+	
+	trigger = {
+		has_country_flag = reform_the_colonies
+		government = theocracy
+		or = {
+			ruling_party_ideology = fascist
+			ruling_party_ideology = conservative
+			ruling_party_ideology = reactionary
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 1000
+			war = yes
+		}
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110121"
+		
+		clr_country_flag = reform_the_colonies
+		any_country = {
+			limit = {
+				or = {
+					vassal_of = THIS
+					substate_of = THIS
+				}
+				not = {
+					or = {
+						government = theocracy
+						government = absolute_monarchy
+						government = presidential_dictatorship
+						government = fascist_dictatorship
+					}
+				}
+			}
+			country_event = 2110138
+		}
+		consciousness = 2
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = 2110138 # Reform to theocracy
+	title = "EVTNAME2110122"
+	desc = "EVTDESC2110122"
+	picture = "governance_of_the_colonies_fascist"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110122"
+		
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = theocracy
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 70
+			modifier = {
+				factor = 0.9
+				rank = 16
+			}
+			modifier = {
+				factor = 0.9
+				rank = 13
+			}
+			modifier = {
+				factor = 0.9
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				not = {
+					overlord = {
+						brigades_compare = 2
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.7
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 2
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110122"
+		
+		overlord = {
+			relation = {
+				who = THIS
+				value = -400
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			release_vassal = THIS
+			casus_belli = {
+				target = THIS
+				type = make_puppet
+				months = 24
+			}
+			country_event = {
+				id = 2110148
+				days = 7
+			}
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 1.1
+				rank = 16
+			}
+			modifier = {
+				factor = 1.1
+				rank = 13
+			}
+			modifier = {
+				factor = 1.1
+				rank = 10
+			}
+			modifier = {
+				factor = 1.5
+				overlord = {
+					brigades_compare = 2
+				}
+			}
+			
+			modifier = {
+				factor = 1.3
+				ruling_party_ideology = conservative
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = reactionary
+			}
+			
+			modifier = {
+				factor = 0
+				ruling_party_ideology = fascist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = liberal
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = communist
+			}
+			
+			modifier = {
+				factor = 10
+				ruling_party_ideology = anarcho_liberal
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110139 # Reform to absolute_monarchy after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = absolute_monarchy
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = none_voting
+		political_reform = appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = absolute_monarchy
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110140 # Reform to prussian_constitutionalism after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = prussian_constitutionalism
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = landed_voting
+		political_reform = appointed
+		political_reform = first_past_the_post
+		political_reform = yes_meeting
+		political_reform = harassment
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = prussian_constitutionalism
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110141 # Reform to hms_government after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = hms_government
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = universal_weighted_voting
+		political_reform = state_equal_weight
+		political_reform = first_past_the_post
+		political_reform = yes_meeting
+		political_reform = harassment
+		political_reform = free_press
+		political_reform = non_socialist
+		government = hms_government
+		ruling_party_ideology = conservative
+		election = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110142 # Reform to democracy after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = democracy
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = universal_voting
+		political_reform = state_equal_weight
+		political_reform = proportional_representation
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		political_reform = free_press
+		political_reform = non_socialist
+		government = democracy
+		ruling_party_ideology = liberal
+		election = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110143 # Reform to presidential_dictatorship after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = presidential_dictatorship
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = presidential_dictatorship
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110144 # Reform to bourgeois_dictatorship after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = bourgeois_dictatorship
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		set_country_flag = radical_republic
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = bourgeois_dictatorship
+		ruling_party_ideology = anarcho_liberal
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110145 # Reform to proletarian_dictatorship after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = proletarian_dictatorship
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = state_controlled
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		nationalize = yes
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110146 # Reform to fascist_dictatorship after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = fascist_dictatorship
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = fascist_dictatorship
+		ruling_party_ideology = fascist
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110147 # Reform to theocracy after war
+	title = "EVTNAME2110139"
+	desc = "EVTDESC2110139"
+	picture = "governance_of_the_colonies_surrender"
+	
+	trigger = {
+		has_country_flag = recently_made_a_puppet
+		overlord =  {
+			government = fascist_dictatorship
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110139"
+		
+		clr_country_flag = recently_made_a_puppet
+		political_reform = none_voting
+		political_reform = party_appointed
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = underground_parties
+		political_reform = state_press
+		political_reform = no_trade_unions
+		government = theocracy
+		ruling_party_ideology = reactionary
+		any_pop = {
+			militancy = 5
+			consciousness = 3
+		}
+		remove_country_modifier = demanded_constitutional_reform
+		add_country_modifier = {
+			name = demanded_constitutional_reform
+			duration = 3650
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110148 #Puppet war event
+	title = "EVTNAME2110148"
+	desc = "EVTDESC2110148"
+	picture = "governance_of_the_colonies"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110148"
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+			call_ally =  yes
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			consciousness = 1
+		}
+			
+		ai_chance = { 
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB2110148"
+		prestige =  -50
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			scaled_consciousness = {
+				factor = 0.5
+				ideology = reactionary
+			}
+			scaled_consciousness = {
+				factor = 0.5
+				ideology = conservative
+			}
+		}
+		any_pop = {
+			limit = {
+				or = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			consciousness = 0.5
+		}
+
+		ai_chance = { 
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = 2110151 #Residential schools
+	title = "EVTNAME2110151"
+	desc = "EVTDESC2110151"
+	picture = "residential_school_systems"
+	
+	trigger = {
+		civilized = yes
+        capital_scope = {
+			or = {
+				continent = north_america
+				continent = south_america
+				continent = africa
+				continent = oceania
+			}
+		}
+		or = {
+			accepted_culture = zzz_religion_catholic
+			accepted_culture = zzz_religion_protestant
+			accepted_culture = zzz_religion_sunni
+		}
+		not = { 
+			or = {
+				has_country_flag = residential_school_systems
+				has_country_modifier = refused_residential_school_systems
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist
+				religious_policy = pro_atheism
+			}
+		}
+		slavery = no_slavery
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110151"
+		set_country_flag = residential_school_systems
+		
+		any_owned = {
+			limit = {
+				not = {
+					or = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+						has_province_modifier = residential_school_systems_local
+					}
+				}
+			}
+			add_province_modifier = {
+				name = residential_school_systems_local
+				duration = 3650
+			}
+			any_pop = {
+				limit = {
+					and = {
+						or = {
+							is_primary_culture = no
+							is_accepted_culture = no
+						}
+						or = {
+							is_culture_group = african_diaspora_cultures
+							is_culture_group = central_african
+							is_culture_group = east_african
+							is_culture_group = west_african
+							is_culture_group = southern_african
+							is_culture_group = anti_human #aliens
+							is_culture_group = non_human #dogs and dragons apparently
+							is_culture_group = native_carribean
+							is_culture_group = native_central_american
+							is_culture_group = native_north_american
+							is_culture_group = native_south_american
+							is_culture_group = oceanic
+							is_culture_group = southeast_asian
+							is_culture_group = south_asian
+							is_culture_group = far_east_asian
+							is_culture_group = east_asian
+							is_culture_group = central_asian
+						}
+					}
+					not = {
+						strata = rich
+					}
+				}
+				reduce_pop = 0.9
+				literacy = 0.1
+			}
+		}
+		add_country_modifier = {
+			name = residential_school_systems
+			duration = -1
+		}        
+		badboy = 5
+		ai_chance = { 
+			factor = 98
+			
+			modifier = {
+				factor = 0.2
+				religious_policy = secularized
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA2110151"
+		add_country_modifier = {
+			name = refused_residential_school_systems
+			duration = 1500
+		}
+		ai_chance = { 
+			factor = 2
+			
+			modifier = {
+				factor = 8
+				religious_policy = secularized
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 2110152 #Abolish Residential schools
+	title = "EVTNAME2110152"
+	desc = "EVTDESC2110152"
+	picture = "residential_school_systems"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "EVTOPTA2110152"
+		clr_country_flag = residential_school_systems
+		remove_country_modifier = residential_school_systems
+		remove_country_modifier = residential_school_systems_are_bad_actually
+		any_owned = {
+			remove_province_modifier = residential_school_systems_local
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = 2110153 #The $COUNTRY_ADJ$ Residential School System Report
+	title = "EVTNAME2110153"
+	desc = "EVTDESC2110153"
+	
+	trigger = {
+		has_country_modifier = residential_school_systems
+		or = {
+			year = 1919
+			behaviorism = 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_secondary_power = yes
+		}
+	}
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	option = {
+		name = "EVTOPTA2110153"
+		any_country = {
+			limit = {
+				has_country_modifier = residential_school_systems
+			}
+			add_country_modifier = {
+				name = residential_school_systems_are_bad_actually
+				duration = -1
+			}
+			any_pop = {
+				limit = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+				militancy = 3
+				consciousness = 3
+			}
+		}
+		add_country_modifier = {
+			name = residential_school_systems_are_bad_actually
+			duration = -1
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+			militancy = 3
+			consciousness = 3
+		}
+		
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}

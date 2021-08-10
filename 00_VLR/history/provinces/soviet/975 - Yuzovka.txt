@@ -1,0 +1,5 @@
+owner=CIR
+add_core=CRI
+trade_goods = coal
+life_rating = 35
+terrain = plains

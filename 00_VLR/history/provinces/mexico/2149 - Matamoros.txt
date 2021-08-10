@@ -1,0 +1,6 @@
+owner=X16
+add_core=X16
+add_core=MEX
+trade_goods = cattle
+life_rating = 35
+terrain = farmlands

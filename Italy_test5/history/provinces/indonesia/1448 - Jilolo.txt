@@ -1,0 +1,8 @@
+owner=TTE
+controller=HLL
+add_core=MAL
+add_core=TTE
+trade_goods = fish
+life_rating = 30
+terrain = plains
+naval_base = 2

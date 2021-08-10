@@ -1,0 +1,6 @@
+owner=TEX
+controller=MEX
+add_core=TEX
+trade_goods = sulphur
+life_rating = 35
+terrain = steppe

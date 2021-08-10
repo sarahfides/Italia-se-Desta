@@ -1,0 +1,7 @@
+owner=AUP
+controller=AUP
+add_core=AUA
+add_core=AUP
+trade_goods = grain
+life_rating = 30
+terrain = plains

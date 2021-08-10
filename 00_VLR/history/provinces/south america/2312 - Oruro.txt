@@ -1,0 +1,8 @@
+owner=CHL
+add_core=CHL
+add_core=PEU
+add_core=CRA
+trade_goods = iron
+life_rating = 30
+terrain = desert
+colonial=2

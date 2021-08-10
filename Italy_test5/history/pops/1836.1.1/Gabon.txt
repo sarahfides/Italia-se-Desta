@@ -1,0 +1,358 @@
+1972 = {
+	soldiers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 136
+	}
+
+	artisans=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 68
+	}
+
+	clergymen=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 13
+	}
+
+	bureaucrats=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 3
+	}
+
+	officers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 1
+	}
+
+	aristocrats=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 14
+	}
+
+	farmers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 13352
+	}
+
+	soldiers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 64
+	}
+
+	artisans=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 810
+	}
+
+	clergymen=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 152
+	}
+
+	bureaucrats=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 31
+	}
+
+	officers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 16
+	}
+
+	aristocrats=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 170
+	}
+
+	farmers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 5129
+	}
+
+	soldiers=
+	{
+		culture = africaine
+		religion = catholic
+		size= 109
+	}
+
+	artisans=
+	{
+		culture = africaine
+		religion = catholic
+		size= 357
+	}
+
+	clergymen=
+	{
+		culture = africaine
+		religion = catholic
+		size= 67
+	}
+
+	bureaucrats=
+	{
+		culture = africaine
+		religion = catholic
+		size= 13
+	}
+
+	officers=
+	{
+		culture = africaine
+		religion = catholic
+		size= 7
+	}
+
+	aristocrats=
+	{
+		culture = africaine
+		religion = catholic
+		size= 75
+	}
+
+	farmers=
+	{
+		culture = africaine
+		religion = catholic
+		size= 10282
+	}
+
+}
+1974 = {
+	soldiers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 47
+	}
+
+	artisans=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 93
+	}
+
+	clergymen=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 17
+	}
+
+	bureaucrats=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 4
+	}
+
+	officers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 2
+	}
+
+	aristocrats=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 20
+	}
+
+	farmers=
+	{
+		culture = bakongo
+		religion = shamanism
+		size= 4479
+	}
+
+	soldiers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 118
+	}
+
+	artisans=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 564
+	}
+
+	clergymen=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 106
+	}
+
+	bureaucrats=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 27
+	}
+
+	officers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 11
+	}
+
+	aristocrats=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 118
+	}
+
+	farmers=
+	{
+		culture = bakongo
+		religion = catholic
+		size= 10829
+	}
+
+}
+1975 = {
+	aristocrats=
+	{
+		culture = african_minor
+		religion = animist
+		size= 125
+	}
+
+	clergymen=
+	{
+		culture = african_minor
+		religion = animist
+		size= 75
+	}
+
+	artisans=
+	{
+		culture = african_minor
+		religion = animist
+		size= 350
+	}
+
+	soldiers=
+	{
+		culture = african_minor
+		religion = animist
+		size= 75
+	}
+
+	farmers=
+	{
+		culture = african_minor
+		religion = animist
+		size= 6375
+	}
+
+}
+1976 = {
+	aristocrats=
+	{
+		culture = fang
+		religion = animist
+		size= 150
+	}
+
+	clergymen=
+	{
+		culture = fang
+		religion = animist
+		size= 75
+	}
+
+	artisans=
+	{
+		culture = fang
+		religion = animist
+		size= 400
+	}
+
+	soldiers=
+	{
+		culture = fang
+		religion = animist
+		size= 75
+	}
+
+	farmers=
+	{
+		culture = fang
+		religion = animist
+		size= 7300
+	}
+
+	aristocrats=
+	{
+		culture = african_minor
+		religion = animist
+		size= 175
+	}
+
+	clergymen=
+	{
+		culture = african_minor
+		religion = animist
+		size= 100
+	}
+
+	artisans=
+	{
+		culture = african_minor
+		religion = animist
+		size= 500
+	}
+
+	soldiers=
+	{
+		culture = african_minor
+		religion = animist
+		size= 100
+	}
+
+	farmers=
+	{
+		culture = african_minor
+		religion = animist
+		size= 9125
+	}
+
+}

@@ -1,0 +1,5 @@
+add_core=X12
+add_core=DES
+trade_goods = fruit
+life_rating = 30
+terrain = mountain

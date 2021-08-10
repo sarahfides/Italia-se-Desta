@@ -1,0 +1,94 @@
+country_event = { 
+	id = 2110011 
+	title = "EVTNAME2110011"
+	desc = "EVTDESC2110011"
+	picture = "colonial_transfers"
+	
+	trigger = {
+		year = 1820
+		civilized = no
+		ai = yes
+	}
+	
+	mean_time_to_happen = { 
+		days = 0.00001
+		
+		modifier = {
+            factor = 0.0001 #increase likelihood to happen
+            year = 1821
+        }
+	}
+	
+	immediate = {
+		X12 = { #Ouregon
+			primary_culture = ouregonnais
+		}
+		X13 = { #New Italy
+			primary_culture = criollo
+		}
+		X15 = { #New Holland
+			primary_culture = zuidelijk
+		}
+		X16 = { #Mechique
+			primary_culture = franco_mexican
+		}
+		X17 = { #Viconia
+			primary_culture = boeroe
+			add_accepted_culture = mauritsstadtian
+		}
+		X18 = { #Gran Galilea
+			primary_culture = americano
+		}
+		X20 = { #Montefeltria
+			primary_culture = sureno
+		}
+		HAI = { #Caraibe
+			primary_culture = antillien
+			remove_accepted_culture = afro_antillean
+		}
+		COL = { #Cascadie
+			primary_culture = cascadien
+		}
+		LOU = { #Louisiane
+			primary_culture = louisiannais
+			remove_accepted_culture = nouvellien
+		}
+		CHL = { #Rio da Prata
+			primary_culture = riopratense
+			add_accepted_culture = serrano
+		}
+		MEX = { #Mechico
+			primary_culture = mechicano
+			add_accepted_culture =  portuguese
+		}
+		CLM = { #Colombia
+			primary_culture = colombiano
+			remove_accepted_culture = chibchan
+		}
+		NOV = { #Nova Anglia
+			primary_culture = nova_anglian
+		}
+		YEM = { #Yemen
+			primary_culture = bedouin
+		}
+		UIL = { #Illinewy
+			primary_culture = illinewyan
+		}
+		X19 = { #Appalachy
+			primary_culture = appalachian
+		}
+		DES = { #Os Californias
+			primary_culture = californao
+		}
+		PEU = { #Biru
+			primary_culture = biruano
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "EVTOPTA2110001"
+		ai_chance = { factor = 100 }
+	}
+}

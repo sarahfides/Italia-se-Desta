@@ -1,0 +1,62 @@
+political_decisions = {
+
+	enact_swiss_neutrality = {
+        potential = {
+            tag = SWI
+			or = {
+				and = {
+					has_recently_lost_war = yes
+					not = { rank = 8 }
+				}
+				and = {
+					not = { rank = 16 }
+					year = 1828
+				}
+			}
+			not = { has_global_flag = swiss_neutrality }
+        }
+       
+        allow = {
+			is_independant = yes
+			SWI = {
+				any_core = {
+					owned_by = SWI
+				}
+			}
+			war = no
+        }
+       
+        effect = {
+			set_global_flag = swiss_neutrality
+			set_country_flag = neutral_state
+			country_event = 2111121
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+	revoke_swiss_neutrality = {
+        potential = {
+            tag = SWI
+			or = {
+				ruling_party_ideology = communist
+				ruling_party_ideology = fascist
+			}
+			has_global_flag = swiss_neutrality
+        }
+       
+        allow = {
+			war = no
+        }
+       
+        effect = {
+			clr_global_flag = swiss_neutrality
+			clr_country_flag = neutral_state
+			country_event = 2111123
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }	
+}

@@ -1,0 +1,7 @@
+owner=SDY
+add_core=DAI
+add_core=KCH
+add_core=SDY
+trade_goods = cattle
+life_rating = 30
+terrain = mountain

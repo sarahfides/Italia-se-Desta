@@ -1,0 +1,10 @@
+owner=AUP
+controller=AUP
+add_core=ABO
+add_core=AUK
+add_core=AUP
+add_core=X20
+add_core=X15
+trade_goods = timber
+life_rating = 30
+terrain = plains

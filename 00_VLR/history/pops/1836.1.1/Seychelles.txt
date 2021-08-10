@@ -1,0 +1,51 @@
+2127 = {
+	soldiers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 276
+	}
+
+	artisans=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 1104
+	}
+
+	clergymen=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 180
+	}
+
+	bureaucrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 55
+	}
+
+	officers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 22
+	}
+
+	aristocrats=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 232
+	}
+
+	farmers=
+	{
+		culture = marfillo
+		religion = catholic
+		size= 25724
+	}
+
+}

@@ -1,0 +1,6 @@
+owner=AJU
+add_core=ETH
+trade_goods = coffee
+life_rating = 30
+terrain = mountain
+fort = 2

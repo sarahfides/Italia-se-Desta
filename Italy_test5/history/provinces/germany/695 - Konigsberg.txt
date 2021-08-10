@@ -1,0 +1,8 @@
+owner=RUS
+controller=RUS
+add_core=GER
+add_core=LIV
+trade_goods = cattle
+life_rating = 40
+terrain = farmlands
+naval_base = 2

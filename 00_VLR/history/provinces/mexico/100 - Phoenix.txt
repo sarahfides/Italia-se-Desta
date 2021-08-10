@@ -1,0 +1,9 @@
+owner=DES
+controller=DES
+add_core=APA
+add_core=DES
+add_core=MSC
+trade_goods = iron
+life_rating = 35
+terrain = desert
+colonial=2
